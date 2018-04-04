@@ -88,9 +88,15 @@ G^{*}=argmin_{G}[max_{D}[\Lagr(G, D)] + \lambda \ell_{mce}(G)]
 \end{equation}
 Here $\lambda$ is just a constant which controls the importance of the second  loss term.
 \subsection{Training generative adversarial networks}
-Generative adversarial networks are notoriously difficult to train. The minmax game formulated in \ref{eq:minimax} relies on both networks being of equal strength. If the generative network is too strong the discriminative network will not be able to differentiate between the generated and the true samples and will not provide an effective loss for the generator. If the discriminative network is to strong it will be able to differentiate between the generated samples and the true samples very effectively no matter what the the generator does. The derivative of the loss will then be very small and we will have a problem with vanishing gradients for the generative network. In practice it is very hard to achieve this balance but some comon tricks is making the generative or descriminative networks more or less complex as well as training them at different amount on steps each iteration. [??] also mentions some other tricks to stabalize gan training.
+Generative adversarial networks are notoriously difficult to train. The minmax game formulated in \ref{eq:minimax} relies on both networks being of equal strength. If the generative network is too strong the discriminative network will not be able to differentiate between the generated and the true samples and will not provide an effective loss for the generator. If the discriminative network is to strong it will be able to differentiate between the generated samples and the true samples very effectively no matter what the the generator does. The derivative of the loss will then be very small and we will have a problem with vanishing gradients for the generative network. In practice it is very hard to achieve this balance but some comon tricks is making the generative or discriminative networks more or less complex as well as training them at different amount on steps each iteration. [??] also mentions some other tricks to stabilize gan training.
 \subsubsection{Modify the loss function}
+
 \subsubsection{Do not mix samples in a mini batch}
+Only use samples of one type i the mini batch. Use batch normalization as well
+\subsubsection{Avoid sparse gradients}
+The minmax game becomes mere unstable with sparse gradients. This means that we should use leaky Relu instead of Relu for the activation function. For down sampling mean pooling should be used instead of max pooling. For up sampling a 2D transposed convolution or PixelShuffle [??] can be used.
+\subsubsection{Perform label smoothing}
+Smooth target labels so the discriminator will not be able to differentiate between the generated and ground truth labels by checking if they are continuous or not.
 \subsection{Segmentor networks}
 For the generative part of a gan a segmentor network is needed. This network takes a image as an input and produces segmentation maps.
 A fully convolotional network (FCN) was first proposed Shelhamer and Long \textit{et al} \citep{shelhamer_fully_2016}. A FCN is a CNN without any fully connected layers. A network with fully connected layers must have a specific input size on the image while a FCN network can take inputs of any size. The key insight is that by the authors were that fully connected layers can be viewed as convolutions with kernels that cover their entire input region. Hencea CNN with fully conected layers can be viewed as a FCN since it takes patches from a image of any size and outputs a spatial output map when the patches are aggregated. While the resulting maps are equivalent the computational cost for the FCN is greatly reduced. This is because no overlapping regions between patches has to be computed. This makes these networks ideal for generating dense output maps such as for image segmentation\\
@@ -172,7 +178,7 @@ The generators task was to produce segmentation maps for the C classes. One init
 \\
 Son and Jung \textit{et al} \cite{son_retinal_2017} showed that a U-NET combined with an adversarial loss could achieve state of the art performance for retinal vessel segmentation in fundoscopic images. The team investigated several types on adversarial networks proposed in \cite{isola_image--image_2016} such as image-GAN, patch-GAN and pixel-GAN. For Image-GAN the discriminator make a decision on a image level if the image is generated or not. For patch-GAN the images are split into patches and the discriminator analyses each individually. The result is the aggregated result from all patches. For pixel-GAN the discriminator makes it decision on pixel per pixel level. The team found that a image-GAN togheter with a cross entropy term preformed the best and outperformed the non adversarial segmentor trained only with the cross entropy loss by a significant margin.\\
 \\
-\section{Network Architecture}
+\section{Network Architecture and initial results}
 For the generator network a U-NET will be used. The objective function for the GAN will be.  Using the definition of the binary cross entropy loss \eqref{eq:bce} and the multi class cross entropy loss \eqref{eq:mce} we can now define our loss function as.
 \begin{equation}
 \Lagr(G, D) = \ell_{mce}(G(x),y)-\lambda(\ell_{bce}(D(x,y), 1)+\ell_{bce}(D(x,G(x)), 0))
@@ -187,7 +193,7 @@ G^{*}=argmin_{G}[max_{D}[\Lagr_{bce}(G, D)] + \ell_{mce}(G(x),y)]
 \end{equation}
 \\
 \\
-The generated segmentation maps will be concatinated with the image the basic manner since \cite{luc_semantic_2016} did not gain any improvements with a product or scaling approach above the basic. Pinheiro \textit{et al} \cite{pinheiro_learning_2016} showed that it is preferable to have the same number of channels for each input to avoid that one input becomes dominating. Therefore the individual kernels will be applied to the image before concatenating them with the semantic maps. This also allows for a different low level representation of the image.
+The generated segmentation maps will be concatenated with the image the basic manner since \cite{luc_semantic_2016} did not gain any improvements with a product or scaling approach above the basic. Pinheiro \textit{et al} \cite{pinheiro_learning_2016} showed that it is preferable to have the same number of channels for each input to avoid that one input becomes dominating. Therefore the individual kernels will be applied to the image before concatenating them with the semantic maps. This also allows for a different low level representation of the image.
 
 \bibliographystyle{ieeetr}
 \bibliography{ex}
