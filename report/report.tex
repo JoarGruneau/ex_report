@@ -179,7 +179,7 @@ The generators task was to produce segmentation maps for the C classes. One init
 Son and Jung \textit{et al} \cite{son_retinal_2017} showed that a U-NET combined with an adversarial loss could achieve state of the art performance for retinal vessel segmentation in fundoscopic images. The team investigated several types on adversarial networks proposed in \cite{isola_image--image_2016} such as image-GAN, patch-GAN and pixel-GAN. For Image-GAN the discriminator make a decision on a image level if the image is generated or not. For patch-GAN the images are split into patches and the discriminator analyses each individually. The result is the aggregated result from all patches. For pixel-GAN the discriminator makes it decision on pixel per pixel level. The team found that a image-GAN togheter with a cross entropy term preformed the best and outperformed the non adversarial segmentor trained only with the cross entropy loss by a significant margin.\\
 \\
 \section{Network Architecture and initial results}
-For the generator network a U-NET will be used. The objective function for the GAN will be.  Using the definition of the binary cross entropy loss \eqref{eq:bce} and the multi class cross entropy loss \eqref{eq:mce} we can now define our loss function as.
+For the generator network a U-NET will be used and for the discriminator a ResNet with fourteen layers will be used. The U-NET will use only one image in the mini batch to minimize the computational cost. The input to the discriminative network will be the satellite image concatenated with the ground truth or generated segmentation. We will use a patchGan structure where the discriminator will only have a view of 100*100 pixels at once. The loss for the discriminator will be the average loss over all patches. The reason for this is this is that an patchGan will a smaller window was more stable during training than a patchGan with a larger window or an imageGan. This also made it easy to perform batch normalization over the batch of patches extracted from one image. Using the definition of the binary cross entropy loss \eqref{eq:bce} and the multi class cross entropy loss \eqref{eq:} we can now define our loss function as.
 \begin{equation}
 \Lagr(G, D) = \ell_{mce}(G(x),y)-\lambda(\ell_{bce}(D(x,y), 1)+\ell_{bce}(D(x,G(x)), 0))
 \end{equation}
@@ -191,6 +191,15 @@ The objective for the network hence becomes.
 \begin{equation}
 G^{*}=argmin_{G}[max_{D}[\Lagr_{bce}(G, D)] + \ell_{mce}(G(x),y)]
 \end{equation}
+\\
+Since \cite{luc_semantic_2016} showed that there were no significant improvment of concatenating the generated maps with the satelite image in the basic maner opposed to the product or scaling method this was firstly used. However the descriminative network quickly learnt to spot the difference between the discrete ground truth labels and spent all of it's time teaching the generative network to draw discrete boundaries and almost completely disregarding the initial segmentation task. Below is an image of the ground truth label, the predicted segmentation using classical training and the predicted segmentation with an adversarial loss and concatenation in the basic manner.
+[******************************************************']
+To force the discriminative network to learn a more productive loss functions the ground truth labels were first smoothed before being fed into the discriminator. The smoothing were performed so that the ground truth labels should have the same smoothness in border pixels as the generated segmentation maps without an adversarial loss. This forced the descriminator to learn a more productive loss function and greatly improved performance.
+['*********************** smoothed lables********************']
+Initally both models were updated at each step. However it turned out that the network complexities poorly matched each other and one network always ended up outperforming. Initially a U-NET with 64 kernels in the first layer was used. For the adveserial networks a resNet 19,34, 5
+The generative network complexity was keep constant while 
+
+For the discriminative network we use a residual network with fourteen layers.
 \\
 \\
 The generated segmentation maps will be concatenated with the image the basic manner since \cite{luc_semantic_2016} did not gain any improvements with a product or scaling approach above the basic. Pinheiro \textit{et al} \cite{pinheiro_learning_2016} showed that it is preferable to have the same number of channels for each input to avoid that one input becomes dominating. Therefore the individual kernels will be applied to the image before concatenating them with the semantic maps. This also allows for a different low level representation of the image.
