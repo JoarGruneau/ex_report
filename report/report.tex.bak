@@ -20,6 +20,7 @@
 \usepackage{tikz}
 \usepackage{rotating}
 \usepackage{amsmath,amssymb}
+\usepackage{listings}
 
 \DeclareRobustCommand{\bbone}{\text{\usefont{U}{bbold}{m}{n}1}}
 
@@ -192,13 +193,68 @@ The objective for the network hence becomes.
 G^{*}=argmin_{G}[max_{D}[\Lagr_{bce}(G, D)] + \ell_{mce}(G(x),y)]
 \end{equation}
 \\
-Since \cite{luc_semantic_2016} showed that there were no significant improvment of concatenating the generated maps with the satelite image in the basic maner opposed to the product or scaling method this was firstly used. However the descriminative network quickly learnt to spot the difference between the discrete ground truth labels and spent all of it's time teaching the generative network to draw discrete boundaries and almost completely disregarding the initial segmentation task. Below is an image of the ground truth label, the predicted segmentation using classical training and the predicted segmentation with an adversarial loss and concatenation in the basic manner.
+Since \cite{luc_semantic_2016} showed that there were no significant disadvantage of concatenating the generated maps with the satellite image in the basic manner opposed to the product or scaling method this was the initial approach. However the discriminative network quickly learnt to spot the difference between the discrete ground truth labels and the coontinous generated labels and spent all of it's time teaching the generative network to draw discrete boundaries and almost completely disregarded the initial segmentation task. Below is an image of the ground truth label, the predicted segmentation using classical training and the predicted segmentation with an adversarial loss and concatenation in the basic manner.
 [******************************************************']
-To force the discriminative network to learn a more productive loss functions the ground truth labels were first smoothed before being fed into the discriminator. The smoothing were performed so that the ground truth labels should have the same smoothness in border pixels as the generated segmentation maps without an adversarial loss. This forced the descriminator to learn a more productive loss function and greatly improved performance.
+To force the discriminative network to learn a more productive loss functions the ground truth labels were first smoothed before being fed into the discriminator. The smoothing were performed so that the ground truth labels should have the same smoothness in border pixels as the generated segmentation maps without an adversarial loss. This forced the discriminative network to learn a more productive loss function and greatly improved performance.
 ['*********************** smoothed lables********************']
-Initally both models were updated at each step. However it turned out that the network complexities poorly matched each other and one network always ended up outperforming. Initially a U-NET with 64 kernels in the first layer was used. For the adveserial networks a resNet 19,34, 5
-The generative network complexity was keep constant while 
+Initially both models were updated at each step. However it turned out that the network complexities poorly matched each other and one network always ended up outperforming the other. Initially a U-NET with 64 kernels in the first layer was used. For the adversarial networks a resNet with depth 14 18,34, 50 and 101 was tried but for all of the configurations one of the networks drastically outperformed the other and training diverged as a result. To combat this a an alternating training regime described below was instead used.
+\lstinputlisting[language=Python]{training.py}
+Here \% is the modulus operator and $check_discriminator=20$ and $cutoff=1.0$. Since we stop training the discriminative network when it's loss goes below the cutoff value the discriminative network is not able to significantly outperform the generative network. A cutoff value of 1.0 indicates that the discriminative network makes a correct prediction approximately 60\% of the time.\\
+\\
+The GAN minimax game becomes unstable with sparse gradients. The Relu activation function was therefore replaced with a leaky relu activation in both the generative and discriminative network and max pooling was replaced by mean pooling in the generative network. The U-NET already uses 2D transposed convolution for up sampling so this was kept as the original network. This changes greatly stabilized the training and made it much easier to train the GAN. However I still managed to train a GAN using the origin U-NET with sparse gradients as a the generative network with a carefully chosen learning rate decay. This training was very unstable and even a small change in the learning rate would cause the training to diverge. Below is the f1 score on the validation data for both types of GANs.
+\begin{center}
+\begin{figure}[H]
+      \includegraphics[scale=0.7]{mean_max_2}
+  \caption{The VGG16 architecture proposed by \cite{simonyan_very_2014}} \label{fig:vgg}
+\end{figure}
+\end{center}
+In the below plots we dislpay the segmentation as a continuous values where the brightness of each pixel is the probability that that pixel belongs to a car. To obtain a discrete prediction an argmax between this layer and the background class can be preformed. The segmented images looks very similar on a large scale.
+\begin{figure}[H]
+\minipage{0.48\textwidth}
+  \includegraphics[width=\linewidth]{gan_vs_class/img_4}
+  \caption{Input validation image}\label{fig:label_1}
+\endminipage\hfill
+\minipage{0.48\textwidth}
+  \includegraphics[width=\linewidth]{gan_vs_class/label_4}
+  \caption{Ground truth segmentation}\label{fig:label_1}
+\endminipage\hfill
+\minipage{0.48\textwidth}
+  \includegraphics[width=\linewidth]{gan_vs_class/class_4}
+  \caption{Training without an advesarial loss}\label{fig:class_1}
+\endminipage\hfill
+\minipage{0.48\textwidth}%
+  \includegraphics[width=\linewidth]{gan_vs_class/gan_4}
+  \caption{Training with an advesarial loss}\label{fig:label_2}
+\endminipage
+\caption{Figure \ref{fig:class_1} shows the ground truth segmentation,}
+\end{figure}
+Both networks had a similar performance on the training data but the original network over fitted less and performed better on the validation data. Hence the original U-NET network was chosen as the generative network for the following comparisons although it was harder to train. The adversarial network managed to enforce more assartive predictions and cars were more likely to be fully segmented or completely left out.
 
+
+\begin{figure}[!htb]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{gan_vs_class/label_1}
+  \caption{Ground truth segmentation}\label{fig:label_1}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{gan_vs_class/class_1}
+  \caption{Without an advesarial loss}\label{fig:class_1}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{gan_vs_class/gan_1}
+  \caption{With an advesarial loss}\label{fig:label_2}
+\endminipage
+
+\caption{Figure \ref{fig:class_1} shows the ground truth segmentation, }
+\end{figure}
+better object separation. However the segmented objects seemed to be more loosely conditioned on the input image then for the network without an adversarial loss. For example was the GAN network more inclined to chop up false positives into vehicle like objects. It also had a tenancy to separate long vehicles such as trucks into smaller car like parts. The adversarial loss forced the generator to make clearer predictions and vehicles where more likely to be completely segmented or completely left out opposed to the U-NET which made more uncertain predictions. Below are cherry picked images wich displays the differences of the two networks. and the adveserial network was mor inclined to to separate The plot below shows the fi score on the validation data with and for the U-NET with and without an adversarial loss.
+\begin{center}
+\begin{figure}[H]
+      \includegraphics[scale=0.7]{classical_vs_adversarial}
+  \caption{The VGG16 architecture proposed by \cite{simonyan_very_2014}} \label{fig:vgg}
+\end{figure}
+\end{center}
+The GAN performed worse on the validation the then the originall U-NET. However
 For the discriminative network we use a residual network with fourteen layers.
 \\
 \\
