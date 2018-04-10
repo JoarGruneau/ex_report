@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.8.23)  10 APR 2018 00:47
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.8.23)  10 APR 2018 16:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -708,21 +708,6 @@ LaTeX Warning: Label `fig:vgg' multiply defined.
 
 LaTeX Warning: Label `fig:vgg' multiply defined.
 
-
-LaTeX Warning: Label `fig:label_1' multiply defined.
-
-
-LaTeX Warning: Label `fig:label_1' multiply defined.
-
-
-LaTeX Warning: Label `fig:class_1' multiply defined.
-
-
-LaTeX Warning: Label `fig:label_2' multiply defined.
-
-
-LaTeX Warning: Label `fig:vgg' multiply defined.
-
 )
 \openout1 = `report.aux'.
 
@@ -901,35 +886,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 176--182
 
 LaTeX Warning: Reference `eq:' on page 11 undefined on input line 183.
 
-[11] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-Overfull \hbox (29.81897pt too wide) in paragraph at lines 194--201
+[11]
+File: pred_soft.jpg Graphic file (type QTm)
+ <use  "pred_soft.jpg" >
+File: label_blured.jpg Graphic file (type QTm)
+ <use  "label_blured.jpg" >
+Overfull \hbox (29.81897pt too wide) in paragraph at lines 194--209
 \T1/cmr/m/n/10.95 the ba-sic man-ner. [****************************************
 **************']
  []
 
-
-Overfull \hbox (3.37328pt too wide) in paragraph at lines 194--201
-\T1/cmr/m/n/10.95 ['*********************** smoothed lables********************
-'] Ini-tially
- []
-
-[12]
+[12] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 201.
- (./training.py
+nput line 211.
+
+(./training.py
 Overfull \hbox (31.96747pt too wide) in paragraph at lines 4--5
 [][][][][][][][][][][][] 
  []
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 202--205
+Underfull \hbox (badness 10000) in paragraph at lines 212--215
 
  []
 
+[13]
 File: mean_max_2.png Graphic file (type QTm)
-<use  "mean_max_2.png" > [13]
+ <use  "mean_max_2.png" >
 File: gan_vs_class/img_4.jpg Graphic file (type QTm)
  <use  "gan_vs_class/img_4.jpg" >
 File: gan_vs_class/label_4.jpg Graphic file (type QTm)
@@ -939,27 +924,71 @@ File: gan_vs_class/class_4.jpg Graphic file (type QTm)
  <use  "gan_vs_class/class_4.jpg" >
 File: gan_vs_class/gan_4.jpg Graphic file (type QTm)
 
-<use  "gan_vs_class/gan_4.jpg" > [14]
+<use  "gan_vs_class/gan_4.jpg" >
+
+LaTeX Warning: Reference `fig:class_1' on page 14 undefined on input line 240.
+
+
+LaTeX Warning: Reference `fig:class_1' on page 14 undefined on input line 240.
+
+[14]
 File: gan_vs_class/label_1.jpg Graphic file (type QTm)
  <use  "gan_vs_class/label_1.jpg" >
 File: gan_vs_class/class_1.jpg Graphic file (type QTm)
-
-<use  "gan_vs_class/class_1.jpg" >
+ <use  "gan_vs_class/class_1.jpg" >
 File: gan_vs_class/gan_1.jpg Graphic file (type QTm)
- <use  "gan_vs_class/gan_1.jpg" > [15]
+
+<use  "gan_vs_class/gan_1.jpg" >
+
+LaTeX Warning: Reference `fig:class_1' on page 15 undefined on input line 253.
+
+
+LaTeX Warning: Reference `fig:class_1' on page 15 undefined on input line 253.
+
+[15]
+File: gan_vs_class/label_2.jpg Graphic file (type QTm)
+ <use  "gan_vs_class/label_2.jpg" >
+File: gan_vs_class/class_2.jpg Graphic file (type QTm)
+ <use  "gan_vs_class/class_2.jpg" >
+File: gan_vs_class/gan_2.jpg Graphic file (type QTm)
+
+<use  "gan_vs_class/gan_2.jpg" >
+
+LaTeX Warning: Reference `fig:class_1' on page 16 undefined on input line 266.
+
+
+LaTeX Warning: Reference `fig:class_1' on page 16 undefined on input line 266.
+
 File: classical_vs_adversarial.png Graphic file (type QTm)
-
 <use  "classical_vs_adversarial.png" > [16]
-Underfull \hbox (badness 10000) in paragraph at lines 257--262
+File: weight_labels.jpg Graphic file (type QTm)
+ <use  "weight_labels.jpg" >
+File: weight_map_3.png Graphic file (type QTm)
 
- []
+<use  "weight_map_3.png" > [17]
+File: weighted_vs_unweighted.png Graphic file (type QTm)
+ <use  "weighted_vs_unweighted.png" > [18]
+File: class_vs_w/label_1.jpg Graphic file (type QTm)
 
+<use  "class_vs_w/label_1.jpg" >
+File: class_vs_w/un_weight_1.jpg Graphic file (type QTm)
+ <use  "class_vs_w/un_weight_1.jpg" >
+File: class_vs_w/weight_1.jpg Graphic file (type QTm)
+
+<use  "class_vs_w/weight_1.jpg" >
+File: class_vs_w/label_2.jpg Graphic file (type QTm)
+ <use  "class_vs_w/label_2.jpg" >
+File: class_vs_w/un_weight_2.jpg Graphic file (type QTm)
+
+<use  "class_vs_w/un_weight_2.jpg" >
+File: class_vs_w/weight_2.jpg Graphic file (type QTm)
+ <use  "class_vs_w/weight_2.jpg" >
 (./report.bbl
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 14.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [17]
-[18]
+) [19]
+[20]
 Underfull \hbox (badness 10000) in paragraph at lines 124--132
 \T1/cmr/m/n/10.95 aerial pho-tog-ra-phy.  \T1/cmr/m/it/10.95 Pho-togram-met-ric
  En-gi-neer-ing and Re-
@@ -995,7 +1024,7 @@ Overfull \hbox (56.34267pt too wide) in paragraph at lines 149--157
 al-[]neural-[]networks .
  []
 
-[19] [20] [21] [22]
+[21] [22] [23] [24]
 Underfull \hbox (badness 3679) in paragraph at lines 450--455
 []\T1/cmr/m/n/10.95 S. Zagoruyko and N. Ko-modakis.  Wide Resid-ual Net-works.
  []
@@ -1006,12 +1035,12 @@ Underfull \hbox (badness 1418) in paragraph at lines 483--490
 017.  ISSN 1424-8220.
  []
 
-) [23]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 265.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 265.
+) [25]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 328.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 328.
  (./report.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 265.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 265.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 328.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 328.
 
 
 LaTeX Warning: There were undefined references.
@@ -1019,15 +1048,15 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 265.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 328.
  ) 
 Here is how much of TeX's memory you used:
- 22733 strings out of 493638
- 397272 string characters out of 6146796
- 460935 words of memory out of 5000000
- 25758 multiletter control sequences out of 15000+600000
+ 22760 strings out of 493638
+ 397784 string characters out of 6146796
+ 458372 words of memory out of 5000000
+ 25772 multiletter control sequences out of 15000+600000
  18641 words of font info for 47 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  55i,9n,54p,1578b,1064s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report.pdf (23 pages).
+Output written on report.pdf (25 pages).

@@ -196,72 +196,131 @@ G^{*}=argmin_{G}[max_{D}[\Lagr_{bce}(G, D)] + \ell_{mce}(G(x),y)]
 Since \cite{luc_semantic_2016} showed that there were no significant disadvantage of concatenating the generated maps with the satellite image in the basic manner opposed to the product or scaling method this was the initial approach. However the discriminative network quickly learnt to spot the difference between the discrete ground truth labels and the coontinous generated labels and spent all of it's time teaching the generative network to draw discrete boundaries and almost completely disregarded the initial segmentation task. Below is an image of the ground truth label, the predicted segmentation using classical training and the predicted segmentation with an adversarial loss and concatenation in the basic manner.
 [******************************************************']
 To force the discriminative network to learn a more productive loss functions the ground truth labels were first smoothed before being fed into the discriminator. The smoothing were performed so that the ground truth labels should have the same smoothness in border pixels as the generated segmentation maps without an adversarial loss. This forced the discriminative network to learn a more productive loss function and greatly improved performance.
-['*********************** smoothed lables********************']
+\begin{figure}[H]
+\minipage{0.48\textwidth}
+  \includegraphics[width=\linewidth]{pred_soft}
+  Image \textbf{(a)}, the input validation image
+\endminipage\hfill
+\minipage{0.48\textwidth}
+  \includegraphics[width=\linewidth]{label_blured}
+  Image \textbf{(b)}, the ground truth segmentation
+\endminipage\hfill
+\caption{Figure shows the ground truth labels and the pixel weight map for a training image}
+\end{figure}
 Initially both models were updated at each step. However it turned out that the network complexities poorly matched each other and one network always ended up outperforming the other. Initially a U-NET with 64 kernels in the first layer was used. For the adversarial networks a resNet with depth 14 18,34, 50 and 101 was tried but for all of the configurations one of the networks drastically outperformed the other and training diverged as a result. To combat this a an alternating training regime described below was instead used.
 \lstinputlisting[language=Python]{training.py}
 Here \% is the modulus operator and $check_discriminator=20$ and $cutoff=1.0$. Since we stop training the discriminative network when it's loss goes below the cutoff value the discriminative network is not able to significantly outperform the generative network. A cutoff value of 1.0 indicates that the discriminative network makes a correct prediction approximately 60\% of the time.\\
 \\
-The GAN minimax game becomes unstable with sparse gradients. The Relu activation function was therefore replaced with a leaky relu activation in both the generative and discriminative network and max pooling was replaced by mean pooling in the generative network. The U-NET already uses 2D transposed convolution for up sampling so this was kept as the original network. This changes greatly stabilized the training and made it much easier to train the GAN. However I still managed to train a GAN using the origin U-NET with sparse gradients as a the generative network with a carefully chosen learning rate decay. This training was very unstable and even a small change in the learning rate would cause the training to diverge. Below is the f1 score on the validation data for both types of GANs.
+The GAN minimax game becomes unstable with sparse gradients. The Relu activation function was therefore replaced with a leaky relu activation in both the generative and discriminative network and max pooling was replaced by mean pooling in the generative network. The U-NET already uses 2D transposed convolution for up sampling so this was kept as the original network. This changes greatly stabilized the training and made it easier to train the GAN. However I still managed to train a GAN using the origin U-NET with sparse gradients with a carefully chosen learning rate decay. This training was very unstable and even a small change in the learning rate would cause the training to diverge. Below is the f1 score on the validation data for both types of GANs.
 \begin{center}
 \begin{figure}[H]
       \includegraphics[scale=0.7]{mean_max_2}
   \caption{The VGG16 architecture proposed by \cite{simonyan_very_2014}} \label{fig:vgg}
 \end{figure}
 \end{center}
-Both networks had a similar performance on the training data but the original network over fitted less and performed better on the validation data. Hence the original U-NET network was chosen as the generative network for the following comparisons although it was harder to train.\\
+Both networks had a similar performance on the training data but the original network over fitted less and performed better on the validation data. Hence the original U-NET network was chosen as the generative network for the following comparisons although it was harder to train.
 In the below plots we displays the segmentation as a continuous values where the brightness of each pixel is the probability that that pixel belongs to a car to make better comparisons between the two networks. To obtain a discrete prediction an argmax between this layer and the background class can be preformed. The segmented images looks very similar on a large scale.
 \begin{figure}[H]
 \minipage{0.48\textwidth}
   \includegraphics[width=\linewidth]{gan_vs_class/img_4}
-  \caption{Input validation image}\label{fig:label_1}
+  Image \textbf{(a)}, the input validation image
 \endminipage\hfill
 \minipage{0.48\textwidth}
   \includegraphics[width=\linewidth]{gan_vs_class/label_4}
-  \caption{Ground truth segmentation}\label{fig:label_1}
+  Image \textbf{(b)}, the ground truth segmentation
 \endminipage\hfill
 \minipage{0.48\textwidth}
   \includegraphics[width=\linewidth]{gan_vs_class/class_4}
-  \caption{Training without an advesarial loss}\label{fig:class_1}
+  Image \textbf{(c)}, segmentation without an adversarial loss
 \endminipage\hfill
 \minipage{0.48\textwidth}%
   \includegraphics[width=\linewidth]{gan_vs_class/gan_4}
-  \caption{Training with an advesarial loss}\label{fig:label_2}
+   Image \textbf{(d)}, segmentation with an adversarial loss
 \endminipage
 \caption{Figure \ref{fig:class_1} shows the ground truth segmentation,}
 \end{figure}
-However if we look closely there are diffrences between the two networks. The adversarial network managed to enforce more assertive predictions and cars were more likely to be fully segmented or completely left out.
-
-
-
+However if we look closely there are differences between the two networks. The adversarial network managed to enforce more assertive predictions and cars were more likely to be fully segmented or completely left out. However the segmented objects seemed to be more loosely conditioned on the input image then for the network without an adversarial loss. Other differences were that the GAN network was more inclined to chop up false positives into vehicle like objects. It also had a tenancy to separate long vehicles such as trucks into smaller car like parts. Below are cherry picked images which displays the differences of the two networks. adversarial loss.
 \begin{figure}[H]
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{gan_vs_class/label_1}
-  \caption{Ground truth segmentation}\label{fig:label_1}
 \endminipage\hfill
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{gan_vs_class/class_1}
-  \caption{Without an advesarial loss}\label{fig:class_1}
 \endminipage\hfill
 \minipage{0.32\textwidth}%
   \includegraphics[width=\linewidth]{gan_vs_class/gan_1}
-  \caption{With an advesarial loss}\label{fig:label_2}
 \endminipage
-
 \caption{Figure \ref{fig:class_1} shows the ground truth segmentation, }
 \end{figure}
-better object separation. However the segmented objects seemed to be more loosely conditioned on the input image then for the network without an adversarial loss. For example was the GAN network more inclined to chop up false positives into vehicle like objects. It also had a tenancy to separate long vehicles such as trucks into smaller car like parts. The adversarial loss forced the generator to make clearer predictions and vehicles where more likely to be completely segmented or completely left out opposed to the U-NET which made more uncertain predictions. Below are cherry picked images wich displays the differences of the two networks. and the adveserial network was mor inclined to to separate The plot below shows the fi score on the validation data with and for the U-NET with and without an adversarial loss.
+
+\begin{figure}[H]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{gan_vs_class/label_2}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{gan_vs_class/class_2}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{gan_vs_class/gan_2}
+\endminipage
+\caption{Figure \ref{fig:class_1} shows the ground truth segmentation, }
+\end{figure}
+When comparing the f1 scores the adversarial loss proved not to be helpful.
 \begin{center}
 \begin{figure}[H]
       \includegraphics[scale=0.7]{classical_vs_adversarial}
-  \caption{The VGG16 architecture proposed by \cite{simonyan_very_2014}} \label{fig:vgg}
+  \caption{The VGG16 architecture proposed by \cite{simonyan_very_2014}} \label{fig:gan_vs_class}
 \end{figure}
 \end{center}
-The GAN performed worse on the validation the then the originall U-NET. However
-For the discriminative network we use a residual network with fourteen layers.
-\\
-\\
-The generated segmentation maps will be concatenated with the image the basic manner since \cite{luc_semantic_2016} did not gain any improvements with a product or scaling approach above the basic. Pinheiro \textit{et al} \cite{pinheiro_learning_2016} showed that it is preferable to have the same number of channels for each input to avoid that one input becomes dominating. Therefore the individual kernels will be applied to the image before concatenating them with the semantic maps. This also allows for a different low level representation of the image.
 
+Another approach to enforce object separation was to weight the loss for each pixel according to the proximity to the two nearest cars according to [??]. Initially $\omega_vehicle$ was set to reflect the class imbalance. This led the model to achieve a good recall but a low precision and recall. The values $\omega_vehicle =2$ and $\omega_0=10$ was found to give a good f1 score while also enforcing better object separation. Below is the binary labels a well as the corresponding weight map for each pixel for the given values.
+\begin{figure}[H]
+\minipage{0.45\textwidth}
+  \includegraphics[width=\linewidth]{weight_labels}
+  Image \textbf{(a)}, the input validation image
+\endminipage\hfill
+\minipage{0.53\textwidth}
+  \includegraphics[width=\linewidth]{weight_map_3}
+  Image \textbf{(b)}, the ground truth segmentation
+\endminipage\hfill
+\caption{Figure shows the ground truth labels and the pixel weight map for a training image}
+\end{figure}
+The network with the weighted cross entropy loss achieved a comparable f1 score with the original network but but learned to separate objects much better. In the below segmentations we use discrete predictions to better display object separations.
+\begin{center}
+\begin{figure}[H]
+      \includegraphics[scale=0.7]{weighted_vs_unweighted}
+  \caption{} \label{fig:weighted_vs_unweighted}
+\end{figure}
+\end{center}
+\begin{figure}[H]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{class_vs_w/label_1}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{class_vs_w/un_weight_1}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{class_vs_w/weight_1}
+\endminipage
+\caption{}
+\end{figure}
+
+\begin{figure}[H]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{class_vs_w/label_2}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{class_vs_w/un_weight_2}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{class_vs_w/weight_2}
+\endminipage
+\caption{}
+\end{figure}
+Since the U-NET with the pixel weighting scheme showed so promising initial result this was the choosen method for the evaluation of all of the final results.
+\section{Results}
+\section{Discussion}
+\section{Conclusion}
 \bibliographystyle{ieeetr}
 \bibliography{ex}
 \end{document}
