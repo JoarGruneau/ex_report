@@ -133,35 +133,47 @@ The success behind the ResNet lies in the residual blocks A residual block is a 
 y=F(x, W) + x
 \end{equation}
 The benefit of this is that this guarantees that the gradients will flow through the entire network. Therefore it is possible to build and train very deep residual networks by stacking hundreds of residual block. This also allows the network to itself decide the required depth since it can learn to set the weight of the final residual blocks to zero if they are not needed \cite{he_deep_2015}. Hence we get e very flexible network where we easily can adapt the depth to the task at hand.
-\subsection{Dealing with severely imbalanced datasets}
-Due to the nature of aerial images the objects of interest are usually small compared to the entire image. This causes the dataset to be imbalanced since most pixels will belong to the background class. A naive segmentor could then obtain good accuracy by only predicting everything to the background class. To combat this there are several techniques. The most straight forward is to use a weighted cross entropy loss where every term is weighted depending on the class frequency \cite{sudre_generalised_2017}. Below is the weighted cross entropy loss for a two class segmentation problem.
+\subsection{Weight functions and dealing with severely imbalanced datasets}
+Due to the nature of aerial images the objects of interest are usually small compared to the entire image. This causes the dataset to be imbalanced since most pixels will belong to the background class. A naive segmentation network could then obtain good accuracy by only predicting everything to the background class. To combat this there are several techniques. The most straight forward is to use a weighted cross entropy loss where every term is weighted depending on the class frequency \cite{sudre_generalised_2017}. Below is the weighted cross entropy loss for a two class segmentation problem.
 \begin{equation}
-\Lagr_{wce}=-\omega*y*log(\hat{y}) + (1-y)log(1-\hat{y})
+\Lagr_{wce}=-\omega_c*y*log(\hat{y}) + (1-y)log(1-\hat{y})
 \end{equation}
-Here $y$ is the true probability for the foreground class  $\hat{y}$ the predicted probability for the foreground class and $\omega_c$ the class weights for the foreground class depending on the frequency. Another popular approach is to minimize the intersect over union loss \cite{yu_unitbox:_2016, rahman_optimizing_2016}
+Here $y$ is the true probability for the foreground class  $\hat{y}$ the predicted probability for the foreground class and $\omega_c$ the class weights for the foreground class depending on the frequency which can be defined in many different ways such as. 
+\begin{equation}\label{eq:wc1}
+w_c=\frac{N - \sum_{n}{} \hat{y}_{c=1}}{\sum_{n} \hat{y}_{c=1}}
+\end{equation}
+Here N is the total number of pixels and $\sum_{n}{} \hat{y}$ the number of pixels defined to the foreground class. 
+\begin{equation}\label{eq:wc2}
+w_c=\frac{\sum_{n}{} \sum_{W*H} y_{c=0}}{\sum_{n} \sum_{W*H} y_{c=1}}
+\end{equation}
+Which is the sum over all of the background pixels in the training dataset divided by the foreground pixels.
+Another popular approach is to minimize the intersect over union loss \cite{yu_unitbox:_2016, rahman_optimizing_2016}
 \begin{equation}
 \Lagr_{IoU}= 1 - \frac{ \Sigma y \otimes \hat{y} }{ \Sigma y + \Sigma \hat{y} - \Sigma y \otimes \hat{y}}
 \end{equation}
+To ensure good object seperation Ronneberger \textit{et al} \cite{ronneberger_u-net:_2015} proposes to scale the pixel wise loss based on the proximity to the closet two foreground objects according to.
+\begin{equation}
+\omega(x)=\omega_c(x)+\omega_0*epx(\frac{(-d_1(x)-d_2(x))^{2}}{2\sigma^2})
+\end{equation}
+Here $\omega_c(x)$ depends on the class frequency and could be computes as \ref{eq:wc1} or \ref{eq:wc2}. The distances $d_1(x)$ and $d_2(x)$ is the distance to the nearest and second nearest foreground object. The constant $\sigma$ determines how fast the penalty should decay with increasing distance and $\omega_0$ is a coefficient that determines the importance of the object separation penalty.
 \subsection{The datasets}
-\subsubsection{The VEDAI dataset}
-The VEDAI dataset \cite{razakarivony_vehicle_2015} consists of 9 different classes, these classes and the number of objects are given in the table below.\begin{center}
-\begin{tabular}{|c|c|}
-\hline
-\textbf{Classes} & \textbf{Number}\\
-\hline
-Car & 1340\\
-Pick-up & 950\\
-Truck & 300\\
-Plane & 47\\
-Boat & 170\\
-Camping car & 390\\
-Tractor & 190\\
-Vans & 100\\
-Other & 100\\
-\hline
-\end{tabular}
+\subsection{The ISPRS Potsdam semantic dataset}
+The ISPRS Potsdam dataset is a two dimensional semantic segmentation
+dataset \cite{noauthor_2d_nodate}. The dataset has six classes, impervious surfaces, buildings, low, vegetation, trees, cars and clutter/background. The images are are of the TIFF format and has 6000∗6000 resolution. There are 24 images for training
+and validation and 14 for testing. The images are rgb or infra-red together
+with rgb. There is also a height data channel. The ground truth segmenta-
+tion for the test images is not released and the segmentation maps have to
+be sent to ISPRS for evaluation. Below is an example of the training data from the ISPRS Potsdam semantic dataset.
+\begin{center}
+\begin{figure}[H]
+      \includegraphics[scale=0.25]{potsdam}
+  \caption{An example image from the Potsdam dataset with a: the rgb
+channel, b: the height data channel and c: the ground truth segmentation
+map.}
+\end{figure}
 \end{center}
-To make the results comparable with the extensive research of different methods done by \cite{zhong_robust_2017} the classes plane, boat tractor van and other were removed due to scarcity of data. The annotations for each target consists on the centre coordinates of the target the angle of the center line of the bounding box as well as the corners of the bounding box. The bounding box fits the target closely so no extra information is given on the sides. The evaluation metrics on the VEDAI dataset are:\\
+The evaluation metric for the individual classes is the F1 score and the
+overall performance is measured by pixel accuracy.
 \begin{equation}\label{eq:precision}
 Precision=\frac{True\textit{ }positive}{True\textit{ }Positive+False\textit{ }poitive}
 \end{equation}
@@ -171,6 +183,36 @@ Recall=\frac{True\textit{ }positive}{True\textit{ }Positive+False\textit{ }negat
 \begin{equation}\label{eq:f1}
 F1\textit{ }score=\frac{2*Recall*Precision}{Recall+Precision}
 \end{equation}
+This work focuses on detecting vehicles in low cost images so only the rgb images will be used and they will be down sampled to a resolution of 1000 ∗ 1000 pixels. Only the car class will also be predicted. One important thing to keep in mind is that this is a multi class semantic dataset and not a vhecle detection dataset. In several of the images it is possible to spot vehicles through trees without leaves but these are not segmented as vehicles as 
+The models will be evaluated on the \cite{noauthor_2d_nodate}
+%\subsubsection{The VEDAI dataset}
+%The VEDAI dataset \cite{razakarivony_vehicle_2015} consists of 9 different classes, these classes and the number of objects are given in the table below.\begin{center}
+%\begin{tabular}{|c|c|}
+%\hline
+%\textbf{Classes} & \textbf{Number}\\
+%\hline
+%Car & 1340\\
+%Pick-up & 950\\
+%Truck & 300\\
+%Plane & 47\\
+%Boat & 170\\
+%Camping car & 390\\
+%Tractor & 190\\
+%Vans & 100\\
+%Other & 100\\
+%\hline
+%\end{tabular}
+%\end{center}
+%To make the results comparable with the extensive research of different methods done by \cite{zhong_robust_2017} the classes plane, boat tractor van and other were removed due to scarcity of data. The annotations for each target consists on the centre coordinates of the target the angle of the center line of the bounding box as well as the corners of the bounding box. The bounding box fits the target closely so no extra information is given on the sides. The evaluation metrics on the VEDAI dataset are:\\
+%\begin{equation}\label{eq:precision}
+%Precision=\frac{True\textit{ }positive}{True\textit{ }Positive+False\textit{ }poitive}
+%\end{equation}
+%\begin{equation}\label{eq:recall}
+%Recall=\frac{True\textit{ }positive}{True\textit{ }Positive+False\textit{ }negative}
+%\end{equation}
+%\begin{equation}\label{eq:f1}
+%F1\textit{ }score=\frac{2*Recall*Precision}{Recall+Precision}
+%\end{equation}
 
 \section{Related work}
 In most cases the segmentation networks needs some post processing to improve the accuracy of the segmentation maps. Conditional random markov fields CRF have been very successfully to enforce spatial contiguity in the output maps \cite{arnab_higher_2015, luc_semantic_2016}. There have been work that used mean field inference expressed as a recurrent convolutional networks to do CRF like post processing \cite{schwing_fully_2015, zheng_conditional_2015}. Luc \textit{et al} \cite{luc_semantic_2016} proposed a adveserial segmentation network to enforce higher order potentials without being limited to a single class. Instead on directly enforcing these higher order potentials in a CRF model as post processing the goal was to enforce them in the generator directly with adversarial training. This technique also has the benefit of lower complexity since at test time only the generator will be used.\\

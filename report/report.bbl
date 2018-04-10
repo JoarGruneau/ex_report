@@ -5,6 +5,11 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[noa()]{noauthor_2d_nodate}
+2d {Semantic} {Labeling} - {ISPRS}.
+\newblock URL
+  \url{http://www2.isprs.org/commissions/comm3/wg4/semantic-labeling.html}.
+
 \bibitem[Ammour et~al.(2017)Ammour, Alhichri, Bazi, Benjdira, Alajlan, and
   Zuair]{ammour_deep_2017}
 N.~Ammour, H.~Alhichri, Y.~Bazi, B.~Benjdira, N.~Alajlan, and M.~Zuair.
@@ -222,14 +227,6 @@ D.~Pathak, P.~Krahenbuhl, J.~Donahue, T.~Darrell, and A.~A. Efros.
 \newblock \emph{arXiv:1604.07379 [cs]}, Apr. 2016.
 \newblock URL \url{http://arxiv.org/abs/1604.07379}.
 \newblock arXiv: 1604.07379.
-
-\bibitem[Pinheiro et~al.(2016)Pinheiro, Lin, Collobert, and
-  Dollàr]{pinheiro_learning_2016}
-P.~O. Pinheiro, T.-Y. Lin, R.~Collobert, and P.~Dollàr.
-\newblock Learning to {Refine} {Object} {Segments}.
-\newblock \emph{arXiv:1603.08695 [cs]}, Mar. 2016.
-\newblock URL \url{http://arxiv.org/abs/1603.08695}.
-\newblock arXiv: 1603.08695.
 
 \bibitem[Polzounov et~al.(2016)Polzounov, Terpugova, Skiparis, and
   Mihai]{polzounov_right_2016}

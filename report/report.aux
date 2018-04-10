@@ -92,72 +92,78 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces The 34 layer deep ResNet architecture \cite  {simonyan_very_2014}\relax }}{9}{figure.caption.4}}
 \newlabel{fig:vgg}{{3}{9}{The 34 layer deep ResNet architecture \cite {simonyan_very_2014}\relax }{figure.caption.4}{}}
 \citation{yu_unitbox:_2016,rahman_optimizing_2016}
-\citation{razakarivony_vehicle_2015}
-\citation{zhong_robust_2017}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Dealing with severely imbalanced datasets}{10}{subsection.3.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}The datasets}{10}{subsection.3.6}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.1}The VEDAI dataset}{10}{subsubsection.3.6.1}}
-\newlabel{eq:precision}{{10}{10}{The VEDAI dataset}{equation.3.10}{}}
+\citation{ronneberger_u-net:_2015}
+\citation{noauthor_2d_nodate}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Weight functions and dealing with severely imbalanced datasets}{10}{subsection.3.5}}
+\newlabel{eq:wc1}{{9}{10}{Weight functions and dealing with severely imbalanced datasets}{equation.3.9}{}}
+\newlabel{eq:wc2}{{10}{10}{Weight functions and dealing with severely imbalanced datasets}{equation.3.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}The datasets}{11}{subsection.3.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}The ISPRS Potsdam semantic dataset}{11}{subsection.3.7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces An example image from the Potsdam dataset with a: the rgb channel, b: the height data channel and c: the ground truth segmentation map.\relax }}{11}{figure.caption.5}}
+\newlabel{eq:precision}{{13}{11}{The ISPRS Potsdam semantic dataset}{equation.3.13}{}}
+\newlabel{eq:recall}{{14}{11}{The ISPRS Potsdam semantic dataset}{equation.3.14}{}}
+\newlabel{eq:f1}{{15}{11}{The ISPRS Potsdam semantic dataset}{equation.3.15}{}}
+\citation{noauthor_2d_nodate}
 \citation{arnab_higher_2015,luc_semantic_2016}
 \citation{schwing_fully_2015,zheng_conditional_2015}
 \citation{luc_semantic_2016}
 \citation{son_retinal_2017}
 \citation{isola_image--image_2016}
-\newlabel{eq:recall}{{11}{11}{The VEDAI dataset}{equation.3.11}{}}
-\newlabel{eq:f1}{{12}{11}{The VEDAI dataset}{equation.3.12}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Related work}{11}{section.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Figure shows the ground truth labels and the pixel weight map for a training image\relax }}{12}{figure.caption.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Related work}{12}{section.4}}
 \citation{goodfellow_generative_2014,luc_semantic_2016}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Network Architecture and initial results}{13}{section.5}}
 \citation{luc_semantic_2016}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Network Architecture and initial results}{12}{section.5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Figure shows the ground truth labels and the pixel weight map for a training image\relax }}{13}{figure.caption.5}}
-\@writefile{lol}{\contentsline {lstlisting}{training.py}{13}{lstlisting.-1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Figure shows the ground truth labels and the pixel weight map for a training image\relax }}{14}{figure.caption.7}}
 \citation{simonyan_very_2014}
 \citation{simonyan_very_2014}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The VGG16 architecture proposed by \cite  {simonyan_very_2014}\relax }}{14}{figure.caption.6}}
-\newlabel{fig:vgg}{{5}{14}{The VGG16 architecture proposed by \cite {simonyan_very_2014}\relax }{figure.caption.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Figure \ref  {fig:class_1} shows the ground truth segmentation,\relax }}{15}{figure.caption.7}}
+\@writefile{lol}{\contentsline {lstlisting}{training.py}{15}{lstlisting.-1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The VGG16 architecture proposed by \cite  {simonyan_very_2014}\relax }}{16}{figure.caption.8}}
+\newlabel{fig:vgg}{{7}{16}{The VGG16 architecture proposed by \cite {simonyan_very_2014}\relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Figure \ref  {fig:class_1} shows the ground truth segmentation,\relax }}{17}{figure.caption.9}}
 \citation{simonyan_very_2014}
 \citation{simonyan_very_2014}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Figure \ref  {fig:class_1} shows the ground truth segmentation, \relax }}{16}{figure.caption.8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Figure \ref  {fig:class_1} shows the ground truth segmentation, \relax }}{16}{figure.caption.9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces The VGG16 architecture proposed by \cite  {simonyan_very_2014}\relax }}{17}{figure.caption.10}}
-\newlabel{fig:gan_vs_class}{{9}{17}{The VGG16 architecture proposed by \cite {simonyan_very_2014}\relax }{figure.caption.10}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Figure shows the ground truth labels and the pixel weight map for a training image\relax }}{18}{figure.caption.11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces \relax }}{18}{figure.caption.12}}
-\newlabel{fig:weighted_vs_unweighted}{{11}{18}{\relax }{figure.caption.12}{}}
-\citation{luc_semantic_2016}
-\citation{pinheiro_learning_2016}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Figure \ref  {fig:class_1} shows the ground truth segmentation, \relax }}{18}{figure.caption.10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Figure \ref  {fig:class_1} shows the ground truth segmentation, \relax }}{18}{figure.caption.11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces The VGG16 architecture proposed by \cite  {simonyan_very_2014}\relax }}{19}{figure.caption.12}}
+\newlabel{fig:gan_vs_class}{{11}{19}{The VGG16 architecture proposed by \cite {simonyan_very_2014}\relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Figure shows the ground truth labels and the pixel weight map for a training image\relax }}{20}{figure.caption.13}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces \relax }}{20}{figure.caption.14}}
+\newlabel{fig:weighted_vs_unweighted}{{13}{20}{\relax }{figure.caption.14}{}}
 \bibstyle{ieeetr}
 \bibdata{ex}
-\bibcite{ammour_deep_2017}{{1}{2017}{{Ammour et~al.}}{{Ammour, Alhichri, Bazi, Benjdira, Alajlan, and Zuair}}}
-\bibcite{arbelle_microscopy_2017-1}{{2}{2017}{{Arbelle and Raviv}}{{}}}
-\bibcite{arnab_higher_2015}{{3}{2015}{{Arnab et~al.}}{{Arnab, Jayasumana, Zheng, and Torr}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces \relax }}{19}{figure.caption.13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces \relax }}{19}{figure.caption.14}}
-\bibcite{audebert_usability_2016}{{4}{2016}{{Audebert et~al.}}{{Audebert, Saux, and Lefèvre}}}
-\bibcite{audebert_segment-before-detect:_2017}{{5}{2017}{{Audebert et~al.}}{{Audebert, Le~Saux, and Lefèvre}}}
-\bibcite{badrinarayanan_segnet:_2015}{{6}{2015}{{Badrinarayanan et~al.}}{{Badrinarayanan, Kendall, and Cipolla}}}
-\bibcite{berni_thermal_2009}{{7}{2009}{{Berni et~al.}}{{Berni, Zarco-Tejada, Suarez, and Fereres}}}
-\bibcite{garcia-garcia_review_2017}{{8}{2017}{{Garcia-Garcia et~al.}}{{Garcia-Garcia, Orts-Escolano, Oprea, Villena-Martinez, and Garcia-Rodriguez}}}
-\bibcite{girshick_fast_2015}{{9}{2015}{{Girshick}}{{}}}
-\bibcite{goodfellow_nips_2016}{{10}{2016}{{Goodfellow}}{{}}}
-\bibcite{goodfellow_generative_2014}{{11}{2014}{{Goodfellow et~al.}}{{Goodfellow, Pouget-Abadie, Mirza, Xu, Warde-Farley, Ozair, Courville, and Bengio}}}
-\bibcite{he_deep_2015}{{12}{2015}{{He et~al.}}{{He, Zhang, Ren, and Sun}}}
-\bibcite{he_identity_2016}{{13}{2016}{{He et~al.}}{{He, Zhang, Ren, and Sun}}}
-\bibcite{he_mask_2017}{{14}{2017}{{He et~al.}}{{He, Gkioxari, Dollár, and Girshick}}}
-\bibcite{holt_object-based_2009}{{15}{2009}{{Holt et~al.}}{{Holt, Seto, Rivard, and Gong}}}
-\bibcite{isola_image--image_2016}{{16}{2016}{{Isola et~al.}}{{Isola, Zhu, Zhou, and Efros}}}
-\bibcite{krizhevsky_learning_2009}{{17}{2009}{{Krizhevsky}}{{}}}
-\bibcite{krizhevsky_imagenet_2012}{{18}{2012}{{Krizhevsky et~al.}}{{Krizhevsky, Sutskever, and Hinton}}}
-\bibcite{ledig_photo-realistic_2016}{{19}{2016}{{Ledig et~al.}}{{Ledig, Theis, Huszar, Caballero, Cunningham, Acosta, Aitken, Tejani, Totz, Wang, and Shi}}}
-\bibcite{li_deepunet:_2017}{{20}{2017}{{Li et~al.}}{{Li, Liu, Yang, Sun, Hu, Zhang, and Li}}}
-\bibcite{lin_microsoft_2014}{{21}{2014}{{Lin et~al.}}{{Lin, Maire, Belongie, Bourdev, Girshick, Hays, Perona, Ramanan, Zitnick, and Dollár}}}
-\bibcite{luc_semantic_2016}{{22}{2016}{{Luc et~al.}}{{Luc, Couprie, Chintala, and Verbeek}}}
-\bibcite{mirza_conditional_2014}{{23}{2014}{{Mirza and Osindero}}{{}}}
-\bibcite{moranduzzo_automatic_2014}{{24}{2014}{{Moranduzzo and Melgani}}{{}}}
-\bibcite{moranduzzo_lbp-based_2015}{{25}{2015}{{Moranduzzo et~al.}}{{Moranduzzo, Mekhalfi, and Melgani}}}
-\bibcite{pathak_context_2016}{{26}{2016}{{Pathak et~al.}}{{Pathak, Krahenbuhl, Donahue, Darrell, and Efros}}}
-\bibcite{pinheiro_learning_2016}{{27}{2016}{{Pinheiro et~al.}}{{Pinheiro, Lin, Collobert, and Dollàr}}}
+\bibcite{noauthor_2d_nodate}{{1}{}{{noa}}{{}}}
+\bibcite{ammour_deep_2017}{{2}{2017}{{Ammour et~al.}}{{Ammour, Alhichri, Bazi, Benjdira, Alajlan, and Zuair}}}
+\bibcite{arbelle_microscopy_2017-1}{{3}{2017}{{Arbelle and Raviv}}{{}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces \relax }}{21}{figure.caption.15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces \relax }}{21}{figure.caption.16}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Results}{21}{section.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{21}{section.7}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{21}{section.8}}
+\bibcite{arnab_higher_2015}{{4}{2015}{{Arnab et~al.}}{{Arnab, Jayasumana, Zheng, and Torr}}}
+\bibcite{audebert_usability_2016}{{5}{2016}{{Audebert et~al.}}{{Audebert, Saux, and Lefèvre}}}
+\bibcite{audebert_segment-before-detect:_2017}{{6}{2017}{{Audebert et~al.}}{{Audebert, Le~Saux, and Lefèvre}}}
+\bibcite{badrinarayanan_segnet:_2015}{{7}{2015}{{Badrinarayanan et~al.}}{{Badrinarayanan, Kendall, and Cipolla}}}
+\bibcite{berni_thermal_2009}{{8}{2009}{{Berni et~al.}}{{Berni, Zarco-Tejada, Suarez, and Fereres}}}
+\bibcite{garcia-garcia_review_2017}{{9}{2017}{{Garcia-Garcia et~al.}}{{Garcia-Garcia, Orts-Escolano, Oprea, Villena-Martinez, and Garcia-Rodriguez}}}
+\bibcite{girshick_fast_2015}{{10}{2015}{{Girshick}}{{}}}
+\bibcite{goodfellow_nips_2016}{{11}{2016}{{Goodfellow}}{{}}}
+\bibcite{goodfellow_generative_2014}{{12}{2014}{{Goodfellow et~al.}}{{Goodfellow, Pouget-Abadie, Mirza, Xu, Warde-Farley, Ozair, Courville, and Bengio}}}
+\bibcite{he_deep_2015}{{13}{2015}{{He et~al.}}{{He, Zhang, Ren, and Sun}}}
+\bibcite{he_identity_2016}{{14}{2016}{{He et~al.}}{{He, Zhang, Ren, and Sun}}}
+\bibcite{he_mask_2017}{{15}{2017}{{He et~al.}}{{He, Gkioxari, Dollár, and Girshick}}}
+\bibcite{holt_object-based_2009}{{16}{2009}{{Holt et~al.}}{{Holt, Seto, Rivard, and Gong}}}
+\bibcite{isola_image--image_2016}{{17}{2016}{{Isola et~al.}}{{Isola, Zhu, Zhou, and Efros}}}
+\bibcite{krizhevsky_learning_2009}{{18}{2009}{{Krizhevsky}}{{}}}
+\bibcite{krizhevsky_imagenet_2012}{{19}{2012}{{Krizhevsky et~al.}}{{Krizhevsky, Sutskever, and Hinton}}}
+\bibcite{ledig_photo-realistic_2016}{{20}{2016}{{Ledig et~al.}}{{Ledig, Theis, Huszar, Caballero, Cunningham, Acosta, Aitken, Tejani, Totz, Wang, and Shi}}}
+\bibcite{li_deepunet:_2017}{{21}{2017}{{Li et~al.}}{{Li, Liu, Yang, Sun, Hu, Zhang, and Li}}}
+\bibcite{lin_microsoft_2014}{{22}{2014}{{Lin et~al.}}{{Lin, Maire, Belongie, Bourdev, Girshick, Hays, Perona, Ramanan, Zitnick, and Dollár}}}
+\bibcite{luc_semantic_2016}{{23}{2016}{{Luc et~al.}}{{Luc, Couprie, Chintala, and Verbeek}}}
+\bibcite{mirza_conditional_2014}{{24}{2014}{{Mirza and Osindero}}{{}}}
+\bibcite{moranduzzo_automatic_2014}{{25}{2014}{{Moranduzzo and Melgani}}{{}}}
+\bibcite{moranduzzo_lbp-based_2015}{{26}{2015}{{Moranduzzo et~al.}}{{Moranduzzo, Mekhalfi, and Melgani}}}
+\bibcite{pathak_context_2016}{{27}{2016}{{Pathak et~al.}}{{Pathak, Krahenbuhl, Donahue, Darrell, and Efros}}}
 \bibcite{polzounov_right_2016}{{28}{2016}{{Polzounov et~al.}}{{Polzounov, Terpugova, Skiparis, and Mihai}}}
 \bibcite{rahman_optimizing_2016}{{29}{2016}{{Rahman and Wang}}{{}}}
 \bibcite{razakarivony_vehicle_2015}{{30}{2015}{{Razakarivony and Jurie}}{{}}}

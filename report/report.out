@@ -11,8 +11,11 @@
 \BOOKMARK [3][-]{subsubsection.3.2.4}{Perform\040label\040smoothing}{subsection.3.2}% 11
 \BOOKMARK [2][-]{subsection.3.3}{Segmentor\040networks}{section.3}% 12
 \BOOKMARK [2][-]{subsection.3.4}{Classification\040networks}{section.3}% 13
-\BOOKMARK [2][-]{subsection.3.5}{Dealing\040with\040severely\040imbalanced\040datasets}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.5}{Weight\040functions\040and\040dealing\040with\040severely\040imbalanced\040datasets}{section.3}% 14
 \BOOKMARK [2][-]{subsection.3.6}{The\040datasets}{section.3}% 15
-\BOOKMARK [3][-]{subsubsection.3.6.1}{The\040VEDAI\040dataset}{subsection.3.6}% 16
+\BOOKMARK [2][-]{subsection.3.7}{The\040ISPRS\040Potsdam\040semantic\040dataset}{section.3}% 16
 \BOOKMARK [1][-]{section.4}{Related\040work}{}% 17
 \BOOKMARK [1][-]{section.5}{Network\040Architecture\040and\040initial\040results}{}% 18
+\BOOKMARK [1][-]{section.6}{Results}{}% 19
+\BOOKMARK [1][-]{section.7}{Discussion}{}% 20
+\BOOKMARK [1][-]{section.8}{Conclusion}{}% 21
