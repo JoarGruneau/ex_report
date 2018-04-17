@@ -1,0 +1,24 @@
+\BOOKMARK [1][-]{section.1}{Abstract}{}% 1
+\BOOKMARK [1][-]{section.2}{Introduction}{}% 2
+\BOOKMARK [1][-]{section.3}{Relevant Theory}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Generative adversarial networks}{section.3}% 4
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Unconditional generative adversarial networks}{subsection.3.1}% 5
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Conditional generative adversarial networks}{subsection.3.1}% 6
+\BOOKMARK [2][-]{subsection.3.2}{Training generative adversarial networks}{section.3}% 7
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Modify the loss function}{subsection.3.2}% 8
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Do not mix samples in a mini batch}{subsection.3.2}% 9
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Avoid sparse gradients}{subsection.3.2}% 10
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Perform label smoothing}{subsection.3.2}% 11
+\BOOKMARK [2][-]{subsection.3.3}{Segmentor networks}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.4}{Classification networks}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.5}{Weight functions and dealing with severely imbalanced datasets}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.6}{Connected component extraction}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.7}{The datasets}{section.3}% 16
+\BOOKMARK [2][-]{subsection.3.8}{The ISPRS Potsdam semantic dataset}{section.3}% 17
+\BOOKMARK [1][-]{section.4}{Related work}{}% 18
+\BOOKMARK [1][-]{section.5}{Network Architecture and initial results}{}% 19
+\BOOKMARK [2][-]{subsection.5.1}{Investigating the benefit of an adversarial loss}{section.5}% 20
+\BOOKMARK [2][-]{subsection.5.2}{Weighting pixel loss based on object separation}{section.5}% 21
+\BOOKMARK [1][-]{section.6}{Results}{}% 22
+\BOOKMARK [1][-]{section.7}{Discussion}{}% 23
+\BOOKMARK [1][-]{section.8}{Conclusion}{}% 24

@@ -1,0 +1,51 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {swedish}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\select@language {swedish}
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Research Question}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Related work}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Generative adversarial networks}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}Unconditional generative adversarial networks}{4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.2}Conditional generative adversarial networks}{5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.3}Training generative adversarial networks}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Segmentor networks}{6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Classification networks}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Weight functions and dealing with severely imbalanced datasets}{9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}Connected component extraction}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.6}Related work}{11}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}The datasets}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}The ISPRS Potsdam semantic dataset}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.1}The VEDAI dataset}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Method}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Result}{20}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Discussion}{21}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{22}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Unnecessary Appended Material}{29}

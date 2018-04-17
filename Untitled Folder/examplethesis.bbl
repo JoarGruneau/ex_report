@@ -1,0 +1,2682 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global}
+    \entry{noauthor_2d_nodate}{book}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8343b463aacf48517c044b4d2c9c45ed}
+      \field{labeltitlesource}{title}
+      \field{title}{2D {Semantic} {Labeling} - {ISPRS}}
+      \field{urlday}{07}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \verb{file}
+      \verb 2D Semantic Labeling - ISPRS:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/NXXU5MPF/semantic-labeling.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www2.isprs.org/commissions/comm3/wg4/semantic-labeling.html
+      \endverb
+    \endentry
+    \entry{ammour_deep_2017}{article}{}
+      \name{author}{6}{}{%
+        {{hash=8fa04748b5cb4a1638a9f6e01503ec4a}{%
+           family={Ammour},
+           family_i={A\bibinitperiod},
+           given={Nassim},
+           given_i={N\bibinitperiod}}}%
+        {{hash=fdb1bd985c655e9a122806432b02b7e1}{%
+           family={Alhichri},
+           family_i={A\bibinitperiod},
+           given={Haikel},
+           given_i={H\bibinitperiod}}}%
+        {{hash=005e196c955e72625dfe46dc482d4c6d}{%
+           family={Bazi},
+           family_i={B\bibinitperiod},
+           given={Yakoub},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=33b331028891639a07033403d034b8b2}{%
+           family={Benjdira},
+           family_i={B\bibinitperiod},
+           given={Bilel},
+           given_i={B\bibinitperiod}}}%
+        {{hash=7e604fed6d407e2345a01d9222805739}{%
+           family={Alajlan},
+           family_i={A\bibinitperiod},
+           given={Naif},
+           given_i={N\bibinitperiod}}}%
+        {{hash=de56d114f30908a83bf4703e1c6dae88}{%
+           family={Zuair},
+           family_i={Z\bibinitperiod},
+           given={Mansour},
+           given_i={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{11afb40716d8cc3ead0914041477d170}
+      \strng{fullhash}{26a8968e8249cbdd4c3c2bad8b4fc4bd}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper presents an automatic solution to the problem of detecting and counting cars in unmanned aerial vehicle (UAV) images. This is a challenging task given the very high spatial resolution of UAV images (on the order of a few centimetres) and the extremely high level of detail, which require suitable automatic analysis methods. Our proposed method begins by segmenting the input image into small homogeneous regions, which can be used as candidate locations for car detection. Next, a window is extracted around each region, and deep learning is used to mine highly descriptive features from these windows. We use a deep convolutional neural network (CNN) system that is already pre-trained on huge auxiliary data as a feature extraction tool, combined with a linear support vector machine (SVM) classifier to classify regions into “car” and “no-car” classes. The final step is devoted to a fine-tuning procedure which performs morphological dilation to smooth the detected regions and fill any holes. In addition, small isolated regions are analysed further using a few sliding rectangular windows to locate cars more accurately and remove false positives. To evaluate our method, experiments were conducted on a challenging set of real UAV images acquired over an urban area. The experimental results have proven that the proposed method outperforms the state-of-the-art methods, both in terms of accuracy and computational time.}
+      \field{journaltitle}{Remote Sensing}
+      \field{month}{03}
+      \field{number}{4}
+      \field{title}{Deep {Learning} {Approach} for {Car} {Detection} in {UAV} {Imagery}}
+      \field{urlday}{07}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{volume}{9}
+      \field{year}{2017}
+      \field{pages}{312}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/rs9040312
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/TMSDIUUN/Ammour et al. - 2017 - Deep Learning Approach for Car Detection in UAV Im.pdf:application/pdf;Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/JICCERL2/312.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.mdpi.com/2072-4292/9/4/312
+      \endverb
+      \keyw{car counting,convolutional neural networks (CNNs),deep learning,mean-shift segmentation,support vector machines (SVM),UAV imagery}
+    \endentry
+    \entry{arbelle_microscopy_2017}{article}{}
+      \name{author}{2}{}{%
+        {{hash=80b02f83455441e4321719777bc71c39}{%
+           family={Arbelle},
+           family_i={A\bibinitperiod},
+           given={Assaf},
+           given_i={A\bibinitperiod}}}%
+        {{hash=efd324c4ab1bc54c1f5beebf431d30d8}{%
+           family={Raviv},
+           family_i={R\bibinitperiod},
+           given={Tammy\bibnamedelima Riklin},
+           given_i={T\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{567ae47baf75b9d0687fdee9a53ce61d}
+      \strng{fullhash}{567ae47baf75b9d0687fdee9a53ce61d}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a novel method for cell segmentation in microscopy images which is inspired by the Generative Adversarial Neural Network (GAN) approach. Our framework is built on a pair of two competitive artificial neural networks, with a unique architecture, termed Rib Cage, which are trained simultaneously and together define a min-max game resulting in an accurate segmentation of a given image. Our approach has two main strengths, similar to the GAN, the method does not require a formulation of a loss function for the optimization process. This allows training on a limited amount of annotated data in a weakly supervised manner. Promising segmentation results on real fluorescent microscopy data are presented. The code is freely available at: https://github.com/arbellea/DeepCellSeg.git}
+      \field{annotation}{Comment: Accepted to IEEE International Symposium on Biomedical Imaging (ISBI) 2018}
+      \field{journaltitle}{arXiv:1709.05860 [cs]}
+      \field{month}{09}
+      \field{title}{Microscopy {Cell} {Segmentation} via {Adversarial} {Neural} {Networks}}
+      \field{urlday}{07}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{year}{2017}
+      \verb{file}
+      \verb arXiv\:1709.05860 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/H2LMAFH4/Arbelle and Raviv - 2017 - Microscopy Cell Segmentation via Adversarial Neura.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/PHB7X6I3/1709.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1709.05860
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{arnab_higher_2015}{article}{}
+      \name{author}{4}{}{%
+        {{hash=a4cc19a9b2b2a4333ac5365d6f7c40a5}{%
+           family={Arnab},
+           family_i={A\bibinitperiod},
+           given={Anurag},
+           given_i={A\bibinitperiod}}}%
+        {{hash=e8f83e110cddd5c7d32df4e3fb080d92}{%
+           family={Jayasumana},
+           family_i={J\bibinitperiod},
+           given={Sadeep},
+           given_i={S\bibinitperiod}}}%
+        {{hash=15b89738ab90dfba4b269ce40ad19700}{%
+           family={Zheng},
+           family_i={Z\bibinitperiod},
+           given={Shuai},
+           given_i={S\bibinitperiod}}}%
+        {{hash=637cf9e6546686b7ce3fcafd1946098d}{%
+           family={Torr},
+           family_i={T\bibinitperiod},
+           given={Philip},
+           given_i={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c773be7d421a5c671208f6e3e9b9ac9}
+      \strng{fullhash}{9db55e5ea083d59af9e0dcec8b234b65}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We address the problem of semantic segmentation using deep learning. Most segmentation systems include a Conditional Random Field (CRF) to produce a structured output that is consistent with the image's visual features. Recent deep learning approaches have incorporated CRFs into Convolutional Neural Networks (CNNs), with some even training the CRF end-to-end with the rest of the network. However, these approaches have not employed higher order potentials, which have previously been shown to significantly improve segmentation performance. In this paper, we demonstrate that two types of higher order potential, based on object detections and superpixels, can be included in a CRF embedded within a deep network. We design these higher order potentials to allow inference with the differentiable mean field algorithm. As a result, all the parameters of our richer CRF model can be learned end-to-end with our pixelwise CNN classifier. We achieve state-of-the-art segmentation performance on the PASCAL VOC benchmark with these trainable higher order potentials.}
+      \field{annotation}{Comment: ECCV 2016}
+      \field{journaltitle}{arXiv:1511.08119 [cs]}
+      \field{month}{11}
+      \field{title}{Higher {Order} {Conditional} {Random} {Fields} in {Deep} {Neural} {Networks}}
+      \field{urlday}{20}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{year}{2015}
+      \verb{file}
+      \verb arXiv\:1511.08119 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/BVRDDWTM/Arnab et al. - 2015 - Higher Order Conditional Random Fields in Deep Neu.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/M3PCFXCZ/1511.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1511.08119
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{audebert_segment-before-detect:_2017}{article}{}
+      \name{author}{3}{}{%
+        {{hash=0c78eb0f8bf60b9af7d3ed5e8631f0f7}{%
+           family={Audebert},
+           family_i={A\bibinitperiod},
+           given={Nicolas},
+           given_i={N\bibinitperiod}}}%
+        {{hash=7289889669438b2160ba39ebab7c60ca}{%
+           family={Le\bibnamedelima Saux},
+           family_i={L\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Bertrand},
+           given_i={B\bibinitperiod}}}%
+        {{hash=7c002a374ccdb7c5c5bb830fb4aacfe9}{%
+           family={Lefèvre},
+           family_i={L\bibinitperiod},
+           given={Sébastien},
+           given_i={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{d16022fa165305caeda77448aa18b97f}
+      \strng{fullhash}{d16022fa165305caeda77448aa18b97f}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Like computer vision before, remote sensing has been radically changed by the introduction of deep learning and, more notably, Convolution Neural Networks. Land cover classification, object detection and scene understanding in aerial images rely more and more on deep networks to achieve new state-of-the-art results. Recent architectures such as Fully Convolutional Networks can even produce pixel level annotations for semantic mapping. In this work, we present a deep-learning based segment-before-detect method for segmentation and subsequent detection and classification of several varieties of wheeled vehicles in high resolution remote sensing images. This allows us to investigate object detection and classification on a complex dataset made up of visually similar classes, and to demonstrate the relevance of such a subclass modeling approach. Especially, we want to show that deep learning is also suitable for object-oriented analysis of Earth Observation data as effective object detection can be obtained as a byproduct of accurate semantic segmentation. First, we train a deep fully convolutional network on the ISPRS Potsdam and the NZAM/ONERA Christchurch datasets and show how the learnt semantic maps can be used to extract precise segmentation of vehicles. Then, we show that those maps are accurate enough to perform vehicle detection by simple connected component extraction. This allows us to study the repartition of vehicles in the city. Finally, we train a Convolutional Neural Network to perform vehicle classification on the VEDAI dataset, and transfer its knowledge to classify the individual vehicle instances that we detected.}
+      \field{journaltitle}{Remote Sensing}
+      \field{month}{04}
+      \field{number}{4}
+      \field{shorttitle}{Segment-before-{Detect}}
+      \field{title}{Segment-before-{Detect}: {Vehicle} {Detection} and {Classification} through {Semantic} {Segmentation} of {Aerial} {Images}}
+      \field{urlday}{07}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{volume}{9}
+      \field{year}{2017}
+      \field{pages}{368}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/rs9040368
+      \endverb
+      \verb{file}
+      \verb Full Text PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/HP9GGA8E/Audebert et al. - 2017 - Segment-before-Detect Vehicle Detection and Class.pdf:application/pdf;Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/SBEU6P7B/368.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://www.mdpi.com/2072-4292/9/4/368
+      \endverb
+      \keyw{deep learning,object classification,semantic segmentation,vehicle detection}
+    \endentry
+    \entry{audebert_usability_2016}{article}{}
+      \name{author}{3}{}{%
+        {{hash=0c78eb0f8bf60b9af7d3ed5e8631f0f7}{%
+           family={Audebert},
+           family_i={A\bibinitperiod},
+           given={Nicolas},
+           given_i={N\bibinitperiod}}}%
+        {{hash=d6a780b871924251695070b2be28a92c}{%
+           family={Saux},
+           family_i={S\bibinitperiod},
+           given={Bertrand\bibnamedelima Le},
+           given_i={B\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=7c002a374ccdb7c5c5bb830fb4aacfe9}{%
+           family={Lefèvre},
+           family_i={L\bibinitperiod},
+           given={Sébastien},
+           given_i={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{80e3443514298d48fee5c4a1735c3d8f}
+      \strng{fullhash}{80e3443514298d48fee5c4a1735c3d8f}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{As computer vision before, remote sensing has been radically changed by the introduction of Convolution Neural Networks. Land cover use, object detection and scene understanding in aerial images rely more and more on deep learning to achieve new state-of-the-art results. Recent architectures such as Fully Convolutional Networks (Long et al., 2015) can even produce pixel level annotations for semantic mapping. In this work, we show how to use such deep networks to detect, segment and classify different varieties of wheeled vehicles in aerial images from the ISPRS Potsdam dataset. This allows us to tackle object detection and classification on a complex dataset made up of visually similar classes, and to demonstrate the relevance of such a subclass modeling approach. Especially, we want to show that deep learning is also suitable for object-oriented analysis of Earth Observation data. First, we train a FCN variant on the ISPRS Potsdam dataset and show how the learnt semantic maps can be used to extract precise segmentation of vehicles, which allow us studying the repartition of vehicles in the city. Second, we train a CNN to perform vehicle classification on the VEDAI (Razakarivony and Jurie, 2016) dataset, and transfer its knowledge to classify candidate segmented vehicles on the Potsdam dataset.}
+      \field{annotation}{Comment: in International Conference on Geographic Object-Based Image Analysis (GEOBIA), Sep 2016, Enschede, Netherlands}
+      \field{journaltitle}{arXiv:1609.06845 [cs]}
+      \field{month}{09}
+      \field{title}{On the usability of deep networks for object-based image analysis}
+      \field{urlday}{09}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2016}
+      \verb{file}
+      \verb arXiv\:1609.06845 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/5FW3UZNT/Audebert et al. - 2016 - On the usability of deep networks for object-based.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/HEYKVS9F/1609.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1609.06845
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Neural and Evolutionary Computing}
+    \endentry
+    \entry{badrinarayanan_segnet:_2015}{article}{}
+      \name{author}{3}{}{%
+        {{hash=2b517df4f81c42dc3c5b32aede012cf9}{%
+           family={Badrinarayanan},
+           family_i={B\bibinitperiod},
+           given={Vijay},
+           given_i={V\bibinitperiod}}}%
+        {{hash=4b1053f4ffb69cd61c1f122cc435c884}{%
+           family={Kendall},
+           family_i={K\bibinitperiod},
+           given={Alex},
+           given_i={A\bibinitperiod}}}%
+        {{hash=95c5bd0a1d6e6649ed56043a63268bfa}{%
+           family={Cipolla},
+           family_i={C\bibinitperiod},
+           given={Roberto},
+           given_i={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb26318591964ff2e23ee05578819393}
+      \strng{fullhash}{fb26318591964ff2e23ee05578819393}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We present a novel and practical deep fully convolutional neural network architecture for semantic pixel-wise segmentation termed SegNet. This core trainable segmentation engine consists of an encoder network, a corresponding decoder network followed by a pixel-wise classification layer. The architecture of the encoder network is topologically identical to the 13 convolutional layers in the VGG16 network. The role of the decoder network is to map the low resolution encoder feature maps to full input resolution feature maps for pixel-wise classification. The novelty of SegNet lies is in the manner in which the decoder upsamples its lower resolution input feature map(s). Specifically, the decoder uses pooling indices computed in the max-pooling step of the corresponding encoder to perform non-linear upsampling. This eliminates the need for learning to upsample. The upsampled maps are sparse and are then convolved with trainable filters to produce dense feature maps. We compare our proposed architecture with the widely adopted FCN and also with the well known DeepLab-LargeFOV, DeconvNet architectures. This comparison reveals the memory versus accuracy trade-off involved in achieving good segmentation performance. SegNet was primarily motivated by scene understanding applications. Hence, it is designed to be efficient both in terms of memory and computational time during inference. It is also significantly smaller in the number of trainable parameters than other competing architectures. We also performed a controlled benchmark of SegNet and other architectures on both road scenes and SUN RGB-D indoor scene segmentation tasks. We show that SegNet provides good performance with competitive inference time and more efficient inference memory-wise as compared to other architectures. We also provide a Caffe implementation of SegNet and a web demo at http://mi.eng.cam.ac.uk/projects/segnet/.}
+      \field{annotation}{arXiv: 1511.00561}
+      \field{journaltitle}{arXiv:1511.00561 [cs]}
+      \field{month}{11}
+      \field{shorttitle}{{SegNet}}
+      \field{title}{{SegNet}: {A} {Deep} {Convolutional} {Encoder}-{Decoder} {Architecture} for {Image} {Segmentation}}
+      \field{urlday}{08}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2015}
+      \verb{file}
+      \verb arXiv\:1511.00561 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/Y5ZWWST6/Badrinarayanan et al. - 2015 - SegNet A Deep Convolutional Encoder-Decoder Archi.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/WBUKLZZJ/1511.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1511.00561
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Learning,Computer Science - Neural and Evolutionary Computing}
+    \endentry
+    \entry{berni_thermal_2009}{article}{}
+      \name{author}{4}{}{%
+        {{hash=06e9d80dd7a182622f78771bf783ad33}{%
+           family={Berni},
+           family_i={B\bibinitperiod},
+           given={J.\bibnamedelimi A.\bibnamedelimi J.},
+           given_i={J\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=d76650e3948249ea8b9c0f09979ccc62}{%
+           family={Zarco-Tejada},
+           family_i={Z\bibinithyphendelim T\bibinitperiod},
+           given={P.\bibnamedelimi J.},
+           given_i={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=d1460e29091cf4f6aae98c533c94bfec}{%
+           family={Suarez},
+           family_i={S\bibinitperiod},
+           given={L.},
+           given_i={L\bibinitperiod}}}%
+        {{hash=0db14a42d8b4a1b0688ef741d45fa639}{%
+           family={Fereres},
+           family_i={F\bibinitperiod},
+           given={E.},
+           given_i={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f30471211c94a39f872cada81be90e4}
+      \strng{fullhash}{d31901317346b494f6ed437f394a2fd8}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Two critical limitations for using current satellite sensors in real-time crop management are the lack of imagery with optimum spatial and spectral resolutions and an unfavorable revisit time for most crop stress-detection applications. Alternatives based on manned airborne platforms are lacking due to their high operational costs. A fundamental requirement for providing useful remote sensing products in agriculture is the capacity to combine high spatial resolution and quick turnaround times. Remote sensing sensors placed on unmanned aerial vehicles (UAVs) could fill this gap, providing low-cost approaches to meet the critical requirements of spatial, spectral, and temporal resolutions. This paper demonstrates the ability to generate quantitative remote sensing products by means of a helicopter-based UAV equipped with inexpensive thermal and narrowband multispectral imaging sensors. During summer of 2007, the platform was flown over agricultural fields, obtaining thermal imagery in the 7.5-13-mum region (40-cm resolution) and narrowband multispectral imagery in the 400-800-nm spectral region (20-cm resolution). Surface reflectance and temperature imagery were obtained, after atmospheric corrections with MODTRAN. Biophysical parameters were estimated using vegetation indices, namely, normalized difference vegetation index, transformed chlorophyll absorption in reflectance index/optimized soil-adjusted vegetation index, and photochemical reflectance index (PRI), coupled with SAILH and FLIGHT models. As a result, the image products of leaf area index, chlorophyll content (C ab), and water stress detection from PRI index and canopy temperature were produced and successfully validated. This paper demonstrates that results obtained with a low-cost UAV system for agricultural applications yielded comparable estimations, if not better, than those obtained by traditional manned airborne sensors.}
+      \field{issn}{0196-2892}
+      \field{journaltitle}{IEEE Transactions on Geoscience and Remote Sensing}
+      \field{month}{03}
+      \field{number}{3}
+      \field{title}{Thermal and {Narrowband} {Multispectral} {Remote} {Sensing} for {Vegetation} {Monitoring} {From} an {Unmanned} {Aerial} {Vehicle}}
+      \field{volume}{47}
+      \field{year}{2009}
+      \field{pages}{722\bibrangedash 738}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1109/TGRS.2008.2010457
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/5VYNM6K5/4781575.html:text/html
+      \endverb
+      \keyw{remote sensing,chlorophyll content,crop management,crops,FLIGHT model,infrared imaging,leaf area index,MODTRAN,Multispectral,multispectral remote sensing,narrowband,photochemical reflectance index,radiative transfer modeling,reflectivity,remotely operated vehicles,SAILH model,stress detection,surface reflectance imagery,surface temperature imagery,thermal,unmanned aerial system (UAS),unmanned aerial vehicle,unmanned aerial vehicles (UAVs),vegetation mapping,vegetation monitoring,water stress detection,wavelength 400 nm to 800 nm,wavelength 7.5 mum to 13 mum}
+    \endentry
+    \entry{garcia-garcia_review_2017}{article}{}
+      \name{author}{5}{}{%
+        {{hash=91b377111e9be859ad399e1438044568}{%
+           family={Garcia-Garcia},
+           family_i={G\bibinithyphendelim G\bibinitperiod},
+           given={Alberto},
+           given_i={A\bibinitperiod}}}%
+        {{hash=8ada7bec05943efc23b4650617d28091}{%
+           family={Orts-Escolano},
+           family_i={O\bibinithyphendelim E\bibinitperiod},
+           given={Sergio},
+           given_i={S\bibinitperiod}}}%
+        {{hash=2e2d0e1b5055bc8d1afb8fe6ca1c319d}{%
+           family={Oprea},
+           family_i={O\bibinitperiod},
+           given={Sergiu},
+           given_i={S\bibinitperiod}}}%
+        {{hash=de1ba1e29764b68f34469017710fcf79}{%
+           family={Villena-Martinez},
+           family_i={V\bibinithyphendelim M\bibinitperiod},
+           given={Victor},
+           given_i={V\bibinitperiod}}}%
+        {{hash=7916bbdff49946e9d942ad67055a314d}{%
+           family={Garcia-Rodriguez},
+           family_i={G\bibinithyphendelim R\bibinitperiod},
+           given={Jose},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b5a0769c8e84ead4a619d4498136bce2}
+      \strng{fullhash}{7008ec7f70bbb61c12c9b05c16611b45}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Image semantic segmentation is more and more being of interest for computer vision and machine learning researchers. Many applications on the rise need accurate and efficient segmentation mechanisms: autonomous driving, indoor navigation, and even virtual or augmented reality systems to name a few. This demand coincides with the rise of deep learning approaches in almost every field or application target related to computer vision, including semantic segmentation or scene understanding. This paper provides a review on deep learning methods for semantic segmentation applied to various application areas. Firstly, we describe the terminology of this field as well as mandatory background concepts. Next, the main datasets and challenges are exposed to help researchers decide which are the ones that best suit their needs and their targets. Then, existing methods are reviewed, highlighting their contributions and their significance in the field. Finally, quantitative results are given for the described methods and the datasets in which they were evaluated, following up with a discussion of the results. At last, we point out a set of promising future works and draw our own conclusions about the state of the art of semantic segmentation using deep learning techniques.}
+      \field{annotation}{Comment: Submitted to TPAMI on Apr. 22, 2017}
+      \field{journaltitle}{arXiv:1704.06857 [cs]}
+      \field{month}{04}
+      \field{title}{A {Review} on {Deep} {Learning} {Techniques} {Applied} to {Semantic} {Segmentation}}
+      \field{urlday}{09}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2017}
+      \verb{file}
+      \verb arXiv\:1704.06857 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/8JT32VLC/Garcia-Garcia et al. - 2017 - A Review on Deep Learning Techniques Applied to Se.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/K6YLNAU7/1704.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1704.06857
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Artificial Intelligence}
+    \endentry
+    \entry{girshick_fast_2015}{article}{}
+      \name{author}{1}{}{%
+        {{hash=bd5dadbe57bedc5957c19a3154c4d424}{%
+           family={Girshick},
+           family_i={G\bibinitperiod},
+           given={Ross},
+           given_i={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{bd5dadbe57bedc5957c19a3154c4d424}
+      \strng{fullhash}{bd5dadbe57bedc5957c19a3154c4d424}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper proposes a Fast Region-based Convolutional Network method (Fast R-CNN) for object detection. Fast R-CNN builds on previous work to efficiently classify object proposals using deep convolutional networks. Compared to previous work, Fast R-CNN employs several innovations to improve training and testing speed while also increasing detection accuracy. Fast R-CNN trains the very deep VGG16 network 9x faster than R-CNN, is 213x faster at test-time, and achieves a higher mAP on PASCAL VOC 2012. Compared to SPPnet, Fast R-CNN trains VGG16 3x faster, tests 10x faster, and is more accurate. Fast R-CNN is implemented in Python and C++ (using Caffe) and is available under the open-source MIT License at https://github.com/rbgirshick/fast-rcnn.}
+      \field{annotation}{Comment: To appear in ICCV 2015}
+      \field{journaltitle}{arXiv:1504.08083 [cs]}
+      \field{month}{04}
+      \field{title}{Fast {R}-{CNN}}
+      \field{urlday}{08}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2015}
+      \verb{file}
+      \verb arXiv\:1504.08083 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/FX9IJ6QG/Girshick - 2015 - Fast R-CNN.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/4QNPPRG2/1504.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1504.08083
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{goodfellow_nips_2016}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5d2585c11210cf1d4512e6e0a03ec315}{%
+           family={Goodfellow},
+           family_i={G\bibinitperiod},
+           given={Ian},
+           given_i={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5d2585c11210cf1d4512e6e0a03ec315}
+      \strng{fullhash}{5d2585c11210cf1d4512e6e0a03ec315}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{This report summarizes the tutorial presented by the author at NIPS 2016 on generative adversarial networks (GANs). The tutorial describes: (1) Why generative modeling is a topic worth studying, (2) how generative models work, and how GANs compare to other generative models, (3) the details of how GANs work, (4) research frontiers in GANs, and (5) state-of-the-art image models that combine GANs with other methods. Finally, the tutorial contains three exercises for readers to complete, and the solutions to these exercises.}
+      \field{annotation}{Comment: v2-v4 are all typo fixes. No substantive changes relative to v1}
+      \field{journaltitle}{arXiv:1701.00160 [cs]}
+      \field{month}{12}
+      \field{shorttitle}{{NIPS} 2016 {Tutorial}}
+      \field{title}{{NIPS} 2016 {Tutorial}: {Generative} {Adversarial} {Networks}}
+      \field{urlday}{07}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{year}{2016}
+      \verb{file}
+      \verb arXiv\:1701.00160 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/PVI2ESDC/Goodfellow - 2016 - NIPS 2016 Tutorial Generative Adversarial Network.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/9MVXVW52/1701.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1701.00160
+      \endverb
+      \keyw{Computer Science - Learning}
+    \endentry
+    \entry{goodfellow_generative_2014}{article}{}
+      \name{author}{8}{}{%
+        {{hash=b8309a3e80e90bd0b1aa74558c5e9741}{%
+           family={Goodfellow},
+           family_i={G\bibinitperiod},
+           given={Ian\bibnamedelima J.},
+           given_i={I\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=a341d25f80a8118cdbb90b272adc8b4f}{%
+           family={Pouget-Abadie},
+           family_i={P\bibinithyphendelim A\bibinitperiod},
+           given={Jean},
+           given_i={J\bibinitperiod}}}%
+        {{hash=9e80f4779b032f68a6106e1424345450}{%
+           family={Mirza},
+           family_i={M\bibinitperiod},
+           given={Mehdi},
+           given_i={M\bibinitperiod}}}%
+        {{hash=743dd6cdaa6639320289d219d351d7b7}{%
+           family={Xu},
+           family_i={X\bibinitperiod},
+           given={Bing},
+           given_i={B\bibinitperiod}}}%
+        {{hash=e8151f1b8f85a048cacb34f374ec922b}{%
+           family={Warde-Farley},
+           family_i={W\bibinithyphendelim F\bibinitperiod},
+           given={David},
+           given_i={D\bibinitperiod}}}%
+        {{hash=9ca00ffd7cc35f7cfb8f698aa9239c76}{%
+           family={Ozair},
+           family_i={O\bibinitperiod},
+           given={Sherjil},
+           given_i={S\bibinitperiod}}}%
+        {{hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
+           family={Courville},
+           family_i={C\bibinitperiod},
+           given={Aaron},
+           given_i={A\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           family_i={B\bibinitperiod},
+           given={Yoshua},
+           given_i={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{28c80b82fce5cf9430bd3acb1557943f}
+      \strng{fullhash}{013d741ee9b7741be2bb987dd83f1374}
+      \field{sortinit}{G}
+      \field{sortinithash}{1c854ef9177a91bf894e66485bdbd3ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We propose a new framework for estimating generative models via an adversarial process, in which we simultaneously train two models: a generative model G that captures the data distribution, and a discriminative model D that estimates the probability that a sample came from the training data rather than G. The training procedure for G is to maximize the probability of D making a mistake. This framework corresponds to a minimax two-player game. In the space of arbitrary functions G and D, a unique solution exists, with G recovering the training data distribution and D equal to 1/2 everywhere. In the case where G and D are defined by multilayer perceptrons, the entire system can be trained with backpropagation. There is no need for any Markov chains or unrolled approximate inference networks during either training or generation of samples. Experiments demonstrate the potential of the framework through qualitative and quantitative evaluation of the generated samples.}
+      \field{annotation}{arXiv: 1406.2661}
+      \field{journaltitle}{arXiv:1406.2661 [cs, stat]}
+      \field{month}{06}
+      \field{title}{Generative {Adversarial} {Networks}}
+      \field{urlday}{20}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{year}{2014}
+      \verb{file}
+      \verb arXiv\:1406.2661 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/TKWRD4TK/Goodfellow et al. - 2014 - Generative Adversarial Networks.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/5QYEN4TS/1406.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1406.2661
+      \endverb
+      \keyw{Computer Science - Learning,Statistics - Machine Learning}
+    \endentry
+    \entry{he_deep_2015}{article}{}
+      \name{author}{4}{}{%
+        {{hash=6b4b60e909e78633945f3f9c9dc83e01}{%
+           family={He},
+           family_i={H\bibinitperiod},
+           given={Kaiming},
+           given_i={K\bibinitperiod}}}%
+        {{hash=5e72bc22dbcf0984c6d113d280e36990}{%
+           family={Zhang},
+           family_i={Z\bibinitperiod},
+           given={Xiangyu},
+           given_i={X\bibinitperiod}}}%
+        {{hash=bb295293acacd54387339079ebbe4ead}{%
+           family={Ren},
+           family_i={R\bibinitperiod},
+           given={Shaoqing},
+           given_i={S\bibinitperiod}}}%
+        {{hash=f85751488058842b5777c7b4074077b5}{%
+           family={Sun},
+           family_i={S\bibinitperiod},
+           given={Jian},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{6edb98fe38401d2fe4a026f5ce6e8451}
+      \strng{fullhash}{42c4b52dc3a62cebabbc11c73e1afb53}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, instead of learning unreferenced functions. We provide comprehensive empirical evidence showing that these residual networks are easier to optimize, and can gain accuracy from considerably increased depth. On the ImageNet dataset we evaluate residual nets with a depth of up to 152 layers—8x deeper than VGG nets but still having lower complexity. An ensemble of these residual nets achieves 3.57\% error on the ImageNet test set. This result won the 1st place on the ILSVRC 2015 classification task. We also present analysis on CIFAR-10 with 100 and 1000 layers. The depth of representations is of central importance for many visual recognition tasks. Solely due to our extremely deep representations, we obtain a 28\% relative improvement on the COCO object detection dataset. Deep residual nets are foundations of our submissions to ILSVRC \& COCO 2015 competitions, where we also won the 1st places on the tasks of ImageNet detection, ImageNet localization, COCO detection, and COCO segmentation.}
+      \field{annotation}{Comment: Tech report}
+      \field{journaltitle}{arXiv:1512.03385 [cs]}
+      \field{month}{12}
+      \field{title}{Deep {Residual} {Learning} for {Image} {Recognition}}
+      \field{urlday}{08}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2015}
+      \verb{file}
+      \verb arXiv\:1512.03385 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/KYLNHKIV/He et al. - 2015 - Deep Residual Learning for Image Recognition.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/NEUQVUCP/1512.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1512.03385
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{he_identity_2016}{article}{}
+      \name{author}{4}{}{%
+        {{hash=6b4b60e909e78633945f3f9c9dc83e01}{%
+           family={He},
+           family_i={H\bibinitperiod},
+           given={Kaiming},
+           given_i={K\bibinitperiod}}}%
+        {{hash=5e72bc22dbcf0984c6d113d280e36990}{%
+           family={Zhang},
+           family_i={Z\bibinitperiod},
+           given={Xiangyu},
+           given_i={X\bibinitperiod}}}%
+        {{hash=bb295293acacd54387339079ebbe4ead}{%
+           family={Ren},
+           family_i={R\bibinitperiod},
+           given={Shaoqing},
+           given_i={S\bibinitperiod}}}%
+        {{hash=f85751488058842b5777c7b4074077b5}{%
+           family={Sun},
+           family_i={S\bibinitperiod},
+           given={Jian},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{6edb98fe38401d2fe4a026f5ce6e8451}
+      \strng{fullhash}{42c4b52dc3a62cebabbc11c73e1afb53}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Deep residual networks have emerged as a family of extremely deep architectures showing compelling accuracy and nice convergence behaviors. In this paper, we analyze the propagation formulations behind the residual building blocks, which suggest that the forward and backward signals can be directly propagated from one block to any other block, when using identity mappings as the skip connections and after-addition activation. A series of ablation experiments support the importance of these identity mappings. This motivates us to propose a new residual unit, which makes training easier and improves generalization. We report improved results using a 1001-layer ResNet on CIFAR-10 (4.62\% error) and CIFAR-100, and a 200-layer ResNet on ImageNet. Code is available at: https://github.com/KaimingHe/resnet-1k-layers}
+      \field{annotation}{Comment: ECCV 2016 camera-ready}
+      \field{journaltitle}{arXiv:1603.05027 [cs]}
+      \field{month}{03}
+      \field{title}{Identity {Mappings} in {Deep} {Residual} {Networks}}
+      \field{urlday}{08}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2016}
+      \verb{file}
+      \verb arXiv\:1603.05027 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/2S6BJ97Q/He et al. - 2016 - Identity Mappings in Deep Residual Networks.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/GGVI3ADW/1603.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1603.05027
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Learning}
+    \endentry
+    \entry{he_mask_2017}{article}{}
+      \name{author}{4}{}{%
+        {{hash=6b4b60e909e78633945f3f9c9dc83e01}{%
+           family={He},
+           family_i={H\bibinitperiod},
+           given={Kaiming},
+           given_i={K\bibinitperiod}}}%
+        {{hash=6e67eba235a8cccf3a69b746a53d5722}{%
+           family={Gkioxari},
+           family_i={G\bibinitperiod},
+           given={Georgia},
+           given_i={G\bibinitperiod}}}%
+        {{hash=ecd149fdcb3e0503881d49e545744c3d}{%
+           family={Dollár},
+           family_i={D\bibinitperiod},
+           given={Piotr},
+           given_i={P\bibinitperiod}}}%
+        {{hash=bd5dadbe57bedc5957c19a3154c4d424}{%
+           family={Girshick},
+           family_i={G\bibinitperiod},
+           given={Ross},
+           given_i={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{6edb98fe38401d2fe4a026f5ce6e8451}
+      \strng{fullhash}{25317aa10282a4a31c271050ed66c455}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a conceptually simple, flexible, and general framework for object instance segmentation. Our approach efficiently detects objects in an image while simultaneously generating a high-quality segmentation mask for each instance. The method, called Mask R-CNN, extends Faster R-CNN by adding a branch for predicting an object mask in parallel with the existing branch for bounding box recognition. Mask R-CNN is simple to train and adds only a small overhead to Faster R-CNN, running at 5 fps. Moreover, Mask R-CNN is easy to generalize to other tasks, e.g., allowing us to estimate human poses in the same framework. We show top results in all three tracks of the COCO suite of challenges, including instance segmentation, bounding-box object detection, and person keypoint detection. Without bells and whistles, Mask R-CNN outperforms all existing, single-model entries on every task, including the COCO 2016 challenge winners. We hope our simple and effective approach will serve as a solid baseline and help ease future research in instance-level recognition. Code has been made available at: https://github.com/facebookresearch/Detectron}
+      \field{annotation}{Comment: open source; appendix on more results}
+      \field{journaltitle}{arXiv:1703.06870 [cs]}
+      \field{month}{03}
+      \field{title}{Mask {R}-{CNN}}
+      \field{urlday}{09}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2017}
+      \verb{file}
+      \verb arXiv\:1703.06870 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/YZP8LZWW/He et al. - 2017 - Mask R-CNN.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/U2BPBWAM/1703.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1703.06870
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{holt_object-based_2009}{article}{}
+      \name{author}{4}{}{%
+        {{hash=f12b1ce00d1cd17e15e849634a6395ec}{%
+           family={Holt},
+           family_i={H\bibinitperiod},
+           given={Ashley\bibnamedelima C.},
+           given_i={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=9aaa1cb3cf91f90427782ed620b9aabe}{%
+           family={Seto},
+           family_i={S\bibinitperiod},
+           given={Edmund\bibnamedelimb Y.\bibnamedelimi W.},
+           given_i={E\bibinitperiod\bibinitdelim Y\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=a6f23ed4af0686c0ecb96d6d22433648}{%
+           family={Rivard},
+           family_i={R\bibinitperiod},
+           given={Tom},
+           given_i={T\bibinitperiod}}}%
+        {{hash=4dfbfce50a8e6d4e6ea57f3a52ce3c2f}{%
+           family={Gong},
+           family_i={G\bibinitperiod},
+           given={Peng},
+           given_i={P\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \strng{namehash}{c3a9ee17b0cd5fa86398ddf8e684070c}
+      \strng{fullhash}{fe600d8bd37cd8a3ebf924b5d683677b}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0099-1112}
+      \field{journaltitle}{Photogrammetric Engineering and Remote Sensing}
+      \field{month}{07}
+      \field{number}{7}
+      \field{title}{Object-based detection and classification of {Vehicles} from high-resolution aerial photography}
+      \field{urlday}{07}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{volume}{75}
+      \field{year}{2009}
+      \field{pages}{871\bibrangedash 880}
+      \range{pages}{10}
+      \verb{file}
+      \verb Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/8RWKGAKZ/object-based-detection-and-classification-of-vehicles-from-high-r.html:text/html
+      \endverb
+      \verb{url}
+      \verb https://iths.pure.elsevier.com/en/publications/object-based-detection-and-classification-of-vehicles-from-high-r
+      \endverb
+    \endentry
+    \entry{isola_image--image_2016}{article}{}
+      \name{author}{4}{}{%
+        {{hash=cae9f806bc99a5f19fadea538fc2db04}{%
+           family={Isola},
+           family_i={I\bibinitperiod},
+           given={Phillip},
+           given_i={P\bibinitperiod}}}%
+        {{hash=9fbb4b31963f07f34a13b375b4997338}{%
+           family={Zhu},
+           family_i={Z\bibinitperiod},
+           given={Jun-Yan},
+           given_i={J\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=fbb5fac74ecd20c0f90a3884d6a93cdf}{%
+           family={Zhou},
+           family_i={Z\bibinitperiod},
+           given={Tinghui},
+           given_i={T\bibinitperiod}}}%
+        {{hash=6a42d448523b8d7c72613345041880c5}{%
+           family={Efros},
+           family_i={E\bibinitperiod},
+           given={Alexei\bibnamedelima A.},
+           given_i={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{dd9b478c7b76d20d978868251cf3ad35}
+      \strng{fullhash}{6e2e3209cb26e11fbc35df057fa4a825}
+      \field{sortinit}{I}
+      \field{sortinithash}{25e99d37ba90f7c4fb20baf4e310faf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We investigate conditional adversarial networks as a general-purpose solution to image-to-image translation problems. These networks not only learn the mapping from input image to output image, but also learn a loss function to train this mapping. This makes it possible to apply the same generic approach to problems that traditionally would require very different loss formulations. We demonstrate that this approach is effective at synthesizing photos from label maps, reconstructing objects from edge maps, and colorizing images, among other tasks. Indeed, since the release of the pix2pix software associated with this paper, a large number of internet users (many of them artists) have posted their own experiments with our system, further demonstrating its wide applicability and ease of adoption without the need for parameter tweaking. As a community, we no longer hand-engineer our mapping functions, and this work suggests we can achieve reasonable results without hand-engineering our loss functions either.}
+      \field{annotation}{Comment: Website: https://phillipi.github.io/pix2pix/}
+      \field{journaltitle}{arXiv:1611.07004 [cs]}
+      \field{month}{11}
+      \field{title}{Image-to-{Image} {Translation} with {Conditional} {Adversarial} {Networks}}
+      \field{urlday}{18}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{year}{2016}
+      \verb{file}
+      \verb arXiv\:1611.07004 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/D7UBSIIJ/Isola et al. - 2016 - Image-to-Image Translation with Conditional Advers.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/7649YWA9/1611.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1611.07004
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{krizhevsky_learning_2009}{report}{}
+      \name{author}{1}{}{%
+        {{hash=c5e3a676e2ac1164b3afcd539c131fc9}{%
+           family={Krizhevsky},
+           family_i={K\bibinitperiod},
+           given={Alex},
+           given_i={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c5e3a676e2ac1164b3afcd539c131fc9}
+      \strng{fullhash}{c5e3a676e2ac1164b3afcd539c131fc9}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Groups at MIT and NYU have collected a dataset of millions of tiny colour images from the web. It is, in principle, an excellent dataset for unsupervised training of deep generative models, but previous researchers who have tried this have found it difficult to learn a good set of filters from the images. We show how to train a multi-layer generative model that learns to extract meaningful features which resemble those found in the human visual cortex. Using a novel parallelization algorithm to distribute the work among multiple machines connected on a network, we show how training such a model can be done in reasonable time. A second problematic aspect of the tiny images dataset is that there are no reliable class labels which makes it hard to use for object recognition experiments. We created two sets of reliable labels. The CIFAR-10 set has 6000 examples of each of 10 classes and the CIFAR-100 set has 600 examples of each of 100 non-overlapping classes. Using these labels, we show that object recognition is significantly}
+      \field{title}{Learning multiple layers of features from tiny images}
+      \field{type}{techreport}
+      \field{year}{2009}
+      \verb{file}
+      \verb Citeseer - Full Text PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/GRQQTTMC/Krizhevsky - 2009 - Learning multiple layers of features from tiny ima.pdf:application/pdf;Citeseer - Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/E4DKKNTF/summary.html:text/html
+      \endverb
+    \endentry
+    \entry{krizhevsky_imagenet_2012}{incollection}{}
+      \name{author}{3}{}{%
+        {{hash=c5e3a676e2ac1164b3afcd539c131fc9}{%
+           family={Krizhevsky},
+           family_i={K\bibinitperiod},
+           given={Alex},
+           given_i={A\bibinitperiod}}}%
+        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           family_i={S\bibinitperiod},
+           given={Ilya},
+           given_i={I\bibinitperiod}}}%
+        {{hash=5aeb1de9b6c6f00a078230c628e6f41c}{%
+           family={Hinton},
+           family_i={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E},
+           given_i={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \name{editor}{4}{}{%
+        {{hash=b4ac0d7da3c70152eb8651dd27648d63}{%
+           family={Pereira},
+           family_i={P\bibinitperiod},
+           given={F.},
+           given_i={F\bibinitperiod}}}%
+        {{hash=b70004bbac2b5517c4c32fc5cfe070be}{%
+           family={Burges},
+           family_i={B\bibinitperiod},
+           given={C.\bibnamedelimi J.\bibnamedelimi C.},
+           given_i={C\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=27b0ff756cf36911b4cd7d704bfca7a4}{%
+           family={Bottou},
+           family_i={B\bibinitperiod},
+           given={L.},
+           given_i={L\bibinitperiod}}}%
+        {{hash=2cffb24bf1e4e0056d694659663c471c}{%
+           family={Weinberger},
+           family_i={W\bibinitperiod},
+           given={K.\bibnamedelimi Q.},
+           given_i={K\bibinitperiod\bibinitdelim Q\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{3ab31bf58af50e5ea6fa561177bf01a9}
+      \strng{fullhash}{3ab31bf58af50e5ea6fa561177bf01a9}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in {Neural} {Information} {Processing} {Systems} 25}
+      \field{title}{{ImageNet} {Classification} with {Deep} {Convolutional} {Neural} {Networks}}
+      \field{year}{2012}
+      \field{pages}{1097\bibrangedash 1105}
+      \range{pages}{9}
+      \verb{url}
+      \verb http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf
+      \endverb
+    \endentry
+    \entry{ledig_photo-realistic_2016}{article}{}
+      \name{author}{11}{}{%
+        {{hash=dee0b959a6d8e56154a0c6381ea357af}{%
+           family={Ledig},
+           family_i={L\bibinitperiod},
+           given={Christian},
+           given_i={C\bibinitperiod}}}%
+        {{hash=5314c7da92c0dd8f017ad76fc7a24e02}{%
+           family={Theis},
+           family_i={T\bibinitperiod},
+           given={Lucas},
+           given_i={L\bibinitperiod}}}%
+        {{hash=55245b2fad09f9c922d0006d08f5b7f0}{%
+           family={Huszar},
+           family_i={H\bibinitperiod},
+           given={Ferenc},
+           given_i={F\bibinitperiod}}}%
+        {{hash=3b9836d6278f3cf5dc21ab6e8c010ecb}{%
+           family={Caballero},
+           family_i={C\bibinitperiod},
+           given={Jose},
+           given_i={J\bibinitperiod}}}%
+        {{hash=c1b16923730dc02c52fbcfe531bad999}{%
+           family={Cunningham},
+           family_i={C\bibinitperiod},
+           given={Andrew},
+           given_i={A\bibinitperiod}}}%
+        {{hash=054b92db4c82434176e894d7fa6055ce}{%
+           family={Acosta},
+           family_i={A\bibinitperiod},
+           given={Alejandro},
+           given_i={A\bibinitperiod}}}%
+        {{hash=b9d6efcdb8c05d59bf4b6c18cba1518c}{%
+           family={Aitken},
+           family_i={A\bibinitperiod},
+           given={Andrew},
+           given_i={A\bibinitperiod}}}%
+        {{hash=3feeeebee8583ecc208f7fb3e0a55068}{%
+           family={Tejani},
+           family_i={T\bibinitperiod},
+           given={Alykhan},
+           given_i={A\bibinitperiod}}}%
+        {{hash=1381c64db5234527e34e6f3b4977fe54}{%
+           family={Totz},
+           family_i={T\bibinitperiod},
+           given={Johannes},
+           given_i={J\bibinitperiod}}}%
+        {{hash=f9c196f615b0bde00b8ef1e7cfaa8055}{%
+           family={Wang},
+           family_i={W\bibinitperiod},
+           given={Zehan},
+           given_i={Z\bibinitperiod}}}%
+        {{hash=59260dd2ba392e626647c9ee8f8c6b35}{%
+           family={Shi},
+           family_i={S\bibinitperiod},
+           given={Wenzhe},
+           given_i={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{d9ed1315cb65e9f234737cc328a74451}
+      \strng{fullhash}{99894a18ba4e3e9cb34c3b03d10f3ad7}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Despite the breakthroughs in accuracy and speed of single image super-resolution using faster and deeper convolutional neural networks, one central problem remains largely unsolved: how do we recover the finer texture details when we super-resolve at large upscaling factors? The behavior of optimization-based super-resolution methods is principally driven by the choice of the objective function. Recent work has largely focused on minimizing the mean squared reconstruction error. The resulting estimates have high peak signal-to-noise ratios, but they are often lacking high-frequency details and are perceptually unsatisfying in the sense that they fail to match the fidelity expected at the higher resolution. In this paper, we present SRGAN, a generative adversarial network (GAN) for image super-resolution (SR). To our knowledge, it is the first framework capable of inferring photo-realistic natural images for 4x upscaling factors. To achieve this, we propose a perceptual loss function which consists of an adversarial loss and a content loss. The adversarial loss pushes our solution to the natural image manifold using a discriminator network that is trained to differentiate between the super-resolved images and original photo-realistic images. In addition, we use a content loss motivated by perceptual similarity instead of similarity in pixel space. Our deep residual network is able to recover photo-realistic textures from heavily downsampled images on public benchmarks. An extensive mean-opinion-score (MOS) test shows hugely significant gains in perceptual quality using SRGAN. The MOS scores obtained with SRGAN are closer to those of the original high-resolution images than to those obtained with any state-of-the-art method.}
+      \field{annotation}{Comment: 19 pages, 15 figures, 2 tables, accepted for oral presentation at CVPR, main paper + some supplementary material}
+      \field{journaltitle}{arXiv:1609.04802 [cs, stat]}
+      \field{month}{09}
+      \field{title}{Photo-{Realistic} {Single} {Image} {Super}-{Resolution} {Using} a {Generative} {Adversarial} {Network}}
+      \field{urlday}{09}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2016}
+      \verb{file}
+      \verb arXiv\:1609.04802 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/3XGCFZPK/Ledig et al. - 2016 - Photo-Realistic Single Image Super-Resolution Usin.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/BS5R8XYN/1609.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1609.04802
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Statistics - Machine Learning}
+    \endentry
+    \entry{li_deepunet:_2017}{article}{}
+      \name{author}{7}{}{%
+        {{hash=9084f089073e2e45c9fdda50e4a3a133}{%
+           family={Li},
+           family_i={L\bibinitperiod},
+           given={Ruirui},
+           given_i={R\bibinitperiod}}}%
+        {{hash=5102dce0c727d3a99602d2d6ff0bc122}{%
+           family={Liu},
+           family_i={L\bibinitperiod},
+           given={Wenjie},
+           given_i={W\bibinitperiod}}}%
+        {{hash=a395f08974363438b5b4297f5a3830aa}{%
+           family={Yang},
+           family_i={Y\bibinitperiod},
+           given={Lei},
+           given_i={L\bibinitperiod}}}%
+        {{hash=41c65cc38a7cb037e65a9f44c7086a94}{%
+           family={Sun},
+           family_i={S\bibinitperiod},
+           given={Shihao},
+           given_i={S\bibinitperiod}}}%
+        {{hash=0b61e9661067d0a906cff8be51415c72}{%
+           family={Hu},
+           family_i={H\bibinitperiod},
+           given={Wei},
+           given_i={W\bibinitperiod}}}%
+        {{hash=ae021641a8f85fd2607152ab99ed115b}{%
+           family={Zhang},
+           family_i={Z\bibinitperiod},
+           given={Fan},
+           given_i={F\bibinitperiod}}}%
+        {{hash=be6f1b6df7f1ddfafad18806238fa391}{%
+           family={Li},
+           family_i={L\bibinitperiod},
+           given={Wei},
+           given_i={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{7c121be2a24b8dcee87f1be45a9daf19}
+      \strng{fullhash}{d9c2b869e3fb1c466c3f33023123d3ee}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Semantic segmentation is a fundamental research in remote sensing image processing. Because of the complex maritime environment, the sea-land segmentation is a challenging task. Although the neural network has achieved excellent performance in semantic segmentation in the last years, there are a few of works using CNN for sea-land segmentation and the results could be further improved. This paper proposes a novel deep convolution neural network named DeepUNet. Like the U-Net, its structure has a contracting path and an expansive path to get high resolution output. But differently, the DeepUNet uses DownBlocks instead of convolution layers in the contracting path and uses UpBlock in the expansive path. The two novel blocks bring two new connections that are U-connection and Plus connection. They are promoted to get more precise segmentation results. To verify our network architecture, we made a new challenging sea-land dataset and compare the DeepUNet on it with the SegNet and the U-Net. Experimental results show that DeepUNet achieved good performance compared with other architectures, especially in high-resolution remote sensing imagery.}
+      \field{annotation}{arXiv: 1709.00201}
+      \field{journaltitle}{arXiv:1709.00201 [cs]}
+      \field{month}{09}
+      \field{shorttitle}{{DeepUNet}}
+      \field{title}{{DeepUNet}: {A} {Deep} {Fully} {Convolutional} {Network} for {Pixel}-level {Sea}-{Land} {Segmentation}}
+      \field{urlday}{08}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2017}
+      \verb{file}
+      \verb arXiv\:1709.00201 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/9ML2X8ES/Li et al. - 2017 - DeepUNet A Deep Fully Convolutional Network for P.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/M3CVZC8T/1709.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1709.00201
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{lin_microsoft_2014}{article}{}
+      \name{author}{10}{}{%
+        {{hash=08f925fe4692d130a1d7cb7d94483351}{%
+           family={Lin},
+           family_i={L\bibinitperiod},
+           given={Tsung-Yi},
+           given_i={T\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=d980bc6930f008a0fb5fa667785f2309}{%
+           family={Maire},
+           family_i={M\bibinitperiod},
+           given={Michael},
+           given_i={M\bibinitperiod}}}%
+        {{hash=044d1db5259b74e4975282f599d8e767}{%
+           family={Belongie},
+           family_i={B\bibinitperiod},
+           given={Serge},
+           given_i={S\bibinitperiod}}}%
+        {{hash=a5d50cf5c085cd3a323d68588dcb89c8}{%
+           family={Bourdev},
+           family_i={B\bibinitperiod},
+           given={Lubomir},
+           given_i={L\bibinitperiod}}}%
+        {{hash=bd5dadbe57bedc5957c19a3154c4d424}{%
+           family={Girshick},
+           family_i={G\bibinitperiod},
+           given={Ross},
+           given_i={R\bibinitperiod}}}%
+        {{hash=797fc3624ba315db58eef7279ace5bf3}{%
+           family={Hays},
+           family_i={H\bibinitperiod},
+           given={James},
+           given_i={J\bibinitperiod}}}%
+        {{hash=e52876f830a8a20786ff3e4d7dd6f083}{%
+           family={Perona},
+           family_i={P\bibinitperiod},
+           given={Pietro},
+           given_i={P\bibinitperiod}}}%
+        {{hash=aedcd3831845183e070aef16857d83ea}{%
+           family={Ramanan},
+           family_i={R\bibinitperiod},
+           given={Deva},
+           given_i={D\bibinitperiod}}}%
+        {{hash=4749e91c0b2618fc42478fccbd430ff9}{%
+           family={Zitnick},
+           family_i={Z\bibinitperiod},
+           given={C.\bibnamedelimi Lawrence},
+           given_i={C\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=ecd149fdcb3e0503881d49e545744c3d}{%
+           family={Dollár},
+           family_i={D\bibinitperiod},
+           given={Piotr},
+           given_i={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{3b7e00bc88d7aca4d4d5ddb8c252e36c}
+      \strng{fullhash}{f4a63f0ec08a1825630e76ba5a64ce0a}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We present a new dataset with the goal of advancing the state-of-the-art in object recognition by placing the question of object recognition in the context of the broader question of scene understanding. This is achieved by gathering images of complex everyday scenes containing common objects in their natural context. Objects are labeled using per-instance segmentations to aid in precise object localization. Our dataset contains photos of 91 objects types that would be easily recognizable by a 4 year old. With a total of 2.5 million labeled instances in 328k images, the creation of our dataset drew upon extensive crowd worker involvement via novel user interfaces for category detection, instance spotting and instance segmentation. We present a detailed statistical analysis of the dataset in comparison to PASCAL, ImageNet, and SUN. Finally, we provide baseline performance analysis for bounding box and segmentation detection results using a Deformable Parts Model.}
+      \field{annotation}{Comment: 1) updated annotation pipeline description and figures; 2) added new section describing datasets splits; 3) updated author list}
+      \field{journaltitle}{arXiv:1405.0312 [cs]}
+      \field{month}{05}
+      \field{shorttitle}{Microsoft {COCO}}
+      \field{title}{Microsoft {COCO}: {Common} {Objects} in {Context}}
+      \field{urlday}{09}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2014}
+      \verb{file}
+      \verb arXiv\:1405.0312 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/CMIUKM8Q/Lin et al. - 2014 - Microsoft COCO Common Objects in Context.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/P2I3IWKA/1405.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1405.0312
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{luc_semantic_2016}{article}{}
+      \name{author}{4}{}{%
+        {{hash=da0089dce390a86a2836b1df7fb6b4c7}{%
+           family={Luc},
+           family_i={L\bibinitperiod},
+           given={Pauline},
+           given_i={P\bibinitperiod}}}%
+        {{hash=f19e2a99ad9edfa217542eeff292dbe3}{%
+           family={Couprie},
+           family_i={C\bibinitperiod},
+           given={Camille},
+           given_i={C\bibinitperiod}}}%
+        {{hash=8ef51a0906e47d2b4472c4e714ed598f}{%
+           family={Chintala},
+           family_i={C\bibinitperiod},
+           given={Soumith},
+           given_i={S\bibinitperiod}}}%
+        {{hash=6db399bb4fce2fb790b103539429f56c}{%
+           family={Verbeek},
+           family_i={V\bibinitperiod},
+           given={Jakob},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c918259b07e502789d73e0982e8f648}
+      \strng{fullhash}{9cb7b21d634b3b37d75a8f192385172c}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Adversarial training has been shown to produce state of the art results for generative image modeling. In this paper we propose an adversarial training approach to train semantic segmentation models. We train a convolutional semantic segmentation network along with an adversarial network that discriminates segmentation maps coming either from the ground truth or from the segmentation network. The motivation for our approach is that it can detect and correct higher-order inconsistencies between ground truth segmentation maps and the ones produced by the segmentation net. Our experiments show that our adversarial training approach leads to improved accuracy on the Stanford Background and PASCAL VOC 2012 datasets.}
+      \field{annotation}{arXiv: 1611.08408}
+      \field{journaltitle}{arXiv:1611.08408 [cs]}
+      \field{month}{11}
+      \field{title}{Semantic {Segmentation} using {Adversarial} {Networks}}
+      \field{urlday}{07}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{year}{2016}
+      \verb{file}
+      \verb arXiv\:1611.08408 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/RI5SXRCL/Luc et al. - 2016 - Semantic Segmentation using Adversarial Networks.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/6SQMCH66/1611.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1611.08408
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{mirza_conditional_2014}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9e80f4779b032f68a6106e1424345450}{%
+           family={Mirza},
+           family_i={M\bibinitperiod},
+           given={Mehdi},
+           given_i={M\bibinitperiod}}}%
+        {{hash=643f92e8f89f2746a4c1aa077d225755}{%
+           family={Osindero},
+           family_i={O\bibinitperiod},
+           given={Simon},
+           given_i={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{f2f89b77d71eb2194d6d6c61ad603e9c}
+      \strng{fullhash}{f2f89b77d71eb2194d6d6c61ad603e9c}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Generative Adversarial Nets [8] were recently introduced as a novel way to train generative models. In this work we introduce the conditional version of generative adversarial nets, which can be constructed by simply feeding the data, y, we wish to condition on to both the generator and discriminator. We show that this model can generate MNIST digits conditioned on class labels. We also illustrate how this model could be used to learn a multi-modal model, and provide preliminary examples of an application to image tagging in which we demonstrate how this approach can generate descriptive tags which are not part of training labels.}
+      \field{annotation}{arXiv: 1411.1784}
+      \field{journaltitle}{arXiv:1411.1784 [cs, stat]}
+      \field{month}{11}
+      \field{title}{Conditional {Generative} {Adversarial} {Nets}}
+      \field{urlday}{18}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{year}{2014}
+      \verb{file}
+      \verb arXiv\:1411.1784 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/EJVAH8GV/Mirza and Osindero - 2014 - Conditional Generative Adversarial Nets.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/4T58M3FP/1411.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1411.1784
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Learning,Computer Science - Artificial Intelligence,Statistics - Machine Learning}
+    \endentry
+    \entry{moranduzzo_lbp-based_2015}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=14bac468565ad31bbf3e31f6df2af2f8}{%
+           family={Moranduzzo},
+           family_i={M\bibinitperiod},
+           given={T.},
+           given_i={T\bibinitperiod}}}%
+        {{hash=f5c3fac167bee9008823f39bfc85b507}{%
+           family={Mekhalfi},
+           family_i={M\bibinitperiod},
+           given={M.\bibnamedelimi L.},
+           given_i={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=735a71d5bfcfbe25d666944f4d12cb49}{%
+           family={Melgani},
+           family_i={M\bibinitperiod},
+           given={F.},
+           given_i={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{eb96dafe3b4b7a4a453b3f393c394206}
+      \strng{fullhash}{eb96dafe3b4b7a4a453b3f393c394206}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In order to describe images acquired with unmanned aerial vehicles (UAV), we introduce in this paper a multilabeling classification method. It starts by subdividing the original UAV image into a grid of tiles which are then analyzed separately. From each tile, a signature which encodes texture information is extracted and compared with the signatures of the tiles belonging to a pre-built training dictionary in order to acquire the binary multilabel vector of the most similar tile. In order to represent and match the tiles, we exploit a well-known texture operator and a common distance measure, respectively. Promising experimental results, in particular for some classes of objects, are obtained on real UAV images acquired over urban areas.}
+      \field{booktitle}{2015 {IEEE} {International} {Geoscience} and {Remote} {Sensing} {Symposium} ({IGARSS})}
+      \field{month}{07}
+      \field{title}{{LBP}-based multiclass classification method for {UAV} imagery}
+      \field{year}{2015}
+      \field{pages}{2362\bibrangedash 2365}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/IGARSS.2015.7326283
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/EH84NKUB/7326283.html:text/html
+      \endverb
+      \keyw{UAV imagery,Image analysis,image classification,image texture,remote sensing,Satellites,unmanned aerial vehicle,autonomous aerial vehicles,geophysical image processing,binary multilabel vector,Dictionaries,Histograms,Image resolution,LBP-based multiclass classification method,local binary pattern,local binary pattern (LBP),multilabeling classification,multilabeling classification method,Sensitivity,similarity measures,texture information,texture operator,Training,Unmanned aerial vehicles,unmanned aerial vehicles (UAV),urban area}
+    \endentry
+    \entry{moranduzzo_automatic_2014}{article}{}
+      \name{author}{2}{}{%
+        {{hash=14bac468565ad31bbf3e31f6df2af2f8}{%
+           family={Moranduzzo},
+           family_i={M\bibinitperiod},
+           given={T.},
+           given_i={T\bibinitperiod}}}%
+        {{hash=735a71d5bfcfbe25d666944f4d12cb49}{%
+           family={Melgani},
+           family_i={M\bibinitperiod},
+           given={F.},
+           given_i={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{ff484348839668705a7cb42ec83b39ca}
+      \strng{fullhash}{ff484348839668705a7cb42ec83b39ca}
+      \field{sortinit}{M}
+      \field{sortinithash}{2684bec41e9697b92699b46491061da2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper presents a solution to solve the car detection and counting problem in images acquired by means of unmanned aerial vehicles (UAVs). UAV images are characterized by a very high spatial resolution (order of few centimeters), and consequently by an extremely high level of details which calls for appropriate automatic analysis methods. The proposed method starts with a screening step of asphalted zones in order to restrict the areas where to detect cars and thus to reduce false alarms. Then, it performs a feature extraction process based on scalar invariant feature transform thanks to which a set of keypoints is identified in the considered image and opportunely described. Successively, it discriminates between keypoints assigned to cars and all the others, by means of a support vector machine classifier. The last step of our method is focused on the grouping of the keypoints belonging to the same car in order to get a “one keypoint-one car” relationship. Finally, the number of cars present in the scene is given by the number of final keypoints identified. The experimental results obtained on a real UAV scene characterized by a spatial resolution of 2 cm show that the proposed method exhibits a promising car counting accuracy.}
+      \field{issn}{0196-2892}
+      \field{journaltitle}{IEEE Transactions on Geoscience and Remote Sensing}
+      \field{month}{03}
+      \field{number}{3}
+      \field{title}{Automatic {Car} {Counting} {Method} for {Unmanned} {Aerial} {Vehicle} {Images}}
+      \field{volume}{52}
+      \field{year}{2014}
+      \field{pages}{1635\bibrangedash 1647}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/TGRS.2013.2253108
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/I67NTLJZ/6514618.html:text/html
+      \endverb
+      \keyw{remote sensing,autonomous aerial vehicles,appropriate automatic analysis methods,asphalted zone screening step,automatic car counting method,automobiles,car counting accuracy,car counting problem,Car detection,car detection problem,car number,extraction process,extremely high detail level,feature extraction,final keypoint number,image recognition,keypoint grouping,keypoint set,one keypoint-one car relationship,real UAV scene,reduce false alarms,scalar invariant feature transform,scale invariant feature transform (SIFT),spatial resolution,support vector machine (SVM),support vector machine classifier,support vector machines,traffic engineering computing,UAV images,unmanned aerial vehicle (UAV),unmanned aerial vehicle images,very high spatial resolution}
+    \endentry
+    \entry{pathak_context_2016}{article}{}
+      \name{author}{5}{}{%
+        {{hash=09e431093c8637ade01037714cfc992c}{%
+           family={Pathak},
+           family_i={P\bibinitperiod},
+           given={Deepak},
+           given_i={D\bibinitperiod}}}%
+        {{hash=7680d27578e3f36a8f45650c3bdca314}{%
+           family={Krahenbuhl},
+           family_i={K\bibinitperiod},
+           given={Philipp},
+           given_i={P\bibinitperiod}}}%
+        {{hash=913090a0d65c7a300c602f5a5a5a61e3}{%
+           family={Donahue},
+           family_i={D\bibinitperiod},
+           given={Jeff},
+           given_i={J\bibinitperiod}}}%
+        {{hash=90180e1a30742e0d15328bfe637c2ef4}{%
+           family={Darrell},
+           family_i={D\bibinitperiod},
+           given={Trevor},
+           given_i={T\bibinitperiod}}}%
+        {{hash=6a42d448523b8d7c72613345041880c5}{%
+           family={Efros},
+           family_i={E\bibinitperiod},
+           given={Alexei\bibnamedelima A.},
+           given_i={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a353c16f2bb5e07676f9be9b2c866db4}
+      \strng{fullhash}{c5afd2bd4570450ec8ffb470493b88f6}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We present an unsupervised visual feature learning algorithm driven by context-based pixel prediction. By analogy with auto-encoders, we propose Context Encoders – a convolutional neural network trained to generate the contents of an arbitrary image region conditioned on its surroundings. In order to succeed at this task, context encoders need to both understand the content of the entire image, as well as produce a plausible hypothesis for the missing part(s). When training context encoders, we have experimented with both a standard pixel-wise reconstruction loss, as well as a reconstruction plus an adversarial loss. The latter produces much sharper results because it can better handle multiple modes in the output. We found that a context encoder learns a representation that captures not just appearance but also the semantics of visual structures. We quantitatively demonstrate the effectiveness of our learned features for CNN pre-training on classification, detection, and segmentation tasks. Furthermore, context encoders can be used for semantic inpainting tasks, either stand-alone or as initialization for non-parametric methods.}
+      \field{annotation}{Comment: New results on ImageNet Generation}
+      \field{journaltitle}{arXiv:1604.07379 [cs]}
+      \field{month}{04}
+      \field{shorttitle}{Context {Encoders}}
+      \field{title}{Context {Encoders}: {Feature} {Learning} by {Inpainting}}
+      \field{urlday}{19}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{year}{2016}
+      \verb{file}
+      \verb arXiv\:1604.07379 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/2ZB2G9J4/Pathak et al. - 2016 - Context Encoders Feature Learning by Inpainting.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/V5NV93VR/1604.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1604.07379
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Learning,Computer Science - Artificial Intelligence,Computer Science - Graphics}
+    \endentry
+    \entry{polzounov_right_2016}{article}{}
+      \name{author}{4}{}{%
+        {{hash=7117cd31cc9dbf631014961a801b98f3}{%
+           family={Polzounov},
+           family_i={P\bibinitperiod},
+           given={Andrei},
+           given_i={A\bibinitperiod}}}%
+        {{hash=0b961a0256ee3cc66d6054f349b99fb7}{%
+           family={Terpugova},
+           family_i={T\bibinitperiod},
+           given={Ilmira},
+           given_i={I\bibinitperiod}}}%
+        {{hash=6bb82f54b3bd680d3d4ceadcb574913b}{%
+           family={Skiparis},
+           family_i={S\bibinitperiod},
+           given={Deividas},
+           given_i={D\bibinitperiod}}}%
+        {{hash=fa11a5c3c060761eee1de766f0f68fd1}{%
+           family={Mihai},
+           family_i={M\bibinitperiod},
+           given={Andrei},
+           given_i={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{5134858b55fab6f4507323c331d073f8}
+      \strng{fullhash}{2604230df70e337e25d734ee42d8b593}
+      \field{sortinit}{P}
+      \field{sortinithash}{c0a4896d0e424f9ca4d7f14f2b3428e7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We studied the feasibility of recognizing individual right whales (Eubalaena glacialis) using convolutional neural networks. Prior studies have shown that CNNs can be used in wide range of classification and categorization tasks such as automated human face recognition. To test applicability of deep learning to whale recognition we have developed several models based on best practices from literature. Here, we describe the performance of the models. We conclude that machine recognition of whales is feasible and comment on the difficulty of the problem}
+      \field{annotation}{Comment: 10 pages + appendix, 15 figures}
+      \field{journaltitle}{arXiv:1604.05605 [cs]}
+      \field{month}{04}
+      \field{title}{Right whale recognition using convolutional neural networks}
+      \field{urlday}{09}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2016}
+      \verb{file}
+      \verb arXiv\:1604.05605 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/GXR5TISG/Polzounov et al. - 2016 - Right whale recognition using convolutional neural.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/4UJMKV3J/1604.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1604.05605
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,68}
+    \endentry
+    \entry{rahman_optimizing_2016}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=e3fee01b2b4fb28f35c2a00b7190279a}{%
+           family={Rahman},
+           family_i={R\bibinitperiod},
+           given={Md\bibnamedelima Atiqur},
+           given_i={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=a84866b4900b3fe9a714de1f78dbf282}{%
+           family={Wang},
+           family_i={W\bibinitperiod},
+           given={Yang},
+           given_i={Y\bibinitperiod}}}%
+      }
+      \name{editor}{12}{}{%
+        {{hash=841fed534c8d9df7d15bb6bceffdd967}{%
+           family={Bebis},
+           family_i={B\bibinitperiod},
+           given={George},
+           given_i={G\bibinitperiod}}}%
+        {{hash=306e1840f3e9ffde5f1a736befe3168f}{%
+           family={Boyle},
+           family_i={B\bibinitperiod},
+           given={Richard},
+           given_i={R\bibinitperiod}}}%
+        {{hash=c302a205d04df281e26654b279b28108}{%
+           family={Parvin},
+           family_i={P\bibinitperiod},
+           given={Bahram},
+           given_i={B\bibinitperiod}}}%
+        {{hash=f55ce36fbbd6713d96120f753a7df2b4}{%
+           family={Koracin},
+           family_i={K\bibinitperiod},
+           given={Darko},
+           given_i={D\bibinitperiod}}}%
+        {{hash=614198715471d146b77068d419298d26}{%
+           family={Porikli},
+           family_i={P\bibinitperiod},
+           given={Fatih},
+           given_i={F\bibinitperiod}}}%
+        {{hash=39c607785756fbf120bf25e6aa863e02}{%
+           family={Skaff},
+           family_i={S\bibinitperiod},
+           given={Sandra},
+           given_i={S\bibinitperiod}}}%
+        {{hash=243b7b20392461f5c951d804c231c248}{%
+           family={Entezari},
+           family_i={E\bibinitperiod},
+           given={Alireza},
+           given_i={A\bibinitperiod}}}%
+        {{hash=4720248c2385ade0d8211e2356e84233}{%
+           family={Min},
+           family_i={M\bibinitperiod},
+           given={Jianyuan},
+           given_i={J\bibinitperiod}}}%
+        {{hash=64f5487c893c5c78130f0f05bd232677}{%
+           family={Iwai},
+           family_i={I\bibinitperiod},
+           given={Daisuke},
+           given_i={D\bibinitperiod}}}%
+        {{hash=4151203f6b31912503bf1a4d98232930}{%
+           family={Sadagic},
+           family_i={S\bibinitperiod},
+           given={Amela},
+           given_i={A\bibinitperiod}}}%
+        {{hash=de216a4cef9daa2d1fce563e8b498941}{%
+           family={Scheidegger},
+           family_i={S\bibinitperiod},
+           given={Carlos},
+           given_i={C\bibinitperiod}}}%
+        {{hash=1f980758856350b3e536e3581ce77885}{%
+           family={Isenberg},
+           family_i={I\bibinitperiod},
+           given={Tobias},
+           given_i={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{e226a2e66358571aaa7151e003aceba3}
+      \strng{fullhash}{e226a2e66358571aaa7151e003aceba3}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We consider the problem of learning deep neural networks (DNNs) for object category segmentation, where the goal is to label each pixel in an image as being part of a given object (foreground) or not (background). Deep neural networks are usually trained with simple loss functions (e.g., softmax loss). These loss functions are appropriate for standard classification problems where the performance is measured by the overall classification accuracy. For object category segmentation, the two classes (foreground and background) are very imbalanced. The intersection-over-union (IoU) is usually used to measure the performance of any object category segmentation method. In this paper, we propose an approach for directly optimizing this IoU measure in deep neural networks. Our experimental results on two object category segmentation datasets demonstrate that our approach outperforms DNNs trained with standard softmax loss.}
+      \field{booktitle}{Advances in {Visual} {Computing}}
+      \field{isbn}{978-3-319-50835-1}
+      \field{title}{Optimizing {Intersection}-{Over}-{Union} in {Deep} {Neural} {Networks} for {Image} {Segmentation}}
+      \field{year}{2016}
+      \field{pages}{234\bibrangedash 244}
+      \range{pages}{11}
+    \endentry
+    \entry{razakarivony_vehicle_2015}{article}{}
+      \name{author}{2}{}{%
+        {{hash=8b4f3f6bc13487b7e9991af4b45a1b47}{%
+           family={Razakarivony},
+           family_i={R\bibinitperiod},
+           given={Sébastien},
+           given_i={S\bibinitperiod}}}%
+        {{hash=091fd87f9b93fc54fb6f230bff4dc178}{%
+           family={Jurie},
+           family_i={J\bibinitperiod},
+           given={Frédéric},
+           given_i={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{9d5f5b836e45cab57b9d8013cc4ed832}
+      \strng{fullhash}{9d5f5b836e45cab57b9d8013cc4ed832}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{This paper introduces VEDAI: Vehicle Detection in Aerial Imagery a new database of aerial images provided as a tool to benchmark automatic target recognition algorithms in unconstrained environments. The vehicles contained in the database, in addition of being small, exhibit different variabil-ities such as multiple orientations, lighting/shadowing changes, specularities or occlusions. Furthermore, each image is available in several spectral bands and resolutions. A precise experimental protocol is also given, ensuring that the experimental results obtained by different people can be properly reproduce and compared. Finally, the paper also gives the performance of baseline algorithms on this dataset, for different settings of these algorithms, to illustrate the difficulties of the task and provide baseline comparisons.}
+      \field{journaltitle}{Journal of Visual Communication and Image Representation, Elsevier}
+      \field{month}{03}
+      \field{shorttitle}{Vehicle {Detection} in {Aerial} {Imagery}}
+      \field{title}{Vehicle {Detection} in {Aerial} {Imagery} : {A} small target detection benchmark}
+      \field{urlday}{07}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{year}{2015}
+      \verb{file}
+      \verb HAL PDF Full Text:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/RVTQZ6AR/Razakarivony and Jurie - 2015 - Vehicle Detection in Aerial Imagery A small targ.pdf:application/pdf
+      \endverb
+      \verb{url}
+      \verb https://hal.archives-ouvertes.fr/hal-01122605
+      \endverb
+      \keyw{Aerial Imagery,Database,Detection,Infrared Imagery,Low Resolution Images,Vehicles}
+    \endentry
+    \entry{reed_generative_2016}{article}{}
+      \name{author}{6}{}{%
+        {{hash=698ee61a2f3fa29734204496d2d36aef}{%
+           family={Reed},
+           family_i={R\bibinitperiod},
+           given={Scott},
+           given_i={S\bibinitperiod}}}%
+        {{hash=0cd48aef2686bbbbccec6d9f2193ddb5}{%
+           family={Akata},
+           family_i={A\bibinitperiod},
+           given={Zeynep},
+           given_i={Z\bibinitperiod}}}%
+        {{hash=ba676e881344787363f4b7380db5d34d}{%
+           family={Yan},
+           family_i={Y\bibinitperiod},
+           given={Xinchen},
+           given_i={X\bibinitperiod}}}%
+        {{hash=c307f4617488a85cda40a206491f0473}{%
+           family={Logeswaran},
+           family_i={L\bibinitperiod},
+           given={Lajanugen},
+           given_i={L\bibinitperiod}}}%
+        {{hash=457dd3049a60059cf69e775a47f0c154}{%
+           family={Schiele},
+           family_i={S\bibinitperiod},
+           given={Bernt},
+           given_i={B\bibinitperiod}}}%
+        {{hash=d09ea8631bf43468107b5ef02c5195aa}{%
+           family={Lee},
+           family_i={L\bibinitperiod},
+           given={Honglak},
+           given_i={H\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{225dee12c579570621661f9d368fb291}
+      \strng{fullhash}{8a298ed225067fa0c246b198845e4222}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{05}
+      \field{title}{Generative {Adversarial} {Text} to {Image} {Synthesis}}
+      \field{urlday}{18}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{year}{2016}
+      \verb{url}
+      \verb https://arxiv.org/abs/1605.05396
+      \endverb
+    \endentry
+    \entry{ren_faster_2015}{article}{}
+      \name{author}{4}{}{%
+        {{hash=bb295293acacd54387339079ebbe4ead}{%
+           family={Ren},
+           family_i={R\bibinitperiod},
+           given={Shaoqing},
+           given_i={S\bibinitperiod}}}%
+        {{hash=6b4b60e909e78633945f3f9c9dc83e01}{%
+           family={He},
+           family_i={H\bibinitperiod},
+           given={Kaiming},
+           given_i={K\bibinitperiod}}}%
+        {{hash=bd5dadbe57bedc5957c19a3154c4d424}{%
+           family={Girshick},
+           family_i={G\bibinitperiod},
+           given={Ross},
+           given_i={R\bibinitperiod}}}%
+        {{hash=f85751488058842b5777c7b4074077b5}{%
+           family={Sun},
+           family_i={S\bibinitperiod},
+           given={Jian},
+           given_i={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{f086ca4da3e532e8a41cb758ea461825}
+      \strng{fullhash}{008a132af3e2d4ff15eb01a8fb4b005c}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{State-of-the-art object detection networks depend on region proposal algorithms to hypothesize object locations. Advances like SPPnet and Fast R-CNN have reduced the running time of these detection networks, exposing region proposal computation as a bottleneck. In this work, we introduce a Region Proposal Network (RPN) that shares full-image convolutional features with the detection network, thus enabling nearly cost-free region proposals. An RPN is a fully convolutional network that simultaneously predicts object bounds and objectness scores at each position. The RPN is trained end-to-end to generate high-quality region proposals, which are used by Fast R-CNN for detection. We further merge RPN and Fast R-CNN into a single network by sharing their convolutional features—using the recently popular terminology of neural networks with 'attention' mechanisms, the RPN component tells the unified network where to look. For the very deep VGG-16 model, our detection system has a frame rate of 5fps (including all steps) on a GPU, while achieving state-of-the-art object detection accuracy on PASCAL VOC 2007, 2012, and MS COCO datasets with only 300 proposals per image. In ILSVRC and COCO 2015 competitions, Faster R-CNN and RPN are the foundations of the 1st-place winning entries in several tracks. Code has been made publicly available.}
+      \field{annotation}{Comment: Extended tech report}
+      \field{journaltitle}{arXiv:1506.01497 [cs]}
+      \field{month}{06}
+      \field{shorttitle}{Faster {R}-{CNN}}
+      \field{title}{Faster {R}-{CNN}: {Towards} {Real}-{Time} {Object} {Detection} with {Region} {Proposal} {Networks}}
+      \field{urlday}{08}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2015}
+      \verb{file}
+      \verb arXiv\:1506.01497 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/ZGMJTQXH/Ren et al. - 2015 - Faster R-CNN Towards Real-Time Object Detection w.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/EKULLNE3/1506.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1506.01497
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{rezaei_conditional_2017}{article}{}
+      \name{author}{7}{}{%
+        {{hash=a829e6f3126b19e725534cddeb3299a3}{%
+           family={Rezaei},
+           family_i={R\bibinitperiod},
+           given={Mina},
+           given_i={M\bibinitperiod}}}%
+        {{hash=df92f5d6266fc6edbe4e8f975fdeb762}{%
+           family={Harmuth},
+           family_i={H\bibinitperiod},
+           given={Konstantin},
+           given_i={K\bibinitperiod}}}%
+        {{hash=62831ba382d1b1acaa68fd2bf50b40a8}{%
+           family={Gierke},
+           family_i={G\bibinitperiod},
+           given={Willi},
+           given_i={W\bibinitperiod}}}%
+        {{hash=511901d42edb5998c8b9ccfce155a2a9}{%
+           family={Kellermeier},
+           family_i={K\bibinitperiod},
+           given={Thomas},
+           given_i={T\bibinitperiod}}}%
+        {{hash=bedef3752e42cc8501a95a23af0db2f8}{%
+           family={Fischer},
+           family_i={F\bibinitperiod},
+           given={Martin},
+           given_i={M\bibinitperiod}}}%
+        {{hash=826fc859b0a9dd22e1fe27b097de6ee5}{%
+           family={Yang},
+           family_i={Y\bibinitperiod},
+           given={Haojin},
+           given_i={H\bibinitperiod}}}%
+        {{hash=70d5a1bce69a1d09ff446044d22b61b0}{%
+           family={Meinel},
+           family_i={M\bibinitperiod},
+           given={Christoph},
+           given_i={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{03ad34d8d7d85379e96f9f7e2aaeb947}
+      \strng{fullhash}{577774ffdd4912ab9744da9a61ba8ebc}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Automated medical image analysis has a significant value in diagnosis and treatment of lesions. Brain tumors segmentation has a special importance and difficulty due to the difference in appearances and shapes of the different tumor regions in magnetic resonance images. Additionally, the data sets are heterogeneous and usually limited in size in comparison with the computer vision problems. The recently proposed adversarial training has shown promising results in generative image modeling. In this paper, we propose a novel end-to-end trainable architecture for brain tumor semantic segmentation through conditional adversarial training. We exploit conditional Generative Adversarial Network (cGAN) and train a semantic segmentation Convolution Neural Network (CNN) along with an adversarial network that discriminates segmentation maps coming from the ground truth or from the segmentation network for BraTS 2017 segmentation task[15, 4, 2, 3]. We also propose an end-to-end trainable CNN for survival day prediction based on deep learning techniques for BraTS 2017 prediction task [15, 4, 2, 3]. The experimental results demonstrate the superior ability of the proposed approach for both tasks. The proposed model achieves on validation data a DICE score, Sensitivity and Specificity respectively 0.68, 0.99 and 0.98 for the whole tumor, regarding online judgment system.}
+      \field{annotation}{Comment: Submitted to BraTS challenges which is part of MICCAI-2017}
+      \field{journaltitle}{arXiv:1708.05227 [cs]}
+      \field{month}{08}
+      \field{title}{Conditional {Adversarial} {Network} for {Semantic} {Segmentation} of {Brain} {Tumor}}
+      \field{urlday}{19}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{year}{2017}
+      \verb{file}
+      \verb arXiv\:1708.05227 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/L42KJWG7/Rezaei et al. - 2017 - Conditional Adversarial Network for Semantic Segme.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/Z8S283N3/1708.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1708.05227
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{ronneberger_u-net:_2015}{article}{}
+      \name{author}{3}{}{%
+        {{hash=8e46da9de9e53ea5d37089897d69cdd9}{%
+           family={Ronneberger},
+           family_i={R\bibinitperiod},
+           given={Olaf},
+           given_i={O\bibinitperiod}}}%
+        {{hash=168e84ce3582cbc6bac5e2ebc3ef8442}{%
+           family={Fischer},
+           family_i={F\bibinitperiod},
+           given={Philipp},
+           given_i={P\bibinitperiod}}}%
+        {{hash=b452a32296958371572717940f900884}{%
+           family={Brox},
+           family_i={B\bibinitperiod},
+           given={Thomas},
+           given_i={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{fullhash}{f23ccc5160c62c7866172335b2c76e11}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{There is large consent that successful training of deep networks requires many thousand annotated training samples. In this paper, we present a network and training strategy that relies on the strong use of data augmentation to use the available annotated samples more efficiently. The architecture consists of a contracting path to capture context and a symmetric expanding path that enables precise localization. We show that such a network can be trained end-to-end from very few images and outperforms the prior best method (a sliding-window convolutional network) on the ISBI challenge for segmentation of neuronal structures in electron microscopic stacks. Using the same network trained on transmitted light microscopy images (phase contrast and DIC) we won the ISBI cell tracking challenge 2015 in these categories by a large margin. Moreover, the network is fast. Segmentation of a 512x512 image takes less than a second on a recent GPU. The full implementation (based on Caffe) and the trained networks are available at http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net .}
+      \field{annotation}{Comment: conditionally accepted at MICCAI 2015}
+      \field{journaltitle}{arXiv:1505.04597 [cs]}
+      \field{month}{05}
+      \field{shorttitle}{U-{Net}}
+      \field{title}{U-{Net}: {Convolutional} {Networks} for {Biomedical} {Image} {Segmentation}}
+      \field{urlday}{19}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{year}{2015}
+      \verb{file}
+      \verb arXiv\:1505.04597 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/FIGRWAJA/Ronneberger et al. - 2015 - U-Net Convolutional Networks for Biomedical Image.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/U26I2DFR/1505.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1505.04597
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{ruhe_traffic_2003}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=2d2155e067ce2b334cdb8718fde034f9}{%
+           family={Ruhe},
+           family_i={R\bibinitperiod},
+           given={M.\bibnamedelimi H.\bibnamedelimi O.},
+           given_i={M\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=077a429231e3aac6922e03eb804b9a54}{%
+           family={Dalaff},
+           family_i={D\bibinitperiod},
+           given={C.},
+           given_i={C\bibinitperiod}}}%
+        {{hash=33e514ee9e6e442a3d4c7f291c92dc7d}{%
+           family={Kuhne},
+           family_i={K\bibinitperiod},
+           given={R.\bibnamedelimi D.},
+           given_i={R\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{c906f5b9900c8a33087e94c79555fe29}
+      \strng{fullhash}{c906f5b9900c8a33087e94c79555fe29}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Prediction of traffic, dynamical routing, off board navigation and a standardisation of traffic flow parameters are the cornerstones of modern intelligent transport systems. Development of such systems requires intelligent data acquisition from different sensors and platforms.}
+      \field{booktitle}{Proceedings of the 2003 {IEEE} {International} {Conference} on {Intelligent} {Transportation} {Systems}}
+      \field{month}{10}
+      \field{title}{Traffic monitoring and traffic flow measurement by remote sensing systems}
+      \field{volume}{1}
+      \field{year}{2003}
+      \field{pages}{760\bibrangedash 764 vol.1}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1109/ITSC.2003.1252053
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/NC2N4PX6/1252053.html:text/html
+      \endverb
+      \keyw{remote sensing,Data acquisition,Communication system traffic control,data acquisition,dynamical routing,Fluid flow measurement,intelligent data acquisition,Intelligent sensors,Intelligent systems,intelligent transport systems,navigation,Navigation,off board navigation,Remote monitoring,remote sensing systems,Roads,sensors,Space technology,standardisation,Telecommunication traffic,traffic control,traffic flow measurement,traffic flow parameter standardisation,traffic monitoring,traffic prediction}
+    \endentry
+    \entry{sakla_deep_2017}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=480a1a123d2c7b5b32ab803e08e21862}{%
+           family={Sakla},
+           family_i={S\bibinitperiod},
+           given={W.},
+           given_i={W\bibinitperiod}}}%
+        {{hash=c9e2c96a439562082c7e0ece3370868d}{%
+           family={Konjevod},
+           family_i={K\bibinitperiod},
+           given={G.},
+           given_i={G\bibinitperiod}}}%
+        {{hash=a24650395bc6cea823a439b655327a59}{%
+           family={Mundhenk},
+           family_i={M\bibinitperiod},
+           given={T.\bibnamedelimi N.},
+           given_i={T\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \strng{namehash}{202365a2c314677250a31ffcd44cf53e}
+      \strng{fullhash}{202365a2c314677250a31ffcd44cf53e}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Since the introduction of deep convolutional neural networks (CNNs), object detection in imagery has witnessed substantial breakthroughs in state-of-the-art performance. The defense community utilizes overhead image sensors that acquire large field-of-view aerial imagery in various bands of the electromagnetic spectrum, which is then exploited for various applications, including the detection and localization of man-made objects. In this work, we utilize a recent state-of-the art object detection algorithm, faster R-CNN, to train a deep CNN for vehicle detection in multimodal imagery. We utilize the vehicle detection in aerial imagery (VEDAI) dataset, which contains overhead imagery that is representative of an ISR setting. Our contribution includes modification of key parameters in the faster R-CNN algorithm for this setting where the objects of interest are spatially small, occupying less than 1:5×10-3 of the total image pixels. Our experiments show that (1) an appropriately trained deep CNN leads to average precision rates above 93\% on vehicle detection, and (2) transfer learning between imagery modalities is possible, yielding average precision rates above 90\% in the absence of fine-tuning.}
+      \field{booktitle}{2017 {IEEE} {Winter} {Conference} on {Applications} of {Computer} {Vision} ({WACV})}
+      \field{month}{03}
+      \field{title}{Deep {Multi}-modal {Vehicle} {Detection} in {Aerial} {ISR} {Imagery}}
+      \field{year}{2017}
+      \field{pages}{916\bibrangedash 923}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/WACV.2017.107
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/5A9ZYY8X/7926690.html:text/html
+      \endverb
+      \keyw{Spatial resolution,geophysical image processing,traffic engineering computing,aerial ISR Imagery,CNN,Computer vision,deep convolutional neural networks,deep multimodal vehicle detection,defense community,electromagnetic spectrum,Image color analysis,image pixels,image sensors,neural nets,object detection,Object detection,object detection algorithm,Proposals,R-CNN algorithm,road vehicles,VEDAI dataset,Vehicle detection,vehicle detection in aerial imagery}
+    \endentry
+    \entry{schwing_fully_2015}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ca814cd9fbc93084eac335ffabcef466}{%
+           family={Schwing},
+           family_i={S\bibinitperiod},
+           given={Alexander\bibnamedelima G.},
+           given_i={A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=bc58c1e920023b071a4d0695299cf804}{%
+           family={Urtasun},
+           family_i={U\bibinitperiod},
+           given={Raquel},
+           given_i={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{040fb3c3cbc78faab968ae3a03b7516a}
+      \strng{fullhash}{040fb3c3cbc78faab968ae3a03b7516a}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Convolutional neural networks with many layers have recently been shown to achieve excellent results on many high-level tasks such as image classification, object detection and more recently also semantic segmentation. Particularly for semantic segmentation, a two-stage procedure is often employed. Hereby, convolutional networks are trained to provide good local pixel-wise features for the second step being traditionally a more global graphical model. In this work we unify this two-stage process into a single joint training algorithm. We demonstrate our method on the semantic image segmentation task and show encouraging results on the challenging PASCAL VOC 2012 dataset.}
+      \field{annotation}{arXiv: 1503.02351}
+      \field{journaltitle}{arXiv:1503.02351 [cs]}
+      \field{month}{03}
+      \field{title}{Fully {Connected} {Deep} {Structured} {Networks}}
+      \field{urlday}{20}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{year}{2015}
+      \verb{file}
+      \verb arXiv\:1503.02351 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/3ZPBJEJ8/Schwing and Urtasun - 2015 - Fully Connected Deep Structured Networks.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/I8E97LWB/1503.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1503.02351
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Learning}
+    \endentry
+    \entry{sermanet_overfeat:_2013}{article}{}
+      \name{author}{6}{}{%
+        {{hash=15f5333df96deaf51c72d065bded37d8}{%
+           family={Sermanet},
+           family_i={S\bibinitperiod},
+           given={Pierre},
+           given_i={P\bibinitperiod}}}%
+        {{hash=19ac0399a087af1f10403369b2bf52b0}{%
+           family={Eigen},
+           family_i={E\bibinitperiod},
+           given={David},
+           given_i={D\bibinitperiod}}}%
+        {{hash=87f628db6da99dc0a2a20f276e51b3ac}{%
+           family={Zhang},
+           family_i={Z\bibinitperiod},
+           given={Xiang},
+           given_i={X\bibinitperiod}}}%
+        {{hash=c8e0f85f89c92f05a8a7ee998755b202}{%
+           family={Mathieu},
+           family_i={M\bibinitperiod},
+           given={Michael},
+           given_i={M\bibinitperiod}}}%
+        {{hash=a6784304d1cc890b2cb6c6c7f2f3fd76}{%
+           family={Fergus},
+           family_i={F\bibinitperiod},
+           given={Rob},
+           given_i={R\bibinitperiod}}}%
+        {{hash=6a1aa6b7eab12b931ca7c7e3f927231d}{%
+           family={LeCun},
+           family_i={L\bibinitperiod},
+           given={Yann},
+           given_i={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{b25e91534b92f8a61f0fb523d489acb2}
+      \strng{fullhash}{7845fffa5f59381298c78dc9a001d424}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We present an integrated framework for using Convolutional Networks for classification, localization and detection. We show how a multiscale and sliding window approach can be efficiently implemented within a ConvNet. We also introduce a novel deep learning approach to localization by learning to predict object boundaries. Bounding boxes are then accumulated rather than suppressed in order to increase detection confidence. We show that different tasks can be learned simultaneously using a single shared network. This integrated framework is the winner of the localization task of the ImageNet Large Scale Visual Recognition Challenge 2013 (ILSVRC2013) and obtained very competitive results for the detection and classifications tasks. In post-competition work, we establish a new state of the art for the detection task. Finally, we release a feature extractor from our best model called OverFeat.}
+      \field{annotation}{arXiv: 1312.6229}
+      \field{journaltitle}{arXiv:1312.6229 [cs]}
+      \field{month}{12}
+      \field{shorttitle}{{OverFeat}}
+      \field{title}{{OverFeat}: {Integrated} {Recognition}, {Localization} and {Detection} using {Convolutional} {Networks}}
+      \field{urlday}{09}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2013}
+      \verb{file}
+      \verb arXiv\:1312.6229 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/IRDJPFAA/Sermanet et al. - 2013 - OverFeat Integrated Recognition, Localization and.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/IVUA26S2/1312.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1312.6229
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{shelhamer_fully_2016}{article}{}
+      \name{author}{3}{}{%
+        {{hash=4ce499f8943cac7cba0a73388d289a2e}{%
+           family={Shelhamer},
+           family_i={S\bibinitperiod},
+           given={Evan},
+           given_i={E\bibinitperiod}}}%
+        {{hash=17faae490b91366d25e0e2d774e7b6b1}{%
+           family={Long},
+           family_i={L\bibinitperiod},
+           given={Jonathan},
+           given_i={J\bibinitperiod}}}%
+        {{hash=90180e1a30742e0d15328bfe637c2ef4}{%
+           family={Darrell},
+           family_i={D\bibinitperiod},
+           given={Trevor},
+           given_i={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{d070d0f5bba90c7ab76c10afeebb7698}
+      \strng{fullhash}{d070d0f5bba90c7ab76c10afeebb7698}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Convolutional networks are powerful visual models that yield hierarchies of features. We show that convolutional networks by themselves, trained end-to-end, pixels-to-pixels, improve on the previous best result in semantic segmentation. Our key insight is to build "fully convolutional" networks that take input of arbitrary size and produce correspondingly-sized output with efficient inference and learning. We define and detail the space of fully convolutional networks, explain their application to spatially dense prediction tasks, and draw connections to prior models. We adapt contemporary classification networks (AlexNet, the VGG net, and GoogLeNet) into fully convolutional networks and transfer their learned representations by fine-tuning to the segmentation task. We then define a skip architecture that combines semantic information from a deep, coarse layer with appearance information from a shallow, fine layer to produce accurate and detailed segmentations. Our fully convolutional network achieves improved segmentation of PASCAL VOC (30\% relative improvement to 67.2\% mean IU on 2012), NYUDv2, SIFT Flow, and PASCAL-Context, while inference takes one tenth of a second for a typical image.}
+      \field{annotation}{Comment: to appear in PAMI (accepted May, 2016); journal edition of arXiv:1411.4038}
+      \field{journaltitle}{arXiv:1605.06211 [cs]}
+      \field{month}{05}
+      \field{title}{Fully {Convolutional} {Networks} for {Semantic} {Segmentation}}
+      \field{urlday}{19}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{year}{2016}
+      \verb{file}
+      \verb arXiv\:1605.06211 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/3GXW77PR/Shelhamer et al. - 2016 - Fully Convolutional Networks for Semantic Segmenta.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/9VFLNBJ7/1605.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1605.06211
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{simonyan_two-stream_2014}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9d16b7284df92c9adaee86c37ab992df}{%
+           family={Simonyan},
+           family_i={S\bibinitperiod},
+           given={Karen},
+           given_i={K\bibinitperiod}}}%
+        {{hash=c72fc39e94030f67717052309266a44d}{%
+           family={Zisserman},
+           family_i={Z\bibinitperiod},
+           given={Andrew},
+           given_i={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{25d2f3c4577a6632d37f0126cc781232}
+      \strng{fullhash}{25d2f3c4577a6632d37f0126cc781232}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We investigate architectures of discriminatively trained deep Convolutional Networks (ConvNets) for action recognition in video. The challenge is to capture the complementary information on appearance from still frames and motion between frames. We also aim to generalise the best performing hand-crafted features within a data-driven learning framework. Our contribution is three-fold. First, we propose a two-stream ConvNet architecture which incorporates spatial and temporal networks. Second, we demonstrate that a ConvNet trained on multi-frame dense optical flow is able to achieve very good performance in spite of limited training data. Finally, we show that multi-task learning, applied to two different action classification datasets, can be used to increase the amount of training data and improve the performance on both. Our architecture is trained and evaluated on the standard video actions benchmarks of UCF-101 and HMDB-51, where it is competitive with the state of the art. It also exceeds by a large margin previous attempts to use deep nets for video classification.}
+      \field{annotation}{arXiv: 1406.2199}
+      \field{journaltitle}{arXiv:1406.2199 [cs]}
+      \field{month}{06}
+      \field{title}{Two-{Stream} {Convolutional} {Networks} for {Action} {Recognition} in {Videos}}
+      \field{urlday}{09}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2014}
+      \verb{file}
+      \verb arXiv\:1406.2199 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/7KTN5QWU/Simonyan and Zisserman - 2014 - Two-Stream Convolutional Networks for Action Recog.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/5SL2N9FP/1406.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1406.2199
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{simonyan_very_2014}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9d16b7284df92c9adaee86c37ab992df}{%
+           family={Simonyan},
+           family_i={S\bibinitperiod},
+           given={Karen},
+           given_i={K\bibinitperiod}}}%
+        {{hash=c72fc39e94030f67717052309266a44d}{%
+           family={Zisserman},
+           family_i={Z\bibinitperiod},
+           given={Andrew},
+           given_i={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{25d2f3c4577a6632d37f0126cc781232}
+      \strng{fullhash}{25d2f3c4577a6632d37f0126cc781232}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this work we investigate the effect of the convolutional network depth on its accuracy in the large-scale image recognition setting. Our main contribution is a thorough evaluation of networks of increasing depth using an architecture with very small (3x3) convolution filters, which shows that a significant improvement on the prior-art configurations can be achieved by pushing the depth to 16-19 weight layers. These findings were the basis of our ImageNet Challenge 2014 submission, where our team secured the first and the second places in the localisation and classification tracks respectively. We also show that our representations generalise well to other datasets, where they achieve state-of-the-art results. We have made our two best-performing ConvNet models publicly available to facilitate further research on the use of deep visual representations in computer vision.}
+      \field{annotation}{arXiv: 1409.1556}
+      \field{journaltitle}{arXiv:1409.1556 [cs]}
+      \field{month}{09}
+      \field{title}{Very {Deep} {Convolutional} {Networks} for {Large}-{Scale} {Image} {Recognition}}
+      \field{urlday}{08}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2014}
+      \verb{file}
+      \verb arXiv\:1409.1556 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/FJKKILH9/Simonyan and Zisserman - 2014 - Very Deep Convolutional Networks for Large-Scale I.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/5V9BWMVH/1409.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1409.1556
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{son_retinal_2017}{article}{}
+      \name{author}{3}{}{%
+        {{hash=862257149c727346795a64f3298c2195}{%
+           family={Son},
+           family_i={S\bibinitperiod},
+           given={Jaemin},
+           given_i={J\bibinitperiod}}}%
+        {{hash=f51d7a1fe9bc56cdc05da98ea5f0bb91}{%
+           family={Park},
+           family_i={P\bibinitperiod},
+           given={Sang\bibnamedelima Jun},
+           given_i={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=ec9edf0c09b323f00e40e86166dc3de4}{%
+           family={Jung},
+           family_i={J\bibinitperiod},
+           given={Kyu-Hwan},
+           given_i={K\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{b7de70f88a74e5e437c1e3061188fc4b}
+      \strng{fullhash}{b7de70f88a74e5e437c1e3061188fc4b}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Retinal vessel segmentation is an indispensable step for automatic detection of retinal diseases with fundoscopic images. Though many approaches have been proposed, existing methods tend to miss fine vessels or allow false positives at terminal branches. Let alone under-segmentation, over-segmentation is also problematic when quantitative studies need to measure the precise width of vessels. In this paper, we present a method that generates the precise map of retinal vessels using generative adversarial training. Our methods achieve dice coefficient of 0.829 on DRIVE dataset and 0.834 on STARE dataset which is the state-of-the-art performance on both datasets.}
+      \field{annotation}{Comment: 9 pages, submitted to DLMIA 2017}
+      \field{journaltitle}{arXiv:1706.09318 [cs]}
+      \field{month}{06}
+      \field{title}{Retinal {Vessel} {Segmentation} in {Fundoscopic} {Images} with {Generative} {Adversarial} {Networks}}
+      \field{urlday}{07}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{year}{2017}
+      \verb{file}
+      \verb arXiv\:1706.09318 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/HIVFYU25/Son et al. - 2017 - Retinal Vessel Segmentation in Fundoscopic Images .pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/C88FNJ7M/1706.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1706.09318
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Learning}
+    \endentry
+    \entry{souly_semi_2017}{article}{}
+      \name{author}{3}{}{%
+        {{hash=9fc2536636a396af48c4b16ffef769d4}{%
+           family={Souly},
+           family_i={S\bibinitperiod},
+           given={Nasim},
+           given_i={N\bibinitperiod}}}%
+        {{hash=78357c6ae43db10fa76ba1284fdf1174}{%
+           family={Spampinato},
+           family_i={S\bibinitperiod},
+           given={Concetto},
+           given_i={C\bibinitperiod}}}%
+        {{hash=c75751f493070716733608d20f74e3af}{%
+           family={Shah},
+           family_i={S\bibinitperiod},
+           given={Mubarak},
+           given_i={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ede0ba4ef279aa18b7464747d5bd17a}
+      \strng{fullhash}{6ede0ba4ef279aa18b7464747d5bd17a}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Semantic segmentation has been a long standing challenging task in computer vision. It aims at assigning a label to each image pixel and needs significant number of pixellevel annotated data, which is often unavailable. To address this lack, in this paper, we leverage, on one hand, massive amount of available unlabeled or weakly labeled data, and on the other hand, non-real images created through Generative Adversarial Networks. In particular, we propose a semi-supervised framework ,based on Generative Adversarial Networks (GANs), which consists of a generator network to provide extra training examples to a multi-class classifier, acting as discriminator in the GAN framework, that assigns sample a label y from the K possible classes or marks it as a fake sample (extra class). The underlying idea is that adding large fake visual data forces real samples to be close in the feature space, enabling a bottom-up clustering process, which, in turn, improves multiclass pixel classification. To ensure higher quality of generated images for GANs with consequent improved pixel classification, we extend the above framework by adding weakly annotated data, i.e., we provide class level information to the generator. We tested our approaches on several challenging benchmarking visual datasets, i.e. PASCAL, SiftFLow, Stanford and CamVid, achieving competitive performance also compared to state-of-the-art semantic segmentation method}
+      \field{annotation}{arXiv: 1703.09695}
+      \field{journaltitle}{arXiv:1703.09695 [cs]}
+      \field{month}{03}
+      \field{title}{Semi and {Weakly} {Supervised} {Semantic} {Segmentation} {Using} {Generative} {Adversarial} {Network}}
+      \field{urlday}{09}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2017}
+      \verb{file}
+      \verb arXiv\:1703.09695 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/BERFF362/Souly et al. - 2017 - Semi and Weakly Supervised Semantic Segmentation U.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/QDCFF7HS/1703.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1703.09695
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{stockman_computer_2001}{book}{}
+      \name{author}{2}{}{%
+        {{hash=d30b39808715fbf248985d39d99da6d6}{%
+           family={Stockman},
+           family_i={S\bibinitperiod},
+           given={George},
+           given_i={G\bibinitperiod}}}%
+        {{hash=8444f00cb7dea5d52e1415be2d29446a}{%
+           family={Shapiro},
+           family_i={S\bibinitperiod},
+           given={Linda\bibnamedelima G.},
+           given_i={L\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Upper Saddle River, NJ, USA}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall PTR}%
+      }
+      \strng{namehash}{7197262d9f68803893f4afe13baf1416}
+      \strng{fullhash}{7197262d9f68803893f4afe13baf1416}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1st}
+      \field{isbn}{0-13-030796-3}
+      \field{title}{Computer {Vision}}
+      \field{year}{2001}
+    \endentry
+    \entry{sudre_generalised_2017}{article}{}
+      \name{author}{5}{}{%
+        {{hash=ebc222c38d1e5a9378eb7e0a0aa3c34b}{%
+           family={Sudre},
+           family_i={S\bibinitperiod},
+           given={Carole\bibnamedelima H.},
+           given_i={C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=d32ec3dde5f923678d38244353a95911}{%
+           family={Li},
+           family_i={L\bibinitperiod},
+           given={Wenqi},
+           given_i={W\bibinitperiod}}}%
+        {{hash=befa5547c0c5b07d62ba6f20e5977440}{%
+           family={Vercauteren},
+           family_i={V\bibinitperiod},
+           given={Tom},
+           given_i={T\bibinitperiod}}}%
+        {{hash=81ba59598fdce027a3a694c8dd331fe7}{%
+           family={Ourselin},
+           family_i={O\bibinitperiod},
+           given={Sébastien},
+           given_i={S\bibinitperiod}}}%
+        {{hash=36ffdb090756a6efed9dd2e1be0df404}{%
+           family={Cardoso},
+           family_i={C\bibinitperiod},
+           given={M.\bibnamedelimi Jorge},
+           given_i={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{59e9ca3a365253998adbee1cdb456da3}
+      \strng{fullhash}{8ab6d2462543c2d7d55a3d32a217bb25}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Deep-learning has proved in recent years to be a powerful tool for image analysis and is now widely used to segment both 2D and 3D medical images. Deep-learning segmentation frameworks rely not only on the choice of network architecture but also on the choice of loss function. When the segmentation process targets rare observations, a severe class imbalance is likely to occur between candidate labels, thus resulting in sub-optimal performance. In order to mitigate this issue, strategies such as the weighted cross-entropy function, the sensitivity function or the Dice loss function, have been proposed. In this work, we investigate the behavior of these loss functions and their sensitivity to learning rate tuning in the presence of different rates of label imbalance across 2D and 3D segmentation tasks. We also propose to use the class re-balancing properties of the Generalized Dice overlap, a known metric for segmentation assessment, as a robust and accurate deep-learning loss function for unbalanced tasks.}
+      \field{annotation}{arXiv: 1707.03237}
+      \field{journaltitle}{arXiv:1707.03237 [cs]}
+      \field{title}{Generalised {Dice} overlap as a deep learning loss function for highly unbalanced segmentations}
+      \field{urlday}{08}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{volume}{10553}
+      \field{year}{2017}
+      \field{pages}{240\bibrangedash 248}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1007/978-3-319-67558-9_28
+      \endverb
+      \verb{file}
+      \verb arXiv\:1707.03237 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/A5ICEQRP/Sudre et al. - 2017 - Generalised Dice overlap as a deep learning loss f.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/PD3APLAE/1707.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1707.03237
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{szegedy_inception-v4_2016}{article}{}
+      \name{author}{4}{}{%
+        {{hash=ed568d9c3bb059e6bf22899fbf170f86}{%
+           family={Szegedy},
+           family_i={S\bibinitperiod},
+           given={Christian},
+           given_i={C\bibinitperiod}}}%
+        {{hash=5543e82359e26b035efc009cb3efff9d}{%
+           family={Ioffe},
+           family_i={I\bibinitperiod},
+           given={Sergey},
+           given_i={S\bibinitperiod}}}%
+        {{hash=8051922e7bd286f884bfbd1023ef62f5}{%
+           family={Vanhoucke},
+           family_i={V\bibinitperiod},
+           given={Vincent},
+           given_i={V\bibinitperiod}}}%
+        {{hash=cccd50d7dd265efaeee8d3e5ab720923}{%
+           family={Alemi},
+           family_i={A\bibinitperiod},
+           given={Alex},
+           given_i={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{80f8e6bfc3aff3e75b2807a6f6962740}
+      \strng{fullhash}{b52c8c4f12c9eff34cde37350d6a23f1}
+      \field{sortinit}{S}
+      \field{sortinithash}{fd1e7c5ab79596b13dbbb67f8d70fb5a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Very deep convolutional networks have been central to the largest advances in image recognition performance in recent years. One example is the Inception architecture that has been shown to achieve very good performance at relatively low computational cost. Recently, the introduction of residual connections in conjunction with a more traditional architecture has yielded state-of-the-art performance in the 2015 ILSVRC challenge; its performance was similar to the latest generation Inception-v3 network. This raises the question of whether there are any benefit in combining the Inception architecture with residual connections. Here we give clear empirical evidence that training with residual connections accelerates the training of Inception networks significantly. There is also some evidence of residual Inception networks outperforming similarly expensive Inception networks without residual connections by a thin margin. We also present several new streamlined architectures for both residual and non-residual Inception networks. These variations improve the single-frame recognition performance on the ILSVRC 2012 classification task significantly. We further demonstrate how proper activation scaling stabilizes the training of very wide residual Inception networks. With an ensemble of three residual and one Inception-v4, we achieve 3.08 percent top-5 error on the test set of the ImageNet classification (CLS) challenge}
+      \field{annotation}{arXiv: 1602.07261}
+      \field{journaltitle}{arXiv:1602.07261 [cs]}
+      \field{month}{02}
+      \field{title}{Inception-v4, {Inception}-{ResNet} and the {Impact} of {Residual} {Connections} on {Learning}}
+      \field{urlday}{08}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2016}
+      \verb{file}
+      \verb arXiv\:1602.07261 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/UUVTW5C9/Szegedy et al. - 2016 - Inception-v4, Inception-ResNet and the Impact of R.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/46MZY8CD/1602.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1602.07261
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{uto_characterization_2013}{article}{}
+      \name{author}{4}{}{%
+        {{hash=48ec714b969871ad78111c74b9ad7711}{%
+           family={Uto},
+           family_i={U\bibinitperiod},
+           given={K.},
+           given_i={K\bibinitperiod}}}%
+        {{hash=64f1fef5a6fb4593e564e8531eaa34e3}{%
+           family={Seki},
+           family_i={S\bibinitperiod},
+           given={H.},
+           given_i={H\bibinitperiod}}}%
+        {{hash=e47adc299b10b305c3596c115905dd4c}{%
+           family={Saito},
+           family_i={S\bibinitperiod},
+           given={G.},
+           given_i={G\bibinitperiod}}}%
+        {{hash=dc756f58c58c121036757adda405dcdb}{%
+           family={Kosugi},
+           family_i={K\bibinitperiod},
+           given={Y.},
+           given_i={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{7239884567a9b98909e80daa365565b3}
+      \strng{fullhash}{bc7f7e1748d1089a057dda544226fac8}
+      \field{sortinit}{U}
+      \field{sortinithash}{8145509bd2718876fc77d31fd2cde117}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A low-cost, small, lightweight hyperspectral sensor system that can be loaded onto small unmanned autonomous vehicle (UAV) platforms has been developed for the acquisition of aerial hyperspectral data. Safe and easy observation is possible under unstable illumination conditions by using lightweight and autonomous cruising. The hyperspectral sensor system, equipped with a 256-band hyperspectral sensor covering a spectral range from 340-763 nm, a GPS and a data logger, is 400 g in total weight. The acquisition period for each sampling, 768 bytes, is 100 ms. The aerial hyperspectral data of rice paddies are collected under cloudy weather. The flight altitude from the ground is 10 m, and the cruising speed is 2 m/s. The high-accuracy estimation of the chlorophyll densities is confirmed, even under unstable illumination conditions, by frequent monitoring of the illumination level and the chlorophyll indices, based on the red-edge (RE) and near infrared (NIR) spectral ranges.}
+      \field{issn}{1939-1404}
+      \field{journaltitle}{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}
+      \field{month}{04}
+      \field{number}{2}
+      \field{title}{Characterization of {Rice} {Paddies} by a {UAV}-{Mounted} {Miniature} {Hyperspectral} {Sensor} {System}}
+      \field{volume}{6}
+      \field{year}{2013}
+      \field{pages}{851\bibrangedash 860}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/JSTARS.2013.2250921
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/2KCCA9XZ/6482672.html:text/html
+      \endverb
+      \keyw{image classification,aerial hyperspectral data acquisition,agriculture,autonomous aerial vehicles,chlorophyll,chlorophyll indices,cloudy weather,Data acquisition,flight altitude,geophysical image processing,Global Positioning System,hyperspectral image,Hyperspectral imaging,illumination condition,near infrared spectral range,red edge spectral range,rice paddies classification,Sensor systems,terrain mapping,time 100 ms,UAV,UAV mounted miniature hyperspectral sensor system,unmanned autonomous vehicle,Vegetation mapping,wavelength 340 nm to 763 nm}
+    \endentry
+    \entry{noauthor_worldview-3_nodate}{misc}{}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labeltitlesource}{title}
+      \field{title}{{WorldView}-3 {Satellite} {Sensor} {|} {Satellite} {Imaging} {Corp}}
+      \field{urlday}{16}
+      \field{urlmonth}{04}
+      \field{urlyear}{2018}
+      \verb{file}
+      \verb WorldView-3 Satellite Sensor | Satellite Imaging Corp:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/NHAG6ISI/worldview-3.html:text/html
+      \endverb
+      \verb{url}
+      \verb https://www.satimagingcorp.com/satellite-sensors/worldview-3/
+      \endverb
+    \endentry
+    \entry{wu_wider_2016}{article}{}
+      \name{author}{3}{}{%
+        {{hash=7405f00457255b6206e99e1f110aa4e5}{%
+           family={Wu},
+           family_i={W\bibinitperiod},
+           given={Zifeng},
+           given_i={Z\bibinitperiod}}}%
+        {{hash=9e49384c78f6861746fe787b12339aed}{%
+           family={Shen},
+           family_i={S\bibinitperiod},
+           given={Chunhua},
+           given_i={C\bibinitperiod}}}%
+        {{hash=7dab8c61eb685ced4fc7a9687e138cef}{%
+           family={Hengel},
+           family_i={H\bibinitperiod},
+           given={Anton\bibnamedelimb van\bibnamedelima den},
+           given_i={A\bibinitperiod\bibinitdelim v\bibinitperiod\bibinitdelim d\bibinitperiod}}}%
+      }
+      \strng{namehash}{7637d01aa949073bc361872fa8a4f4d8}
+      \strng{fullhash}{7637d01aa949073bc361872fa8a4f4d8}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The trend towards increasingly deep neural networks has been driven by a general observation that increasing depth increases the performance of a network. Recently, however, evidence has been amassing that simply increasing depth may not be the best way to increase performance, particularly given other limitations. Investigations into deep residual networks have also suggested that they may not in fact be operating as a single deep network, but rather as an ensemble of many relatively shallow networks. We examine these issues, and in doing so arrive at a new interpretation of the unravelled view of deep residual networks which explains some of the behaviours that have been observed experimentally. As a result, we are able to derive a new, shallower, architecture of residual networks which significantly outperforms much deeper models such as ResNet-200 on the ImageNet classification dataset. We also show that this performance is transferable to other problem domains by developing a semantic segmentation approach which outperforms the state-of-the-art by a remarkable margin on datasets including PASCAL VOC, PASCAL Context, and Cityscapes. The architecture that we propose thus outperforms its comparators, including very deep ResNets, and yet is more efficient in memory use and sometimes also in training time. The code and models are available at https://github.com/itijyou/ademxapp}
+      \field{annotation}{Comment: Code available at: https://github.com/itijyou/ademxapp}
+      \field{journaltitle}{arXiv:1611.10080 [cs]}
+      \field{month}{11}
+      \field{shorttitle}{Wider or {Deeper}}
+      \field{title}{Wider or {Deeper}: {Revisiting} the {ResNet} {Model} for {Visual} {Recognition}}
+      \field{urlday}{08}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2016}
+      \verb{file}
+      \verb arXiv\:1611.10080 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/92RHUXNP/Wu et al. - 2016 - Wider or Deeper Revisiting the ResNet Model for V.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/23HX8GYH/1611.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1611.10080
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{xue_segan:_2017}{article}{}
+      \name{author}{5}{}{%
+        {{hash=0db46c7e1181501a0d743a27e978ce9b}{%
+           family={Xue},
+           family_i={X\bibinitperiod},
+           given={Yuan},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=1eed631dd35845a607a45dd35d948203}{%
+           family={Xu},
+           family_i={X\bibinitperiod},
+           given={Tao},
+           given_i={T\bibinitperiod}}}%
+        {{hash=e29e2cdbaa50d58d413b689667ace7db}{%
+           family={Zhang},
+           family_i={Z\bibinitperiod},
+           given={Han},
+           given_i={H\bibinitperiod}}}%
+        {{hash=ea028242308e69f84cfa86bb3f983b56}{%
+           family={Long},
+           family_i={L\bibinitperiod},
+           given={Rodney},
+           given_i={R\bibinitperiod}}}%
+        {{hash=62c1a5cd1a6209701effd9d40f5ddb3b}{%
+           family={Huang},
+           family_i={H\bibinitperiod},
+           given={Xiaolei},
+           given_i={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{91f8239a2272e0ad6e3222fc376d92e5}
+      \strng{fullhash}{a89b9c35da6cbaabe700e4e6746c9781}
+      \field{sortinit}{X}
+      \field{sortinithash}{2999ebab86052e6d71b434385f8b4ed2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Inspired by classic generative adversarial networks (GAN), we propose a novel end-to-end adversarial neural network, called SegAN, for the task of medical image segmentation. Since image segmentation requires dense, pixel-level labeling, the single scalar real/fake output of a classic GAN's discriminator may be ineffective in producing stable and sufficient gradient feedback to the networks. Instead, we use a fully convolutional neural network as the segmentor to generate segmentation label maps, and propose a novel adversarial critic network with a multi-scale \$L\_1\$ loss function to force the critic and segmentor to learn both global and local features that capture long- and short-range spatial relationships between pixels. In our SegAN framework, the segmentor and critic networks are trained in an alternating fashion in a min-max game: The critic takes as input a pair of images, (original\_image \$*\$ predicted\_label\_map, original\_image \$*\$ ground\_truth\_label\_map), and then is trained by maximizing a multi-scale loss function; The segmentor is trained with only gradients passed along by the critic, with the aim to minimize the multi-scale loss function. We show that such a SegAN framework is more effective and stable for the segmentation task, and it leads to better performance than the state-of-the-art U-net segmentation method. We tested our SegAN method using datasets from the MICCAI BRATS brain tumor segmentation challenge. Extensive experimental results demonstrate the effectiveness of the proposed SegAN with multi-scale loss: on BRATS 2013 SegAN gives performance comparable to the state-of-the-art for whole tumor and tumor core segmentation while achieves better precision and sensitivity for Gd-enhance tumor core segmentation; on BRATS 2015 SegAN achieves better performance than the state-of-the-art in both dice score and precision.}
+      \field{annotation}{arXiv: 1706.01805}
+      \field{journaltitle}{arXiv:1706.01805 [cs]}
+      \field{month}{06}
+      \field{shorttitle}{{SegAN}}
+      \field{title}{{SegAN}: {Adversarial} {Network} with {Multi}-scale \${L}\_1\$ {Loss} for {Medical} {Image} {Segmentation}}
+      \field{urlday}{09}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2017}
+      \verb{file}
+      \verb arXiv\:1706.01805 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/47IVIDHX/Xue et al. - 2017 - SegAN Adversarial Network with Multi-scale \$L_1\$ .pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/GRRD9GUK/1706.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1706.01805
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{yang_automatic_2017}{article}{}
+      \name{author}{8}{}{%
+        {{hash=43bfecf0db835905ffe98dadaa0b057f}{%
+           family={Yang},
+           family_i={Y\bibinitperiod},
+           given={Dong},
+           given_i={D\bibinitperiod}}}%
+        {{hash=40c221ac11c898cb10013b2468fc229b}{%
+           family={Xu},
+           family_i={X\bibinitperiod},
+           given={Daguang},
+           given_i={D\bibinitperiod}}}%
+        {{hash=de5db8686a0629092d1a733ee291627b}{%
+           family={Zhou},
+           family_i={Z\bibinitperiod},
+           given={S.\bibnamedelimi Kevin},
+           given_i={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=77447fe4dce50348878554781b5164d7}{%
+           family={Georgescu},
+           family_i={G\bibinitperiod},
+           given={Bogdan},
+           given_i={B\bibinitperiod}}}%
+        {{hash=e9b63ce8e604e5be75575928c9796360}{%
+           family={Chen},
+           family_i={C\bibinitperiod},
+           given={Mingqing},
+           given_i={M\bibinitperiod}}}%
+        {{hash=1f9ded4e2e7e862dab3a159a87672be2}{%
+           family={Grbic},
+           family_i={G\bibinitperiod},
+           given={Sasa},
+           given_i={S\bibinitperiod}}}%
+        {{hash=46ea3ac4cd400961380ad39adf32ebed}{%
+           family={Metaxas},
+           family_i={M\bibinitperiod},
+           given={Dimitris},
+           given_i={D\bibinitperiod}}}%
+        {{hash=00467887280b83151c56567803878174}{%
+           family={Comaniciu},
+           family_i={C\bibinitperiod},
+           given={Dorin},
+           given_i={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{993c146e980db475a24664d36a89979d}
+      \strng{fullhash}{c376f9e0c6c100897f8a7dc7597e8ae3}
+      \field{sortinit}{Y}
+      \field{sortinithash}{3cbc1e3d286284cedb5e5218a3248f94}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Automatic liver segmentation in 3D medical images is essential in many clinical applications, such as pathological diagnosis of hepatic diseases, surgical planning, and postoperative assessment. However, it is still a very challenging task due to the complex background, fuzzy boundary, and various appearance of liver. In this paper, we propose an automatic and efficient algorithm to segment liver from 3D CT volumes. A deep image-to-image network (DI2IN) is first deployed to generate the liver segmentation, employing a convolutional encoder-decoder architecture combined with multi-level feature concatenation and deep supervision. Then an adversarial network is utilized during training process to discriminate the output of DI2IN from ground truth, which further boosts the performance of DI2IN. The proposed method is trained on an annotated dataset of 1000 CT volumes with various different scanning protocols (e.g., contrast and non-contrast, various resolution and position) and large variations in populations (e.g., ages and pathology). Our approach outperforms the state-of-the-art solutions in terms of segmentation accuracy and computing efficiency.}
+      \field{annotation}{Comment: Accepted by MICCAI 2017}
+      \field{journaltitle}{arXiv:1707.08037 [cs]}
+      \field{month}{07}
+      \field{title}{Automatic {Liver} {Segmentation} {Using} an {Adversarial} {Image}-to-{Image} {Network}}
+      \field{urlday}{19}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{year}{2017}
+      \verb{file}
+      \verb arXiv\:1707.08037 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/S8IMP6KS/Yang et al. - 2017 - Automatic Liver Segmentation Using an Adversarial .pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/6TFBL573/1707.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1707.08037
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{yu_unitbox:_2016}{article}{}
+      \name{author}{5}{}{%
+        {{hash=39e224f7a71cf6663eb02e20fe36a941}{%
+           family={Yu},
+           family_i={Y\bibinitperiod},
+           given={Jiahui},
+           given_i={J\bibinitperiod}}}%
+        {{hash=50b19fa0d073b0e04e584a8b6277eb0b}{%
+           family={Jiang},
+           family_i={J\bibinitperiod},
+           given={Yuning},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=4f87ba962b43f4d664922e1f3c38c9c0}{%
+           family={Wang},
+           family_i={W\bibinitperiod},
+           given={Zhangyang},
+           given_i={Z\bibinitperiod}}}%
+        {{hash=e9a267bad5456ca8efad5b11f63123f7}{%
+           family={Cao},
+           family_i={C\bibinitperiod},
+           given={Zhimin},
+           given_i={Z\bibinitperiod}}}%
+        {{hash=e886c8b7a02b34d7438382dfd3c7db2a}{%
+           family={Huang},
+           family_i={H\bibinitperiod},
+           given={Thomas},
+           given_i={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b07e9f7a99a3340aeea50449895deaef}
+      \strng{fullhash}{ac6176530428c5b88cfafc7244cc7462}
+      \field{sortinit}{Y}
+      \field{sortinithash}{3cbc1e3d286284cedb5e5218a3248f94}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{annotation}{Comment: To appear in ACM MM 2016, 5 pages, 6 figures}
+      \field{journaltitle}{arXiv:1608.01471 [cs]}
+      \field{shorttitle}{{UnitBox}}
+      \field{title}{{UnitBox}: {An} {Advanced} {Object} {Detection} {Network}}
+      \field{urlday}{08}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2016}
+      \field{pages}{516\bibrangedash 520}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1145/2964284.2967274
+      \endverb
+      \verb{file}
+      \verb arXiv\:1608.01471 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/KKEPG7U7/Yu et al. - 2016 - UnitBox An Advanced Object Detection Network.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/UGSNGMVS/1608.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1608.01471
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,68U01,I.4.0}
+    \endentry
+    \entry{zagoruyko_wide_2016}{article}{}
+      \name{author}{2}{}{%
+        {{hash=23bcbde34947ed4fd04cc55ff956c83e}{%
+           family={Zagoruyko},
+           family_i={Z\bibinitperiod},
+           given={Sergey},
+           given_i={S\bibinitperiod}}}%
+        {{hash=1b19df6325edc9e76749ac30a9d962c7}{%
+           family={Komodakis},
+           family_i={K\bibinitperiod},
+           given={Nikos},
+           given_i={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d6318237b805b7959eba1465dd40cf0a}
+      \strng{fullhash}{d6318237b805b7959eba1465dd40cf0a}
+      \field{sortinit}{Z}
+      \field{sortinithash}{fdda4caaa6b5fa63e0c081dcb159543a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Deep residual networks were shown to be able to scale up to thousands of layers and still have improving performance. However, each fraction of a percent of improved accuracy costs nearly doubling the number of layers, and so training very deep residual networks has a problem of diminishing feature reuse, which makes these networks very slow to train. To tackle these problems, in this paper we conduct a detailed experimental study on the architecture of ResNet blocks, based on which we propose a novel architecture where we decrease depth and increase width of residual networks. We call the resulting network structures wide residual networks (WRNs) and show that these are far superior over their commonly used thin and very deep counterparts. For example, we demonstrate that even a simple 16-layer-deep wide residual network outperforms in accuracy and efficiency all previous deep residual networks, including thousand-layer-deep networks, achieving new state-of-the-art results on CIFAR, SVHN, COCO, and significant improvements on ImageNet. Our code and models are available at https://github.com/szagoruyko/wide-residual-networks}
+      \field{annotation}{arXiv: 1605.07146}
+      \field{journaltitle}{arXiv:1605.07146 [cs]}
+      \field{month}{05}
+      \field{title}{Wide {Residual} {Networks}}
+      \field{urlday}{08}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2016}
+      \verb{file}
+      \verb arXiv\:1605.07146 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/I3PAU8H6/Zagoruyko and Komodakis - 2016 - Wide Residual Networks.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/3JJU67IJ/1605.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1605.07146
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Learning,Computer Science - Neural and Evolutionary Computing}
+    \endentry
+    \entry{zeiler_visualizing_2013}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2e8f0042fa52e2976f90a025ddf6268c}{%
+           family={Zeiler},
+           family_i={Z\bibinitperiod},
+           given={Matthew\bibnamedelima D.},
+           given_i={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=a6784304d1cc890b2cb6c6c7f2f3fd76}{%
+           family={Fergus},
+           family_i={F\bibinitperiod},
+           given={Rob},
+           given_i={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7e365559d3f8f8ce2795177db498f8d}
+      \strng{fullhash}{f7e365559d3f8f8ce2795177db498f8d}
+      \field{sortinit}{Z}
+      \field{sortinithash}{fdda4caaa6b5fa63e0c081dcb159543a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv:1311.2901 [cs]}
+      \field{month}{11}
+      \field{note}{arXiv: 1311.2901}
+      \field{title}{Visualizing and {Understanding} {Convolutional} {Networks}}
+      \field{urlday}{17}
+      \field{urlmonth}{04}
+      \field{urlyear}{2018}
+      \field{year}{2013}
+      \verb{file}
+      \verb arXiv\:1311.2901 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/P8C55DEJ/Zeiler and Fergus - 2013 - Visualizing and Understanding Convolutional Networ.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/R857YLPH/1311.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1311.2901
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{zhao_classification_2007}{article}{}
+      \name{author}{4}{}{%
+        {{hash=7d697b1b311e4ccb6b0f0a2f1c13c519}{%
+           family={Zhao},
+           family_i={Z\bibinitperiod},
+           given={Y.},
+           given_i={Y\bibinitperiod}}}%
+        {{hash=4f9d4d2fa5b60c96090e0f4219c11d2c}{%
+           family={Zhang},
+           family_i={Z\bibinitperiod},
+           given={L.},
+           given_i={L\bibinitperiod}}}%
+        {{hash=49fc546520d1d066d1c595a1147a3819}{%
+           family={Li},
+           family_i={L\bibinitperiod},
+           given={P.},
+           given_i={P\bibinitperiod}}}%
+        {{hash=96c25354977d1839281253b993651ab5}{%
+           family={Huang},
+           family_i={H\bibinitperiod},
+           given={B.},
+           given_i={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{5aa8fbff0a0a6c4948aa65a915384f3f}
+      \strng{fullhash}{2049aad58a7d45b851be4ca5666b90f5}
+      \field{sortinit}{Z}
+      \field{sortinithash}{fdda4caaa6b5fa63e0c081dcb159543a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Gaussian Markov random fields (GMRFs) are used to analyze textures. GMRFs measure the interdependence of neighboring pixels within a texture to produce features. In this paper, neighboring pixels are taken into account in a priority sequence according to their distance from the center pixel, and a step-by-step least squares method is proposed to extract a novel set of GMRF texture features, named as PS-GMRF. A complete procedure is first designed to classify texture samples of QuickBird imagery. After texture feature extraction, a subset of PS-GMRF features is obtained by the sequential floating forward-selection method. Then, the maximum a posteriori iterated conditional mode classification algorithm is used, involving the selected PS-GMRF texture features in combination with spectral features. The experimental results show that the performance of classifying texture samples on high spatial resolution QuickBird satellite imagery is improved when texture features and spectral features are used jointly, and PS-GMRF features have a higher discrimination power compared to the classical GMRF features, making a notable improvement in classification accuracy from 71.84\% to 94.01\%. On the other hand, it is found that one of the PS-GMRF texture features - the lowest order variance - is effective for residential-area detection. Some results for IKONOS and SPOT-5 images show that the integration of the lowest order variance with spectral features improves the classification accuracy compared to classification with purely spectral features}
+      \field{issn}{0196-2892}
+      \field{journaltitle}{IEEE Transactions on Geoscience and Remote Sensing}
+      \field{month}{05}
+      \field{number}{5}
+      \field{title}{Classification of {High} {Spatial} {Resolution} {Imagery} {Using} {Improved} {Gaussian} {Markov} {Random}-{Field}-{Based} {Texture} {Features}}
+      \field{volume}{45}
+      \field{year}{2007}
+      \field{pages}{1458\bibrangedash 1468}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1109/TGRS.2007.892602
+      \endverb
+      \verb{file}
+      \verb IEEE Xplore Abstract Record:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/7BNDLT76/4156351.html:text/html
+      \endverb
+      \keyw{Classifying texture samples,Feature extraction,Gaussian Markov random field,Gaussian Markov random fields (GMRFs),IKONOS images,Image analysis,image classification,image texture,Image texture analysis,Laboratories,least squares (LS) method,least squares method,Least squares methods,Markov random fields,Pixel,priority sequence,PS-GMRF features,QuickBird images,remote sensing,Remote sensing,residential-area detection,Satellites,Spatial resolution,SPOT-5 images,texture feature}
+    \endentry
+    \entry{zheng_conditional_2015}{article}{}
+      \name{author}{8}{}{%
+        {{hash=15b89738ab90dfba4b269ce40ad19700}{%
+           family={Zheng},
+           family_i={Z\bibinitperiod},
+           given={Shuai},
+           given_i={S\bibinitperiod}}}%
+        {{hash=e8f83e110cddd5c7d32df4e3fb080d92}{%
+           family={Jayasumana},
+           family_i={J\bibinitperiod},
+           given={Sadeep},
+           given_i={S\bibinitperiod}}}%
+        {{hash=a4ad88ba00428c727fd7a7295f097c6d}{%
+           family={Romera-Paredes},
+           family_i={R\bibinithyphendelim P\bibinitperiod},
+           given={Bernardino},
+           given_i={B\bibinitperiod}}}%
+        {{hash=919bdbb82e6940f3a8a29ffaa5b4c177}{%
+           family={Vineet},
+           family_i={V\bibinitperiod},
+           given={Vibhav},
+           given_i={V\bibinitperiod}}}%
+        {{hash=69d13335e6b6dcacafd8c7d1cc1d0d91}{%
+           family={Su},
+           family_i={S\bibinitperiod},
+           given={Zhizhong},
+           given_i={Z\bibinitperiod}}}%
+        {{hash=8b53f4dfa64286d61a3baf48681895ef}{%
+           family={Du},
+           family_i={D\bibinitperiod},
+           given={Dalong},
+           given_i={D\bibinitperiod}}}%
+        {{hash=c579e88b7416fed9966902d191cd4775}{%
+           family={Huang},
+           family_i={H\bibinitperiod},
+           given={Chang},
+           given_i={C\bibinitperiod}}}%
+        {{hash=d76cd9ac847163e992ddb1c39e744459}{%
+           family={Torr},
+           family_i={T\bibinitperiod},
+           given={Philip\bibnamedelimb H.\bibnamedelimi S.},
+           given_i={P\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b42ffe87641ebc742d0b8f78dd8af502}
+      \strng{fullhash}{50477491f5d878ab62ff114cadfc2828}
+      \field{sortinit}{Z}
+      \field{sortinithash}{fdda4caaa6b5fa63e0c081dcb159543a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Pixel-level labelling tasks, such as semantic segmentation, play a central role in image understanding. Recent approaches have attempted to harness the capabilities of deep learning techniques for image recognition to tackle pixel-level labelling tasks. One central issue in this methodology is the limited capacity of deep learning techniques to delineate visual objects. To solve this problem, we introduce a new form of convolutional neural network that combines the strengths of Convolutional Neural Networks (CNNs) and Conditional Random Fields (CRFs)-based probabilistic graphical modelling. To this end, we formulate mean-field approximate inference for the Conditional Random Fields with Gaussian pairwise potentials as Recurrent Neural Networks. This network, called CRF-RNN, is then plugged in as a part of a CNN to obtain a deep network that has desirable properties of both CNNs and CRFs. Importantly, our system fully integrates CRF modelling with CNNs, making it possible to train the whole deep network end-to-end with the usual back-propagation algorithm, avoiding offline post-processing methods for object delineation. We apply the proposed method to the problem of semantic image segmentation, obtaining top results on the challenging Pascal VOC 2012 segmentation benchmark.}
+      \field{annotation}{Comment: This paper is published in IEEE ICCV 2015}
+      \field{journaltitle}{arXiv:1502.03240 [cs]}
+      \field{month}{12}
+      \field{title}{Conditional {Random} {Fields} as {Recurrent} {Neural} {Networks}}
+      \field{urlday}{20}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{year}{2015}
+      \field{pages}{1529\bibrangedash 1537}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/ICCV.2015.179
+      \endverb
+      \verb{file}
+      \verb arXiv\:1502.03240 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/TZAVRFQR/Zheng et al. - 2015 - Conditional Random Fields as Recurrent Neural Netw.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/R3RUEQ7M/1502.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1502.03240
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition}
+    \endentry
+    \entry{zhong_robust_2017}{article}{}
+      \name{author}{3}{}{%
+        {{hash=376fa3a53594432674623e715a40ef27}{%
+           family={Zhong},
+           family_i={Z\bibinitperiod},
+           given={Jiandan},
+           given_i={J\bibinitperiod}}}%
+        {{hash=137d087a15655178d65e5fcc93702c5b}{%
+           family={Lei},
+           family_i={L\bibinitperiod},
+           given={Tao},
+           given_i={T\bibinitperiod}}}%
+        {{hash=3e17226b4eac851660f6c8f756b257f8}{%
+           family={Yao},
+           family_i={Y\bibinitperiod},
+           given={Guangle},
+           given_i={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{88683bac3fd7cf889b96bdd75cba89be}
+      \strng{fullhash}{88683bac3fd7cf889b96bdd75cba89be}
+      \field{sortinit}{Z}
+      \field{sortinithash}{fdda4caaa6b5fa63e0c081dcb159543a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Vehicle detection in aerial images is an important and challenging task. Traditionally, many target detection models based on sliding-window fashion were developed and achieved acceptable performance, but these models are time-consuming in the detection phase. Recently, with the great success of convolutional neural networks (CNNs) in computer vision, many state-of-the-art detectors have been designed based on deep CNNs. However, these CNN-based detectors are inefficient when applied in aerial image data due to the fact that the existing CNN-based models struggle with small-size object detection and precise localization. To improve the detection accuracy without decreasing speed, we propose a CNN-based detection model combining two independent convolutional neural networks, where the first network is applied to generate a set of vehicle-like regions from multi-feature maps of different hierarchies and scales. Because the multi-feature maps combine the advantage of the deep and shallow convolutional layer, the first network performs well on locating the small targets in aerial image data. Then, the generated candidate regions are fed into the second network for feature extraction and decision making. Comprehensive experiments are conducted on the Vehicle Detection in Aerial Imagery (VEDAI) dataset and Munich vehicle dataset. The proposed cascaded detection model yields high performance, not only in detection accuracy but also in detection speed.}
+      \field{issn}{1424-8220}
+      \field{journaltitle}{Sensors (Basel, Switzerland)}
+      \field{month}{11}
+      \field{number}{12}
+      \field{title}{Robust {Vehicle} {Detection} in {Aerial} {Images} {Based} on {Cascaded} {Convolutional} {Neural} {Networks}}
+      \field{urlday}{18}
+      \field{urlmonth}{02}
+      \field{urlyear}{2018}
+      \field{volume}{17}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.3390/s17122720
+      \endverb
+      \verb{file}
+      \verb PubMed Central Full Text PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/TWVTMQQV/Zhong et al. - 2017 - Robust Vehicle Detection in Aerial Images Based on.pdf:application/pdf
+      \endverb
+      \verb{url}
+      \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5751529/
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
