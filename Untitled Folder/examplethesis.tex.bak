@@ -299,7 +299,7 @@ Here \% is the modulus operator and $check\_discriminator=20$ and $cut\_off=1.0$
 \hline
 \textbf{Number of vehicles} & 107 & 123 & 304 & 250 & 346 & 346 \\
 \textbf{Predicted number of vehicles} & 108 & 126 & 310 & 251 & 352 & 337 \\
-\textbf{Prediction error in \%} 0.9 &  0 & \\\
+\textbf{Prediction error in \%} &0.9 &  2.4 & 1.9 & 0.4 & 1.7 & 2.7\\
 \hline
 \end{tabular}
 \end{center}
