@@ -44,8 +44,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Result}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Discussion}{21}
+\contentsline {section}{\numberline {5.1}With weight scaling}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{22}
+\contentsline {section}{\numberline {5.2}Comparison with earlier work}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Unnecessary Appended Material}{29}
+\contentsline {chapter}{\numberline {6}Discussion}{23}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{24}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Unnecessary Appended Material}{31}

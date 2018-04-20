@@ -1,0 +1,160 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global}
+    \entry{audebert_usability_2016}{article}{}
+      \name{author}{3}{}{%
+        {{hash=0c78eb0f8bf60b9af7d3ed5e8631f0f7}{%
+           family={Audebert},
+           family_i={A\bibinitperiod},
+           given={Nicolas},
+           given_i={N\bibinitperiod}}}%
+        {{hash=d6a780b871924251695070b2be28a92c}{%
+           family={Saux},
+           family_i={S\bibinitperiod},
+           given={Bertrand\bibnamedelima Le},
+           given_i={B\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=7c002a374ccdb7c5c5bb830fb4aacfe9}{%
+           family={Lefèvre},
+           family_i={L\bibinitperiod},
+           given={Sébastien},
+           given_i={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{80e3443514298d48fee5c4a1735c3d8f}
+      \strng{fullhash}{80e3443514298d48fee5c4a1735c3d8f}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{As computer vision before, remote sensing has been radically changed by the introduction of Convolution Neural Networks. Land cover use, object detection and scene understanding in aerial images rely more and more on deep learning to achieve new state-of-the-art results. Recent architectures such as Fully Convolutional Networks (Long et al., 2015) can even produce pixel level annotations for semantic mapping. In this work, we show how to use such deep networks to detect, segment and classify different varieties of wheeled vehicles in aerial images from the ISPRS Potsdam dataset. This allows us to tackle object detection and classification on a complex dataset made up of visually similar classes, and to demonstrate the relevance of such a subclass modeling approach. Especially, we want to show that deep learning is also suitable for object-oriented analysis of Earth Observation data. First, we train a FCN variant on the ISPRS Potsdam dataset and show how the learnt semantic maps can be used to extract precise segmentation of vehicles, which allow us studying the repartition of vehicles in the city. Second, we train a CNN to perform vehicle classification on the VEDAI (Razakarivony and Jurie, 2016) dataset, and transfer its knowledge to classify candidate segmented vehicles on the Potsdam dataset.}
+      \field{annotation}{Comment: in International Conference on Geographic Object-Based Image Analysis (GEOBIA), Sep 2016, Enschede, Netherlands}
+      \field{journaltitle}{arXiv:1609.06845 [cs]}
+      \field{month}{09}
+      \field{title}{On the usability of deep networks for object-based image analysis}
+      \field{urlday}{09}
+      \field{urlmonth}{03}
+      \field{urlyear}{2018}
+      \field{year}{2016}
+      \verb{file}
+      \verb arXiv\:1609.06845 PDF:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/5FW3UZNT/Audebert et al. - 2016 - On the usability of deep networks for object-based.pdf:application/pdf;arXiv.org Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/HEYKVS9F/1609.html:text/html
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1609.06845
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Neural and Evolutionary Computing}
+    \endentry
+    \entry{zeiler_visualizing_2014}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=2e8f0042fa52e2976f90a025ddf6268c}{%
+           family={Zeiler},
+           family_i={Z\bibinitperiod},
+           given={Matthew\bibnamedelima D.},
+           given_i={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=a6784304d1cc890b2cb6c6c7f2f3fd76}{%
+           family={Fergus},
+           family_i={F\bibinitperiod},
+           given={Rob},
+           given_i={R\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {Springer, Cham}%
+      }
+      \strng{namehash}{f7e365559d3f8f8ce2795177db498f8d}
+      \strng{fullhash}{f7e365559d3f8f8ce2795177db498f8d}
+      \field{sortinit}{Z}
+      \field{sortinithash}{fdda4caaa6b5fa63e0c081dcb159543a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Large Convolutional Network models have recently demonstrated impressive classification performance on the ImageNet benchmark Krizhevsky et al. [18]. However there is no clear understanding of why they perform so well, or how they might be improved. In this paper we explore both issues. We introduce a novel visualization technique that gives insight into the function of intermediate feature layers and the operation of the classifier. Used in a diagnostic role, these visualizations allow us to find model architectures that outperform Krizhevsky et al on the ImageNet classification benchmark. We also perform an ablation study to discover the performance contribution from different model layers. We show our ImageNet model generalizes well to other datasets: when the softmax classifier is retrained, it convincingly beats the current state-of-the-art results on Caltech-101 and Caltech-256 datasets.}
+      \field{booktitle}{Computer {Vision} – {ECCV} 2014}
+      \field{isbn}{978-3-319-10589-5 978-3-319-10590-1}
+      \field{month}{09}
+      \field{series}{Lecture {Notes} in {Computer} {Science}}
+      \field{title}{Visualizing and {Understanding} {Convolutional} {Networks}}
+      \field{urlday}{19}
+      \field{urlmonth}{04}
+      \field{urlyear}{2018}
+      \field{year}{2014}
+      \field{pages}{818\bibrangedash 833}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1007/978-3-319-10590-1_53
+      \endverb
+      \verb{file}
+      \verb Snapshot:/home/joar/.zotero/zotero/97ry1s8l.default/zotero/storage/M5AGS4CQ/978-3-319-10590-1_53.html:text/html
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/chapter/10.1007/978-3-319-10590-1_53
+      \endverb
+    \endentry
+    \entry{zhong_robust_2017-1}{article}{}
+      \name{author}{3}{}{%
+        {{hash=376fa3a53594432674623e715a40ef27}{%
+           family={Zhong},
+           family_i={Z\bibinitperiod},
+           given={Jiandan},
+           given_i={J\bibinitperiod}}}%
+        {{hash=137d087a15655178d65e5fcc93702c5b}{%
+           family={Lei},
+           family_i={L\bibinitperiod},
+           given={Tao},
+           given_i={T\bibinitperiod}}}%
+        {{hash=3e17226b4eac851660f6c8f756b257f8}{%
+           family={Yao},
+           family_i={Y\bibinitperiod},
+           given={Guangle},
+           given_i={G\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{88683bac3fd7cf889b96bdd75cba89be}
+      \strng{fullhash}{88683bac3fd7cf889b96bdd75cba89be}
+      \field{sortinit}{Z}
+      \field{sortinithash}{fdda4caaa6b5fa63e0c081dcb159543a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Vehicle detection in aerial images is an important and challenging task. Traditionally, many target detection models based on sliding-window fashion were developed and achieved acceptable performance, but these models are time-consuming in the detection phase. Recently, with the great success of convolutional neural networks (CNNs) in computer vision, many state-of-the-art detectors have been designed based on deep CNNs. However, these CNN-based detectors are inefficient when applied in aerial image data due to the fact that the existing CNN-based models struggle with small-size object detection and precise localization. To improve the detection accuracy without decreasing speed, we propose a CNN-based detection model combining two independent convolutional neural networks, where the first network is applied to generate a set of vehicle-like regions from multi-feature maps of different hierarchies and scales. Because the multi-feature maps combine the advantage of the deep and shallow convolutional layer, the first network performs well on locating the small targets in aerial image data. Then, the generated candidate regions are fed into the second network for feature extraction and decision making. Comprehensive experiments are conducted on the Vehicle Detection in Aerial Imagery (VEDAI) dataset and Munich vehicle dataset. The proposed cascaded detection model yields high performance, not only in detection accuracy but also in detection speed.}
+      \field{journaltitle}{Sensors}
+      \field{month}{11}
+      \field{number}{12}
+      \field{title}{Robust {Vehicle} {Detection} in {Aerial} {Images} {Based} on {Cascaded} {Convolutional} {Neural} {Networks}}
+      \field{urlday}{19}
+      \field{urlmonth}{04}
+      \field{urlyear}{2018}
+      \field{volume}{17}
+      \field{year}{2017}
+      \field{pages}{2720}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/s17122720
+      \endverb
+      \verb{url}
+      \verb http://www.mdpi.com/1424-8220/17/12/2720
+      \endverb
+      \keyw{deep learning,vehicle detection,aerial image,convolutional neural network}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

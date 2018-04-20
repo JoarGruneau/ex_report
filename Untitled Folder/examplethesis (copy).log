@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.8.23)  19 APR 2018 15:11
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.8.23)  19 APR 2018 15:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**examplethesis.tex
-(./examplethesis.tex
+**"examplethesis (copy).tex"
+(./examplethesis (copy).tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (./kththesis.cls
@@ -915,18 +915,8 @@ Package biblatex Info: ... file 'english.lbx' found.
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2016/03/03 v3.3 biblatex localization (PK/JW/AB)
 )
-(./examplethesis.aux
-Package biblatex Info: Trying to load language 'swedish'...
-Package biblatex Info: ... file 'swedish.lbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/swedish.lbx
-File: swedish.lbx 2016/03/03 v3.3 biblatex localization (PK/JW/AB)
-)
-
-LaTeX Warning: Label `fig:vgg' multiply defined.
-
-)
-\openout1 = `examplethesis.aux'.
+(./examplethesis (copy).aux)
+\openout1 = `"examplethesis (copy).aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
@@ -1051,11 +1041,11 @@ Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout3 = `examplethesis.bcf'.
+\openout3 = `"examplethesis (copy).bcf"'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'examplethesis.bbl' found.
-(./examplethesis.bbl)
+Package biblatex Info: ... file '"examplethesis (copy)".bbl' found.
+(./examplethesis (copy).bbl)
 Package biblatex Info: Reference section=0 on input line 36.
 Package biblatex Info: Reference segment=0 on input line 36.
 Package caption Info: Begin \AtBeginDocument code.
@@ -1075,508 +1065,51 @@ Package gensymb Info: Using \Omega for \ohm on input line 36.
 Package gensymb Warning: Not defining \micro.
 
 \c@lstlisting=\count363
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: xetex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(142.26378pt, 355.65945pt, 99.58464pt)
-* v-part:(T,H,B)=(184.9429pt, 574.74568pt, 85.35826pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=355.65945pt
-* \textheight=574.74568pt
-* \oddsidemargin=69.99379pt
-* \evensidemargin=69.99379pt
-* \topmargin=55.76743pt
-* \headheight=14.22636pt
-* \headsep=42.67912pt
-* \topskip=12.0pt
-* \footskip=71.13188pt
-* \marginparwidth=44.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-[1
-
-
-] [2
-
-
-] [3] [4
-
-] (./examplethesis.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 15.
-
+LaTeX Font Info:    Try loading font information for U+msa on input line 40.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 15.
+LaTeX Font Info:    Try loading font information for U+msb on input line 40.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
-\tf@toc=\write4
-\openout4 = `examplethesis.toc'.
-
- [5
-
-
-] [6
-
-]
-Chapter 1.
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--83
-
+)
+Overfull \hbox (24.21817pt too wide) in paragraph at lines 40--49
+ [] 
  []
 
 
-Overfull \hbox (2.30217pt too wide) in paragraph at lines 70--83
-\EU1/TeXGyrePagella(0)/m/n/12 spatial contiguity in the segmentation maps [23] 
-or proper spatial seper-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--83
-
- []
-
-
-Overfull \hbox (0.77318pt too wide) in paragraph at lines 70--83
-\EU1/TeXGyrePagella(0)/m/n/12 region proposal network (RPN) on internal convolu
-tional feature maps.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--83
-
+Overfull \hbox (50.0182pt too wide) in paragraph at lines 54--65
+ [] 
  []
 
 [1
 
-] [2] [3]
-Chapter 2.
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--92
-
- []
-
-[4
-
-] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 130--135
-
- []
-
-
-Overfull \hbox (10.53017pt too wide) in paragraph at lines 130--135
-\EU1/TeXGyrePagella(0)/m/n/12 been shown to produce high accuracy results even 
-on small sized datasets
- []
-
-[6]
-File: u-net.png Graphic file (type QTm)
- <use  "u-net.png" > [7]
-File: vgg.png Graphic file (type QTm)
- <use  "vgg.png" >
-File: resnet.png Graphic file (type QTm)
- <use  "resnet.png" >
-Overfull \hbox (8.2612pt too wide) in paragraph at lines 143--160
-\EU1/TeXGyrePagella(0)/m/n/12 For the discriminative part of the GAN a classifi
-cation network is needed.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 143--160
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 143--160
-
- []
-
-
-Overfull \hbox (5.91286pt too wide) in paragraph at lines 143--160
-\EU1/TeXGyrePagella(0)/m/n/12 taining comparable performance [49, 53]. The succ
-ess behind the ResNet
- []
-
-[8]
-Overfull \hbox (1.19066pt too wide) in paragraph at lines 164--164
-|[]\EU1/lmss/bx/n/17.28 Weight functions and dealing with severely
- []
-
-[9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 191--196
-
- []
-
-
-Overfull \hbox (4.60117pt too wide) in paragraph at lines 191--196
-\EU1/TeXGyrePagella(0)/m/n/12 The generators task was to produce segmentation m
-aps for the C classes.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 191--196
-
- []
-
-[11] [12]
-Chapter 3.
-File: potsdam.png Graphic file (type QTm)
-<use  "potsdam.png" > [13
-
-]
-File: trees.jpg Graphic file (type QTm)
- <use  "trees.jpg" >
-File: trees_label.jpg Graphic file (type QTm)
- <use  "trees_label.jpg" >
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 251--252
-
- []
-
-[15]
-Chapter 4.
-[16
-
-]
-File: pred_soft.jpg Graphic file (type QTm)
- <use  "pred_soft.jpg" >
-File: label_blured.jpg Graphic file (type QTm)
- <use  "label_blured.jpg" >
-Underfull \hbox (badness 10000) in paragraph at lines 264--281
-
- []
-
-
-Overfull \hbox (98.44884pt too wide) in paragraph at lines 264--281
-\EU1/TeXGyrePagella(0)/m/n/12 and concatenation in the basic manner. [*********
-*********************************************’]
- []
-
-
-Overfull \hbox (11.76888pt too wide) in paragraph at lines 264--281
-\EU1/TeXGyrePagella(0)/m/n/12 into the discriminator. The smoothing were perfor
-med so that the ground
- []
-
-[17] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-(./training.py
-Overfull \hbox (11.71805pt too wide) in paragraph at lines 3--4
-[][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (62.11856pt too wide) in paragraph at lines 4--5
-[][][][][][][][][][][] 
- []
-
-)
-Overfull \hbox (11.71805pt too wide) in paragraph at lines 5--290
-[][][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 291--292
-
- []
-
-[18] [19]
-Chapter 5.
-
-Overfull \hbox (12.12218pt too wide) in paragraph at lines 296--305
- [] 
- []
-
-[20
-
-]
-Overfull \hbox (24.21817pt too wide) in paragraph at lines 310--319
- [] 
- []
-
-
-Overfull \hbox (50.0182pt too wide) in paragraph at lines 324--335
- [] 
- []
-
-[21] [22]
-Chapter 6.
-[23
-
-]
-LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 377
+] [2]
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 105
 .
  (/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmtt.fd
 File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (5.21103pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/n/12 mentation via Adversarial Neural Networks”. In: \
-EU1/TeXGyrePagella(0)/m/it/12 arXiv:1709.05860
+Overfull \hbox (1.92896pt too wide) in paragraph at lines 105--105
+\EU1/TeXGyrePagella(0)/m/n/12 ing Convolutional Networks”. en. In: \EU1/TeXGyre
+Pagella(0)/m/it/12 Computer Vision – ECCV 2014\EU1/TeXGyrePagella(0)/m/n/12 .
  []
 
-
-Overfull \hbox (5.63281pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/sc/12 url\EU1/TeXGyrePagella(0)/m/n/12 : $[][][][] [] 
-[] [] [][][][][] [] [][][] [] [][][] [] [][][][] [] [][][][][]$ (visited on 02/
-20/2018). 
- []
-
-
-Overfull \hbox (28.32802pt too wide) in paragraph at lines 377--377
-[]\EU1/TeXGyrePagella(0)/m/n/12 Nicolas Audebert, Bertrand Le Saux, and Sébasti
-en Lefèvre. “  Segment-
- []
-
-
-Overfull \hbox (11.13206pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/n/12 mote Sensing for Vegetation Monitoring From an Un
-manned Aerial
- []
-
-[24
-
-]
-Overfull \hbox (3.91496pt too wide) in paragraph at lines 377--377
-[]\EU1/TeXGyrePagella(0)/m/n/12 Ross Girshick. “  Fast R-CNN”. In: \EU1/TeXGyre
-Pagella(0)/m/it/12 arXiv:1504.08083 [cs] \EU1/TeXGyrePagella(0)/m/n/12 (Apr. 20
-15).
- []
-
-
-Overfull \hbox (5.6448pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/sc/12 url\EU1/TeXGyrePagella(0)/m/n/12 : $[][][][] [] 
-[] [] [][][][][] [] [][][] [] [][][] [] [][][][] [] [][][][][]$ (visited on 03/
-08/2018). 
- []
-
-
-Overfull \hbox (1.94301pt too wide) in paragraph at lines 377--377
-[]\EU1/TeXGyrePagella(0)/m/n/12 Ian Goodfellow. “  NIPS 2016 Tutorial: Generati
-ve Adversarial Net-
- []
-
-
-Overfull \hbox (11.11003pt too wide) in paragraph at lines 377--377
-[]\EU1/TeXGyrePagella(0)/m/n/12 Kaiming He et al. “  Identity Mappings in Deep 
-Residual Networks”.
- []
-
-
-Overfull \hbox (0.69176pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/n/12 pp. 871–880. \EU1/TeXGyrePagella(0)/m/sc/12 issn\
-EU1/TeXGyrePagella(0)/m/n/12 : 0099-1112. \EU1/TeXGyrePagella(0)/m/sc/12 url\EU
-1/TeXGyrePagella(0)/m/n/12 : $[][][][][] [] [] [] [][][][] [] [][][][] [] [][][
-][][][][][] []
- []
-
-
-Overfull \hbox (47.5156pt too wide) in paragraph at lines 377--377
-[][][] [] [][] [] [][][][][][][][][][][][] [] [][][][][][] [][] [][][][][] [][]
- [][][][][][][][][] [][] [][][] [][] [][][][][][][][][][][][][][] [][]
- []
-
-[25]
-Overfull \hbox (2.15205pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/n/12 geNet Classification with Deep Convolutional Neur
-al Networks”.
- []
-
-
-Overfull \hbox (15.61563pt too wide) in paragraph at lines 377--377
-[][][][] [] [] [] [][][][][][] [] [][][][] [] [][] [] [][][][][] [] [][][][] []
-[] [][][][][][][][] [][] [][][][][][][][][][][][][][] [][]
- []
-
-
-Overfull \hbox (19.91406pt too wide) in paragraph at lines 377--377
-[]\EU1/TeXGyrePagella(0)/m/n/12 Christian Ledig et al. “  Photo-Realistic Singl
-e Image Super-Resolution
- []
-
-
-Overfull \hbox (1.11804pt too wide) in paragraph at lines 377--377
-[]\EU1/TeXGyrePagella(0)/m/n/12 Pauline Luc et al. “  Semantic Segmentation usi
-ng Adversarial Net-
- []
-
-
-Overfull \hbox (4.36293pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/n/12 versarial Nets”. In: \EU1/TeXGyrePagella(0)/m/it/
-12 arXiv:1411.1784 [cs, stat] \EU1/TeXGyrePagella(0)/m/n/12 (Nov. 2014). \EU1/T
-eXGyrePagella(0)/m/sc/12 url\EU1/TeXGyrePagella(0)/m/n/12 : $[][][][] []
- []
-
-
-Overfull \hbox (5.40604pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/it/12 ternational Geoscience and Remote Sensing Sympos
-ium (IGARSS)\EU1/TeXGyrePagella(0)/m/n/12 . July
- []
-
-
-Overfull \hbox (4.83pt too wide) in paragraph at lines 377--377
-[]\EU1/TeXGyrePagella(0)/m/n/12 T. Moranduzzo and F. Melgani. “  Automatic Car 
-Counting Method
- []
-
-
-Overfull \hbox (5.62082pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/sc/12 url\EU1/TeXGyrePagella(0)/m/n/12 : $[][][][] [] 
-[] [] [][][][][] [] [][][] [] [][][] [] [][][][] [] [][][][][]$ (visited on 03/
-09/2018). 
- []
-
-[26]
-Overfull \hbox (5.6448pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/sc/12 url\EU1/TeXGyrePagella(0)/m/n/12 : $[][][][] [] 
-[] [] [][][][][] [] [][][] [] [][][] [] [][][][] [] [][][][][]$ (visited on 02/
-20/2018). 
- []
-
-[27]
-Overfull \hbox (45.02301pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/n/12 ization and Detection using Convolutional Network
-s”. In: \EU1/TeXGyrePagella(0)/m/it/12 arXiv:1312.6229
- []
-
-
-Overfull \hbox (26.58302pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/n/12 volutional Networks for Semantic Segmentation”. I
-n: \EU1/TeXGyrePagella(0)/m/it/12 arXiv:1605.06211
- []
-
-
-Overfull \hbox (36.19902pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/n/12 lutional Networks for Action Recognition in Video
-s”. In: \EU1/TeXGyrePagella(0)/m/it/12 arXiv:1406.2199
- []
-
-
-Overfull \hbox (35.05103pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/n/12 tional Networks for Large-Scale Image Recognition
-”. In: \EU1/TeXGyrePagella(0)/m/it/12 arXiv:1409.1556
- []
-
-
-Overfull \hbox (5.60883pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/sc/12 url\EU1/TeXGyrePagella(0)/m/n/12 : $[][][][] [] 
-[] [] [][][][][] [] [][][] [] [][][] [] [][][][] [] [][][][][]$ (visited on 03/
-09/2018). 
- []
-
-
-Overfull \hbox (58.00302pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/n/12 ing loss function for highly unbalanced segmentat
-ions”. In: \EU1/TeXGyrePagella(0)/m/it/12 arXiv:1707.03237
- []
-
-
-Overfull \hbox (7.89502pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/n/12 Impact of Residual Connections on Learning”. In: 
-\EU1/TeXGyrePagella(0)/m/it/12 arXiv:1602.07261
- []
-
-[28]
-Overfull \hbox (0.48804pt too wide) in paragraph at lines 377--377
-[]\EU1/TeXGyrePagella(0)/m/n/12 K. Uto et al. “  Characterization of Rice Paddi
-es by a UAV-Mounted
- []
-
-
-Overfull \hbox (5.49503pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/n/12 $L_1$ Loss for Medical Image Segmentation”. In: \
-EU1/TeXGyrePagella(0)/m/it/12 arXiv:1706.01805
- []
-
-
-Overfull \hbox (3.20702pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/n/12 versarial Image-to-Image Network”. In: \EU1/TeXGy
-rePagella(0)/m/it/12 arXiv:1707.08037 [cs] \EU1/TeXGyrePagella(0)/m/n/12 (July
- []
-
-
-Overfull \hbox (0.22691pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/n/12 work”. In: \EU1/TeXGyrePagella(0)/m/it/12 arXiv:1
-608.01471 [cs] \EU1/TeXGyrePagella(0)/m/n/12 (2016), pp. 516–520. \EU1/TeXGyreP
-agella(0)/m/sc/12 doi\EU1/TeXGyrePagella(0)/m/n/12 : $[][] [] [][][][] []
- []
-
-
-Overfull \hbox (2.78801pt too wide) in paragraph at lines 377--377
-[]\EU1/TeXGyrePagella(0)/m/n/12 Matthew D. Zeiler and Rob Fergus. “  Visualizin
-g and Understand-
- []
-
-
-Overfull \hbox (2.029pt too wide) in paragraph at lines 377--377
-\EU1/TeXGyrePagella(0)/m/n/12 ing Convolutional Networks”. In: \EU1/TeXGyrePage
-lla(0)/m/it/12 arXiv:1311.2901 [cs] \EU1/TeXGyrePagella(0)/m/n/12 (Nov. 2013).
- []
-
-
-Overfull \hbox (2.78801pt too wide) in paragraph at lines 377--377
-[]\EU1/TeXGyrePagella(0)/m/n/12 Matthew D. Zeiler and Rob Fergus. “  Visualizin
-g and Understand-
- []
-
-
-Overfull \hbox (1.11865pt too wide) in paragraph at lines 377--377
-[][] [] [][][][] [] [][][] [][] [] [][] [][][] [][] [][][][][] [][] [] [] [][]$
-\EU1/TeXGyrePagella(0)/m/n/12 . \EU1/TeXGyrePagella(0)/m/sc/12 url\EU1/TeXGyreP
-agella(0)/m/n/12 : $[][][][][] [] [] [] [][][][] [] [][][][][][][][] []
- []
-
-[29]
-Overfull \hbox (2.73402pt too wide) in paragraph at lines 377--377
-[]\EU1/TeXGyrePagella(0)/m/n/12 Shuai Zheng et al. “  Conditional Random Fields
- as Recurrent Neu-
- []
-
-[30]
-Appendix A.
-[31
-
-] (./examplethesis.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package logreq Info: Writing requests to 'examplethesis.run.xml'.
-\openout1 = `examplethesis.run.xml'.
+[3
+
+] (./examplethesis (copy).aux)
+Package logreq Info: Writing requests to '"examplethesis (copy)".run.xml'.
+\openout1 = `"examplethesis (copy).run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25656 strings out of 493638
- 476461 string characters out of 6146796
- 868063 words of memory out of 5000000
- 28755 multiletter control sequences out of 15000+600000
- 8517 words of font info for 61 fonts, out of 8000000 for 9000
+ 25141 strings out of 493638
+ 464677 string characters out of 6146796
+ 846868 words of memory out of 5000000
+ 28276 multiletter control sequences out of 15000+600000
+ 8469 words of font info for 55 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 61i,11n,92p,10412b,2431s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,10n,92p,10421b,2352s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on examplethesis.pdf (37 pages).
+Output written on examplethesis (copy).pdf (3 pages).
