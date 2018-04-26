@@ -25,7 +25,7 @@
   \vspace{0.02\textheight}
   
   \begin{Large}
-    Investigation of deep learning approaches for aerial image analysis 
+    Investigation of deep learning approaches for overhead imagery analysis 
   \end{Large}
 
   \vspace{0.1\textheight}
@@ -45,6 +45,28 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\begin{frame}
+  \frametitle{\hfill Evaluation of models}
+
+  \begin{block}{Models where evaluated on a AWS EC2 P2 spot instance}
+    \begin{itemize}
+    \item A spot instance allows you to bid on spare computing power
+    \item Will be shut down when the market price exceeds your maximum bidding price
+    \item Mount a volume or swap root volumes to obtain persistency
+    \item Around 100 times speed up compared to evaluating the model on my Lenovo laptop
+    \end{itemize}
+  \end{block}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{\hfill How do we detect vehicles?}
+\begin{figure}[H]
+  \includegraphics[scale=0.15]{input}
+\caption{A overhead image with a resolution of 30 cm/pixel}
+\end{figure}
+\end{frame}
+
 
 \begin{frame}
   \frametitle{\hfill Previous techniques}
@@ -54,7 +76,7 @@
     \item Sliding window techniques
     \item Aggregating pixels into super pixels before analysing
     \item Two stage segmentation networks
-    \item Fast region-based convolutional networks (fast R-CNN)
+    \item Fast region-based convolutional neural networks (fast R-CNN)
     \end{itemize}
   \end{block}
 
@@ -67,7 +89,7 @@
 \begin{figure}[h!]
 \centering
       \includegraphics[scale=0.18]{SBD_net}
-\caption{The segment before you detect structure} \label{fig:SBD}
+\caption{The Segment Before you Detect network structure} \label{fig:SBD}
 \end{figure}
 \end{frame}
 
@@ -78,9 +100,47 @@
 \begin{figure}[h!]
 \centering
       \includegraphics[scale=0.18]{r-cnn}
-\caption{The two stage fasr R-CNN} \label{fig:SBD}
+\caption{The two stage fast R-CNN} \label{fig:SBD}
 \end{figure}
 \end{frame}
+
+
+
+\begin{frame}
+  \frametitle{\hfill Previous techniques}
+	  \begin{block}{Drawbacks}
+    \begin{itemize}
+    \item Segment Before you Detect is slow due complex structure with two deep networks
+    \item Fast R-CNN can only predict some predefined ratios of bounding boxes which affects the precision
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{\hfill The goal}
+	  \begin{block}{Extract vehicles directly from the segmentation map}
+    \begin{itemize}
+    \item Superior speed compared to Segment Before you Detect methods
+    \item A more general approach compared to fast R-CNN since arbitrary size bounding boxes can be predicted
+    \item The final network will be more simple considering only one stage is needed.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{\hfill Proposed Model}
+\begin{figure}[h!]
+\centering
+      \includegraphics[scale=0.15]{net}
+\caption{The architecture of the proposed model}
+\end{figure}
+\end{frame}
+
+
 
 
 \begin{frame}
@@ -93,40 +153,8 @@
   \begin{block}{Find a loss function that enforces object separation}
     \begin{itemize}
     \item Adding an adversarial loss term
-    \item Scaling the cross entropy loss based on vehicle separation
+    \item Weighting the cross entropy loss based on vehicle separation
     \end{itemize}
-  \end{block}
-\end{frame}
-
-
-
-\begin{frame}
-  \frametitle{\hfill The goal}
-	  \begin{block}{Extract vehicles directly from the segmentation map}
-    \begin{itemize}
-    \item Superior speed compared to Segment Before you Detect methods
-    \item More general approach compared to fast R-CNN since arbitrary size bounding boxes can be predicted
-    \item Simpler network since only one stage is needed
-    \end{itemize}
-  \end{block}
-\end{frame}
-
-
-
-\begin{frame}
-  \frametitle{\hfill Adding an adversarial loss term}
-	  \begin{block}{Builds on a counterfeit game between the generator and discriminator}
-	  \begin{equation*}\label{eq:mce}
-	\ell_{pxl}(\hat{y}, y) = - \sum_{x=1}^{H*W}y(x)*log(\hat{y}(x))
-	\end{equation*}
-
-\begin{equation*}
-\Lagr(G, D) =  -(\ell_{bce}(D(x, y), 1) + \ell_{bce}(D(x, G(x)), 0))
-\end{equation*}
-\\
-\begin{equation*}
-G^{*}=argmin_{G}[max_{D}[\Lagr(G, D)] + \lambda \ell_{pxl}(G)]
-\end{equation*}
   \end{block}
 \end{frame}
 
@@ -142,9 +170,32 @@ G^{*}=argmin_{G}[max_{D}[\Lagr(G, D)] + \lambda \ell_{pxl}(G)]
 \end{frame}
 
 
+
+
 \begin{frame}
-  \frametitle{\hfill Scaling the cross entropy loss}
-	  \begin{block}{Builds on a counterfeit game between the generator and discriminator}
+  \frametitle{\hfill Adding an adversarial loss term}
+	  \begin{block}{Builds on a counterfeit game between the semantic and discriminating network}
+	  \begin{equation*}
+\ell_{bce}(\hat{y}, y)=-(y*ln(\hat{y})+(1-y)*ln(1-\hat{y}))
+\end{equation*}
+	  \begin{equation*}\label{eq:mce}
+	\ell_{pxl}(\hat{y}, y) = - \sum_{x=1}^{H*W}y(x)*log(\hat{y}(x))
+	\end{equation*}
+
+\begin{equation*}
+\Lagr(G) =\ell_{bce}(D(x,G(x)), 1) + \lambda\ell_{pxl}(G(x),y)
+\end{equation*}
+\begin{equation*}
+\Lagr(D) =\ell_{bce}(D(x,G(x)), 0) + \ell_{bce}(D(x,y), 1)
+\end{equation*}
+  \end{block}
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{\hfill Weighting the cross entropy loss}
+	  \begin{block}{Enforce the network to learn small separations between vehicles}
 	  \begin{equation*}\label{eq:mce}
 	\ell_{pxl}(\hat{y}, y) = - \sum_{x=0}^{H*W}\omega(x)*y(x)*log(\hat{y}(x))
 	\end{equation*}
@@ -160,11 +211,11 @@ G^{*}=argmin_{G}[max_{D}[\Lagr(G, D)] + \lambda \ell_{pxl}(G)]
 
 
 \begin{frame}
-  \frametitle{\hfill Adding an adversarial loss term}
+  \frametitle{\hfill Weighting the cross entropy loss}
 \begin{figure}[h!]
 \centering
       \includegraphics[scale=0.18]{weight_map_3}
-\caption{The generative adversarial network architecture} \label{fig:SBD}
+\caption{The pixel wise weight map used to enforce seperations between vehicles} \label{fig:SBD}
 \end{figure}
 \end{frame}
 
@@ -175,21 +226,35 @@ G^{*}=argmin_{G}[max_{D}[\Lagr(G, D)] + \lambda \ell_{pxl}(G)]
         \item The ISPRS Potsdam dataset
         \begin{itemize}
     \item A segmentation dataset
-    \item 25 cm/pixel resolution
-    \item $\approx$ 98 \% of all pixels belong to background class
+    \item 5 cm/pixel resolution
+    \item $\approx$ 98 \% of all pixels belong to  the background class
     \item Images will be down sampled to 30 cm/pixel to match resolution of commercial satellite images.
-    \item 18 images for training, 6 for validation, 14 for testing.
+    \item 24 images for training and validation, 14 for testing.
     \end{itemize}
     \item The Vedai dataset
     \begin{itemize}
     \item A vehicle detection dataset
     \item Vehicles are marked with bounding boxes
-    \item 5 cm/pixel resolution
-    \item severe class imbalance $\approx$ 99.3 \% of all pixels belong to background class
+    \item 25 cm/pixel resolution
+    \item Severe class imbalance $\approx$ 99.3 \% of all pixels belong to the background class
     \item 927 images for training, 100 for validation, 240 for testing.
     \end{itemize}
     \end{itemize}
   \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{\hfill The Potsdam dataset}
+\begin{figure}[H]
+\minipage{0.40\textwidth}
+  \includegraphics[width=\linewidth]{trees}
+\endminipage\hfill
+\minipage{0.40\textwidth}
+  \includegraphics[width=\linewidth]{trees_label}
+\endminipage\hfill
+\caption{The left image shows the input image and the right image the ground truth segmentation}
+\end{figure}
 \end{frame}
 
 
@@ -214,7 +279,7 @@ F1\textit{ }score=\frac{2*Recall*Precision}{Recall+Precision}
 
 
 \begin{frame}
-  \frametitle{\hfill Results: adding a adversarial loss term}
+  \frametitle{\hfill Results: Adding a adversarial loss term}
 \begin{figure}[H]
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{gan_vs_class/label_1}
@@ -225,14 +290,14 @@ F1\textit{ }score=\frac{2*Recall*Precision}{Recall+Precision}
 \minipage{0.32\textwidth}%
   \includegraphics[width=\linewidth]{gan_vs_class/gan_1}
 \endminipage
-\caption{The the ground truth segmentation, the soft classical prediction without and with an adversarial loss}
+\caption{The the ground truth segmentation, the soft prediction without and with an adversarial loss}
 \end{figure}
 \end{frame}
 
 
 
 \begin{frame}
-  \frametitle{\hfill Result of adding a adversarial loss term}
+  \frametitle{\hfill Results: Adding a adversarial loss term}
 \begin{figure}[H]
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{gan_vs_class/label_2}
@@ -243,25 +308,25 @@ F1\textit{ }score=\frac{2*Recall*Precision}{Recall+Precision}
 \minipage{0.32\textwidth}%
   \includegraphics[width=\linewidth]{gan_vs_class/gan_2}
 \endminipage
-\caption{The the ground truth segmentation, the soft classical prediction without and with an adversarial loss}
+\caption{The the ground truth segmentation, the soft prediction without and with an adversarial loss}
 \end{figure}
 \end{frame}
 
 
 \begin{frame}
-  \frametitle{\hfill Result of adding a adversarial loss term}
-  The network with adversarial loss mas much more unstable and harder yo train and did not increase the F1 pixelwise score on the validation dataset.
+  \frametitle{\hfill Results: Adding a adversarial loss term}
+  The network with an adversarial loss was much more unstable, harder to train and did not increase the F1 pixel wise score on the validation dataset.
 \begin{center}
 \begin{figure}[H]
       \includegraphics[scale=0.4]{classical_vs_adversarial}
-  \caption{The F1 pixelwise score with and without an adversarial loss} \label{fig:gan_vs_class}
+  \caption{The F1 pixel wise score with and without an adversarial loss} \label{fig:gan_vs_class}
 \end{figure}
 \end{center}
 \end{frame}
 
 
 \begin{frame}
-  \frametitle{\hfill Result of scaling the loss function}
+  \frametitle{\hfill Results: Weighting the loss function}
 \begin{figure}[H]
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{class_vs_w/label_1}
@@ -272,13 +337,13 @@ F1\textit{ }score=\frac{2*Recall*Precision}{Recall+Precision}
 \minipage{0.32\textwidth}%
   \includegraphics[width=\linewidth]{class_vs_w/weight_1}
 \endminipage
-\caption{}
+\caption{The ground truth segmentation, the hard prediction with and without a weighted loss function}
 \end{figure}
 \end{frame}
 
 
 \begin{frame}
-  \frametitle{\hfill Result of weighting the loss function}
+  \frametitle{\hfill Results: Weighting the loss function}
 \begin{figure}[H]
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{class_vs_w/label_2}
@@ -289,14 +354,14 @@ F1\textit{ }score=\frac{2*Recall*Precision}{Recall+Precision}
 \minipage{0.32\textwidth}%
   \includegraphics[width=\linewidth]{class_vs_w/weight_2}
 \endminipage
-\caption{}
+\caption{The ground truth segmentation, the hard prediction with and without a weighted loss function}
 \end{figure}
 \end{frame}
 
 
 \begin{frame}
-  \frametitle{\hfill Result of weighting the loss function}
-  The weighted loss managed to enforce better object separation while obtaining comparable pixel wise F1 score.
+  \frametitle{\hfill Results: Weighting the loss function}
+  Weighting the loss function enforced better object separation while obtaining comparable pixel wise F1 score.
 \begin{center}
 \begin{figure}[H]
       \includegraphics[scale=0.4]{class_vs_w}
@@ -324,8 +389,8 @@ F1\textit{ }score=\frac{2*Recall*Precision}{Recall+Precision}
   \frametitle{\hfill Final results on the Potsdam dataset}
 	  \begin{block}{Vehicle detection}
     \begin{itemize}
-    \item The proposed model obtains an pixel wise F1 score 0.851
-    \item The proposed model obtains vehicle wise F1 score 0.80
+    \item The proposed model obtains a pixel wise F1 score 0.851
+    \item The proposed model obtains a vehicle wise F1 score 0.811
     \item Mean evaluation time per image is 0.19 seconds = 2 seconds per square kilometre 
     \end{itemize}
   \end{block}
@@ -337,7 +402,7 @@ F1\textit{ }score=\frac{2*Recall*Precision}{Recall+Precision}
 	  \begin{block}{Counting cars}
     \begin{itemize}
     \item The connected components of the predicted segmentation and the ground truth segmentation were extracted and counted
-    \item Mean prediction error of 1.7 \%
+    \item Mean prediction error of 1.67 \%
     \end{itemize}
     \begin{tabular}{|c c c c c c c|}
 \hline
@@ -361,11 +426,11 @@ F1\textit{ }score=\frac{2*Recall*Precision}{Recall+Precision}
 \textbf{Model} & Proposed Model & SBD \\
 \textbf{Resolution used} & \textbf{30 cm/pixel} & 12.5 cm/pixel\\
 \textbf{Pixel wise F1 score} & 0.851 & \textbf{0.884}\\
-\textbf{Vehicle wise F1 score} & \textbf{0.800} &  0.773\\
+\textbf{Vehicle wise F1 score} & \textbf{0.811} &  0.773\\
 \textbf{Mean prediction error counting cars} & \textbf{1.67 \%} &  3.57 \%\\
 \textbf{Evaluation time per image *} & \textbf{0.19 seconds} &  28.19 seconds\\
 \hline
-\end{tabular}\caption{Shows the comparison between the proposed model and the Segment before you Detect (SBD) model \parencite{audebert_usability_2016} on the Potsdam dataset. \textbf{*} The SBD model was evaluated on a Tesla K20 which can at maximum perform $3.52*10^{12}$ 32 bit floating point operations per second. The proposed model was evaluated on a Tesla K80 which can perform at maximum $8.74*10^{12}$ 32 bit floating point operations per second. Therefore the evaluation time on the SBD model was multiplied with $3.52/8.74\approx0.4027$ to make fair comparisons.}
+\end{tabular}\caption{Shows the comparison between the proposed model and the Segment before you Detect (SBD) model \parencite{audebert_usability_2016} on the Potsdam dataset. \textbf{*} The SBD model was evaluated on a Tesla K20 which can at maximum perform $3.52*10^{12}$ 32 bit floating point operations per second. The proposed model was evaluated on a Tesla K80 which can perform at maximum $8.74*10^{12}$ 32 bit floating point operations per second. Therefore the evaluation time on the SBD model was multiplied with $3.52/8.74\approx0.4027$ to make a fair comparison.}
 \end{frame}
 
 
@@ -380,10 +445,10 @@ Faster R-CNN (Z\&F) & 0.1998 & 0.212\\
 Faster R-CNN (VGG-16) & 0.2248 & 0.225\\
 Fast R-CNN (VGG-16) & 3.1465 &  0.224\\
 CCNN &0.2736 &  0.305\\
-Proposed Model & $\approx$ \textbf{0.19/4} & \textbf{0.554}\\
+Proposed Model & \textbf{0.0616} & \textbf{0.542}\\
 \hline
 \end{tabular}
-\caption{Shows the comparison between the proposed model and the Faster R-CNN (Z\&F), Faster R-CNN (VGG-16), Fast R-CNN (VGG-16) \cite{zeiler_visualizing_2014} and the Cascaded Convolutional Neural Networks (CCNN) \cite{zhong_robust_2017-1} on the Vedai dataset. \textbf{*} The other models were evaluated by \cite{zhong_robust_2017-1} on a Titan X which can at maximum perform $11*10^{12}$ 32 bit floating point operations per second. The proposed model was evaluated on a Tesla K80 which can perform at maximum $8.74*10^{12}$ 32 bit floating point operations per second. Therefore the evaluation time on the compared models were multiplied with $11/8.74\approx1.2586$ to make fair comparisons.}
+\caption{Shows the comparison between the proposed model and the Faster R-CNN (Z\&F), Faster R-CNN (VGG-16), Fast R-CNN (VGG-16) \cite{zeiler_visualizing_2014} and the Cascaded Convolutional Neural Networks (CCNN) \cite{zhong_robust_2017-1} on the Vedai dataset. \textbf{*} The other models were evaluated by \cite{zhong_robust_2017-1} on a Titan X which can at maximum perform $11*10^{12}$ 32 bit floating point operations per second. The proposed model was evaluated on a Tesla K80 which can perform at maximum $8.74*10^{12}$ 32 bit floating point operations per second. Therefore the evaluation time on the compared models were multiplied with $11/8.74\approx1.2586$ to make a fair comparison.}
 \end{frame}
 
 
@@ -392,8 +457,8 @@ Proposed Model & $\approx$ \textbf{0.19/4} & \textbf{0.554}\\
 	  \begin{block}{Proposed model characteristics}
     \begin{itemize}
     \item The proposed model has a computational time which is only a fraction of the SBD model while also obtaining higher vehicle wise F1 score and lower counting prediction error.
-    \item The proposed model can use much mower resolution images which makes it a viable method for detecting and counting cars in satellite images.
-    \item The proposed model outperforms the R-CNN models while with a significant margin while also obtaining a slightly lower computational time.
+    \item The proposed model can use much lower resolution images which makes it a viable method for detecting and counting cars in satellite images.
+    \item The proposed model outperforms the R-CNN models with a significant margin while also obtaining a slightly lower computational time.
     \item The proposed model only need a few images for training which means that  building new datasets for training is a low cost operation.
     \item The objects need to have a separation for connected component extraction to work. This can however be solved by introducing an ''artificial'' separation between touching objects.
     \end{itemize}

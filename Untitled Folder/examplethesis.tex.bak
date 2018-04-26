@@ -22,12 +22,12 @@
 \addbibresource{ex.bib} % The file containing our references, in BibTeX format
 
 
-\title{This is the English title}
-\alttitle{Detta är den svenska översättningen av titeln}
-\author{Osquar Student}
-\email{osquar@kth.se}
-\supervisor{Lotta Larsson}
-\examiner{Lennart Bladgren}
+\title{Investigation of deep learning approaches for overhead imagery analysis}
+\alttitle{Utredning av djupinlärnings metoder för satellit och flygbilder}
+\author{Joar Gruneau}
+\email{joarg@kth.se}
+\supervisor{Kevin Smith}
+\examiner{Danica Kragic}
 \programme{Master in Computer Science}
 \school{School of Electrical Engineering and Computer Science}
 \date{\today}
@@ -67,17 +67,17 @@
 
 
 \chapter{Introduction}
-Convolutionla neural networks (CNN) have had great success for computer vision tasks \parencite{sermanet_overfeat:_2013,zeiler_visualizing_2013,  simonyan_two-stream_2014, krizhevsky_imagenet_2012}.
-The success is possible thanks to graphical processing units (GPUs) and large scale human annotated datasets which  the networks can learn from. CNN have progressed from single object detection in images \parencite{krizhevsky_learning_2009} to multiple object detection and bounding box prediction \parencite{lin_microsoft_2014}. CNN networks have also had great success in different segmentation task \parencite{garcia-garcia_review_2017}. There is a similar trend in segmentation where we are moving from the easier task of semantic segmentation to the more complex task of instance segmentation. In semantic segmentation every pixel is mapped to a class and in instance segmentation the different instances of objects are separated detected for each class. Much work has gone into constructing well suited loss functions for segmentation \parencite{ronneberger_u-net:_2015, yu_unitbox:_2016, rahman_optimizing_2016}\\
+Convolutional neural networks (CNN) have had great success for computer vision tasks \parencite{sermanet_overfeat:_2013,zeiler_visualizing_2013,  simonyan_two-stream_2014, krizhevsky_imagenet_2012}.
+The success is possible in part thanks to graphical processing units (GPUs) and large scale human annotated datasets which  the networks can learn from. CNN have progressed from single object detection in images \parencite{krizhevsky_learning_2009} to multiple object detection and bounding box prediction \parencite{lin_microsoft_2014}. CNN networks have also had great success in different segmentation task \parencite{garcia-garcia_review_2017}. There is a similar trend in segmentation where we are moving from the easier task of semantic segmentation to the more complex task of instance segmentation. In semantic segmentation every pixel is mapped to a class and in instance segmentation the different instances of objects are separated detected for each class. It is not trivial to construct a loss function for segmentation which enforces the desired properties into the segmentation network. Much work has gone into this problem wich has resulted in several different types of loss functions \parencite{ronneberger_u-net:_2015, yu_unitbox:_2016, rahman_optimizing_2016}. Often the loss function fails to enforce important properties such as spatial contiguity in the segmentation maps \parencite{luc_semantic_2016} or proper spatial seperation \parencite{audebert_segment-before-detect:_2017}. Conditional markov random fields (CRFs) have been a popular post processing step to ensure spatial contiguity in segmentation maps \parencite{zhao_classification_2007}. Ronneberger \textit{et al} \parencite{ronneberger_u-net:_2015} also shows that object separation can be enforced by weighting the pixel wise loss function based on the proximity to nearby objects.\\
 \\
-Often the loss function fails to enforce important properties such as spatial contiguity in the segmentation maps \parencite{luc_semantic_2016} or proper spatial seperation \parencite{audebert_segment-before-detect:_2017}. Conditional markov random fields (CRFs) have been a popular post processing step to ensure spatial contiguity in segmentation maps \parencite{zhao_classification_2007}.
-A new popular network for image to image translations are generative adversarial networks. The network consists of a generator network which performs the image translation and a discriminative network which aims to learn the loss function to differentiate the generated samples from the ground truth ones \parencite{goodfellow_nips_2016}. These type of networks have had great success on image to image translation tasks and are able to produce much more artistically pleasing mappings then networks without the adversarial loss \parencite{ledig_photo-realistic_2016, isola_image--image_2016}. The success comes from the general approach where the network can learn it's own loss function which has proven beneficial for many tasks where a effective loss function is hard to express simply.\\
+A new popular network for image to image translations are generative adversarial networks. The network consists of a generator network which performs the image translation and a discriminative network which aims to learn the loss function to differentiate the generated samples from the ground truth ones \parencite{goodfellow_nips_2016}. These type of networks have had great success on image to image translation tasks and are able to produce much more artistically pleasing mappings then networks without the adversarial loss \parencite{ledig_photo-realistic_2016, isola_image--image_2016}. The success comes from the general approach where the network can learn its own loss function which has proven beneficial for many tasks where a effective loss function is hard to express simply. These types of networks have also been applied to image segmentation and has shown to give an increased performance \parencite{luc_semantic_2016, souly_semi_2017}. GANs have proven to be especially successful on small dataset such as medical segmentation where the human annotations usually are costly due to the required medical expertise needed to create correct annotations \parencite{souly_semi_2017, xue_segan:_2017, yang_automatic_2017, rezaei_conditional_2017, arbelle_microscopy_2017}.\\
 \\
-GANs have also been applied to image segmentation and has shown to give an increased performance \parencite{luc_semantic_2016, souly_semi_2017}. GANs have proven to be especially successful on small dataset such as medical segmentation where the human annotations usually are costly due to the required medical expertise needed to create correct annotations \parencite{souly_semi_2017, xue_segan:_2017, yang_automatic_2017, rezaei_conditional_2017, arbelle_microscopy_2017}.\\
 \\
-Analysis of aerial images can be a useful tool to obtain real time data cost effectively. To mention a few applications it can be used for traffic flow monitoring \parencite{ruhe_traffic_2003, moranduzzo_automatic_2014} vegetation monitoring \parencite{uto_characterization_2013, berni_thermal_2009}, urban area monitoring \parencite{moranduzzo_lbp-based_2015}, water reserve capacity monitoring, generate new maps \parencite{isola_image--image_2016} and even to detect endangered whales \parencite{polzounov_right_2016}. It can also be used to predict market trends since if we continuously can count the number of vehicles outside a marketplace we can more accurately predict how many customers that are visiting the marketplace and therefore make more accurate predictions about the markets earnings.\\
+In today's information society data is becoming more and more valuable. The data is used as a foundation to do business decisions  as well as political decisions daily. The life time of new data is also decreasing and new data is considered old and unrepresentative much faster than before. Thanks to the large number of satellites and the low cost to produce high resolution satellite images analysis of satellite images can be a useful tool to obtain real time data cost effectively. To mention a few applications it can be used for traffic flow monitoring \parencite{ruhe_traffic_2003, moranduzzo_automatic_2014} vegetation monitoring \parencite{uto_characterization_2013, berni_thermal_2009}, urban area monitoring \parencite{moranduzzo_lbp-based_2015}, water reserve capacity monitoring, generate new maps \parencite{isola_image--image_2016} and even to detect endangered whales \parencite{polzounov_right_2016}. Investors are continuously competing to obtain an edge over their competitors and turn a profit. Here satellite imagery analysis can be used to obtain fresh information before it reaches the market. For example, if we continuously can count the number of vehicles outside a marketplace we can more accurately predict how many customers that are visiting the marketplace and therefore make more accurate predictions about the markets earnings before those earnings are released to the public market.\\
 \\
-Much research has been performed investigating object detection an more specifically vehicle detection in aerial imagery \parencite{ammour_deep_2017, holt_object-based_2009, audebert_segment-before-detect:_2017, razakarivony_vehicle_2015, zhong_robust_2017, audebert_usability_2016, sakla_deep_2017}. However object detection in aerial images has proven to be a troublesome area. The objects of interest are usually very small compared to the image and there can be multiple objects within image. This causes naive classification networks to achieve bad performance if the entire image is fed in at once \parencite{ammour_deep_2017}. To combat this some form of segmentation is usually done and the image is fed into the network in patches. Earlier methods fed explicit image patches through the CNN using sliding window techniques\parencite{holt_object-based_2009}. This achieved good performance but at a great computational cost since redundant computation of low-level filters for overlapping patches had to be performed \parencite{luc_semantic_2016}. To combat this different forms of segmentation algorithms were used such as the mean-shift-algorithm which drastically decreased the number of patches which had to be fed through the network \parencite{ammour_deep_2017}. There have been work of two stage pipelines where a CNN segmentor first segments the image and the segmentation patchet are then fed into a object classification network which classifies the patches and predict bounding boxes \parencite{audebert_segment-before-detect:_2017}. A more advanced approach of such networks is the two stage fast region-based convolutional network (fast R-CNN) \parencite{ren_faster_2015, girshick_fast_2015} or mask region-based convolutional network (mask R-NN) \parencite{he_mask_2017} which computes the bounding boxes predictions using a second stage region proposal network (RPN) on internal convolutional feature maps. These networks decreases the computational cost compared to previous networks.  However these networks can only predict some predefined ratio of bounding boxes and the two stage network adds complexity both at training and test time.\\
+Much research has been performed investigating object detection an more specifically vehicle detection in aerial imagery \parencite{ammour_deep_2017, holt_object-based_2009, audebert_segment-before-detect:_2017, razakarivony_vehicle_2015, zhong_robust_2017, audebert_usability_2016, sakla_deep_2017}. However object detection in aerial images has proven to be a troublesome area. The objects of interest are usually very small compared to the image and there can be multiple objects within image. This causes naive classification networks to achieve bad performance if the entire image is fed in at once \parencite{ammour_deep_2017}. To combat this some form of segmentation is usually done and the image is fed into the network in patches. Earlier methods fed explicit image patches through the CNN using sliding window techniques\parencite{holt_object-based_2009}. This achieved good performance but at a great computational cost since redundant computation of low-level filters for overlapping patches had to be performed \parencite{luc_semantic_2016}. To combat this different forms of segmentation algorithms were used such as the mean-shift-algorithm which drastically decreased the number of patches which had to be fed through the network \parencite{ammour_deep_2017}. There have been work of two stage pipelines where a CNN segmentation network first segments the image into vehicle patches and then the patches are then fed into a object classification network which classifies the vehicles and predict bounding boxes \parencite{audebert_segment-before-detect:_2017}.\\
+\\
+A more advanced approach of such networks is the two stage fast region-based convolutional network (fast R-CNN) \parencite{ren_faster_2015, girshick_fast_2015} or mask region-based convolutional network (mask R-NN) \parencite{he_mask_2017} which computes the bounding boxes predictions using a second stage region proposal network (RPN) on internal convolutional feature maps. These networks decreases the computational cost compared to previous networks.  However these networks can only predict some predefined ratio of bounding boxes and the two stage network adds complexity both at training and test time.\\
 \\
 In this work we propose a generative adversarial segmentation network. The aim is to learn a better loss function for the segmentor so that vehicles can be detected by only performing connected component extraction on the segmentation maps. Since the adversarial part of the network only is used while training and connected component extraction is very computational efficient this guarantees computational efficient pipeline to detect and segment vehicles in aerial images compared to fast R-NN and mask R-NN which uses a two stage approach.
 \section{Research Question}
@@ -92,9 +92,9 @@ A common solution to try to force the generator to generate samples from the ent
 \subsection{Unconditional generative adversarial networks}
 Unconditional GANs are the simplest form of GANs. Here the discriminator does not observe the input to the generator. This means that the discriminator will learn a loss function which does not depend on the generators input \parencite{isola_image--image_2016}. We first define the binary cross entropy loss.
 \begin{equation}\label{eq:bce}
-\ell_{bce}(\hat{z}, z)=-(zln(\hat{z})+(1-z)ln(1-\hat{z}))
+\ell_{bce}(\hat{y}, y)=-(yln(\hat{y})+(1-y)ln(1-\hat{y}))
 \end{equation}
-Here $\hat{z}$ is the prediction and $z$ is the ground truth.
+Here $\hat{y}$ is the prediction and $y$ is the ground truth.
 The loss function for a unconditional GAN can then be described as.
  \begin{equation}
 \Lagr(G, D) = -(\ell_{bce}(D(y), 1) + \ell_{bce}(D(G(x)), 0))
@@ -105,19 +105,19 @@ G^{*}=argmin_{G}[max_{D}[\Lagr(G, D)]]\label{eq:minimax}
 \end{equation}
 \subsection{Conditional generative adversarial networks}
 A conditional generative adversarial network (cGAN) was proposed by \parencite{mirza_conditional_2014}.
-By letting the discriminator observe the input to the generator we can condition the loss function the discriminator learns on this input. This is of great importance here since we are not just trying to generate any semantic maps but semantic maps corresponding to the input image. The objective function will in this case be given by and the networks is trained with the minimax equation \eqref{eq:minimax}.
+By letting the discriminator observe the input to the generator we can condition the loss function the discriminator learns on this input. This is of great importance here since we are not just trying to generate any semantic maps but semantic maps corresponding to the input image. The objective function will in this case be given by the below eqation.
 \begin{equation}
-\Lagr(G, D) =  -(\ell_{bce}(D(x, y), 1) + \ell_{bce}(D(x, G(x)), 0))
+\Lagr(G, D) =  -(\ell_{bce}(D(x, y), 1) + \ell_{bce}(D(x, G(x)), 0))\label{eq:cgan}
 \end{equation}
 It has been shown that a multi term loss function can improve the quality of the generator \parencite{pathak_context_2016, isola_image--image_2016}. For image to image mappings a $\Lagr_1$ or $\Lagr_2$ loss is usually used. However for image segmentation a cross entropy loss is a better option to enforce the generator to assign a high probability to the correct class for each pixel. The pixel wise cross entropy loss is given below.
 \begin{equation}\label{eq:mce}
-\ell_{pxl}(\hat{y}, y) = - \sum_{n=1}^{H*W} \sum_{n=1}^{C}y*log(\hat{y})
+\ell_{pxl}(\hat{y}, y) = - \sum_{x=1}^{H*W}y(x)*log(\hat{y}(x))
 \end{equation}
-Here $y$ is the ground truth segmentation maps while $\hat{y}$ is the predicted maps. The discriminators objective is unchanged but the generator now has to fool the discriminator as well as minimizing the distance to the ground truth.
+Here $y(x)$ is the one hot encoding for pixel x and $\hat{y}(x)$ is the predicted probabilities. The discriminators objective is unchanged but the generator now has to fool the discriminator as well as minimizing the distance to the ground truth in respect to the cross entropy.
 \begin{equation}
 G^{*}=argmin_{G}[max_{D}[\Lagr(G, D)] + \lambda \ell_{pxl}(G)]
 \end{equation}
-Here $\lambda$ is just a constant which controls the importance of the second  loss term.
+Here $\lambda$ is a constant which controls the importance of the second  loss term.
 \subsection{Training generative adversarial networks}
 Generative adversarial networks are notoriously difficult to train. The minmax game formulated in \ref{eq:minimax} relies on both networks being of equal strength. If the generative network is too strong the discriminative network will not be able to differentiate between the generated and the true samples and will not provide an effective loss for the generator. If the discriminative network is to strong it will be able to differentiate between the generated samples and the true samples very effectively no matter what the the generator does. The derivative of the loss will then be very small and we will have a problem with vanishing gradients for the generative network. In practice it is very hard to achieve this balance but some comon tricks is making the generative or discriminative networks more or less complex as well as training them at different amount on steps each iteration. [??] also mentions some other tricks to stabilize gan training.
 Modify the loss function
@@ -130,7 +130,7 @@ Smooth target labels so the discriminator will not be able to differentiate betw
 For the generative part of a gan a segmentor network is needed. This network takes a image as an input and produces segmentation maps.
 A fully convolotional network (FCN) was first proposed Shelhamer and Long \textit{et al} \parencite{shelhamer_fully_2016}. A FCN is a CNN without any fully connected layers. A network with fully connected layers must have a specific input size on the image while a FCN network can take inputs of any size. The key insight is that by the authors were that fully connected layers can be viewed as convolutions with kernels that cover their entire input region. Hencea CNN with fully connected layers can be viewed as a FCN since it takes patches from a image of any size and outputs a spatial output map when the patches are aggregated. While the resulting maps are equivalent the computational cost for the FCN is greatly reduced. This is because no overlapping regions between patches has to be computed. This makes these networks ideal for generating dense output maps such as for image segmentation\\
 \\
-Ronneberger \textit{et al} \parencite{ronneberger_u-net:_2015} builds on the advancements of the FCN to propose a new type of segmentation network. The U-NET uses a encoder decoder structure with skip connections from bottleneck layers to upsampled layers. Thess skip connections are crucial to segmentation tasks as the initial feature
+Ronneberger \textit{et al} \parencite{ronneberger_u-net:_2015} builds on the advancements of the FCN to propose a new type of segmentation network. The U-NET uses a encoder decoder structure with skip connections from bottleneck layers to upsampled layers. These skip connections are crucial to segmentation tasks as the initial feature
 maps maintain low-level features such that can be properly exploited for accurate segmentation.The network has been shown to produce high accuracy results even on small sized datasets \parencite{son_retinal_2017, ronneberger_u-net:_2015, isola_image--image_2016, xue_segan:_2017, yang_automatic_2017}. Ronneberger \textit{et al} \parencite{ronneberger_u-net:_2015} attributes this to the networks structure which creates internal data augmentation.
 
 \begin{figure}[h!]
@@ -184,17 +184,82 @@ Here $\otimes$ operator is the pixel wise multiplication. To ensure good object 
 \omega(x)=\omega_c+\omega_0*epx(\frac{(-d_1(x)-d_2(x))^{2}}{2\sigma^2})
 \end{equation}
 Here $\omega_c(x)$ depends on the class frequency and could be computes as \ref{eq:wc1} or \ref{eq:wc2}. The distances $d_1(x)$ and $d_2(x)$ is the distance to the nearest and second nearest foreground object. The constant $\sigma$ determines how fast the penalty should decay with increasing distance and $\omega_0$ is a coefficient that determines the importance of the object separation penalty.
-\section{Connected component extraction}
-The most simple and intuitive method of labelling connected components in an image is the two pass algorithm \parencite{stockman_computer_2001}. The algorithm iterates two times over the binary two dimensional image. In the first pass the algorithm assigns temporary labels and records equivalences for each foreground pixel. In the second pass the algorithm replaces each temporary label by the smallest label of its equivalence class. Pixels can be defined to be connected by four or eight way connectivity. In four way connectivity only the above, below and two sideways neighbours are examined for connectivity but in eight way connectivity the diagonal neighbours are examined as well. Since all pixels in a vehicle should be four way connected with each other we will only use this mode. Since the algorithm makes a constant number of passes over the image array and a constant number of neighbours are compared at each step this is a O(n) time algorithm where n is the number of pixels i the input
-image.
+
 \section{Related work}
 In most cases the segmentation networks needs some post processing to improve the accuracy of the segmentation maps. Conditional random markov fields CRF have been very successfully to enforce spatial contiguity in the output maps \parencite{arnab_higher_2015, luc_semantic_2016}. There have been work that used mean field inference expressed as a recurrent convolutional networks to do CRF like post processing \parencite{schwing_fully_2015, zheng_conditional_2015}. Luc \textit{et al} \parencite{luc_semantic_2016} proposed a adversarial segmentation network to enforce higher order potentials without being limited to a single class. Instead on directly enforcing these higher order potentials in a CRF model as post processing the goal was to enforce them in the generator directly with adversarial training. This technique also has the benefit of lower complexity since at test time only the generator will be used.\\
 \\
 The generators task was to produce segmentation maps for the C classes. One initial concern was that the discriminator would trivially be able to differentiate the generated segmentation maps from the ground truth by only examining if they were continuous or discrete. To combat this a scaling method was proposed where the ground truth segmentation maps were processed so that a mass of $\tau$ where placed on the correct label but were otherwise made as similar as possible to the generated maps (in regard to KL divergence). The scaling method showed no improvement over the basic method with no pre processing.\\
 \\
-Son and Jung \textit{et al} \parencite{son_retinal_2017} showed that a U-NET combined with an adversarial loss could achieve state of the art performance for retinal vessel segmentation in fundoscopic images. The team investigated several types on adversarial networks proposed in \parencite{isola_image--image_2016} such as image-GAN, patch-GAN and pixel-GAN. For Image-GAN the discriminator make a decision on a image level if the image is generated or not. For patch-GAN the images are split into patches and the discriminator analyses each individually. The result is the aggregated result from all patches. For pixel-GAN the discriminator makes it decision on pixel per pixel level. The team found that a image-GAN togheter with a cross entropy term preformed the best and outperformed the non adversarial segmantic network trained only with the cross entropy loss by a significant margin.
-\chapter{The datasets}
-\section{The ISPRS Potsdam semantic dataset}
+Son and Jung \textit{et al} \parencite{son_retinal_2017} showed that a U-NET combined with an adversarial loss could achieve state of the art performance for retinal vessel segmentation in fundoscopic images. The team investigated several types on adversarial networks proposed in \parencite{isola_image--image_2016} such as image-GAN, patch-GAN and pixel-GAN. For Image-GAN the discriminator make a decision on a image level if the image is generated or not. For patch-GAN the images are split into patches and the discriminator analyses each individually. The result is the aggregated result from all patches. For pixel-GAN the discriminator makes it decision on pixel per pixel level. The team found that a image-GAN together with a cross entropy term preformed the best and outperformed the non adversarial semantic network trained only with the cross entropy loss by a significant margin.
+\chapter{Method}
+\section{The semantic network}
+\subsection{Network architecture}
+For the semantic network a U-Net proposed by \parencite{ronneberger_u-net:_2015} was used. Different number of filters in the initial layer was tried but it was concluded that more than 16 filters did not give a better performance but instead only resulted in a greater computational cost and greater over fitting. Dropout did not manage to solve the over fitting problem for the more complex networks so a U-Net with 16 initial filters and no dropout was chosen as the semantic network for the following experiments. To produce data augmentation the training image were randomly rotated 0, 90 180 or 270 degrees as well as randomly mirrored left to right and up to down.\\
+\\
+To extract vehicles from the segmentation map connected component extraction is used. Pixels can be defined to be connected by four or eight way connectivity. In four way connectivity only the above, below and two sideways neighbours are examined for connectivity but in eight way connectivity the diagonal neighbours are examined as well. Since all pixels in a vehicle should be four way connected with each other we will only use this mode. he most simple and intuitive method of extracting connected components in an image is the two pass algorithm \parencite{stockman_computer_2001} which is a O(n) time algorithm. The below image shows the proposed pipeline at testing time for counting and detecting vehicles.
+\begin{figure}[H]
+  \centering
+      \includegraphics[scale=.16]{net}
+  \caption{The 34 layer deep ResNet architecture \parencite{simonyan_very_2014}} \label{fig:vgg}
+\end{figure}
+\subsection{Border mirroring}
+Since the U-Net uses unpadded convolutions the output segmentation is smaller than the input image. Therefore borders where added to the input image to give the output segmentation the desired size. Information in the borders where extrapolated by mirroring. The below image shows the result of mirroring borders. The mirrored borders are shaded for clarity and the lighter are is the covered area for the output segmentation map.
+\begin{figure}[H]
+  \centering
+      \includegraphics[scale=.8]{borders}
+  \caption{The 34 layer deep ResNet architecture \parencite{simonyan_very_2014}} \label{fig:vgg}
+\end{figure}
+
+\section{Weighting the cross entropy loss}
+Using the weighting definition \ref{eq:weight} the cross entropy loss was weighted based on object separation. Initially $\omega_c$ was set to reflect the class imbalance. This led the model to achieve a good recall but a low precision and F1 score. The values $\omega_c =2$, $\omega_0=10$ and $\sigma=3$ was found to give a good F1 score while also enforcing better object separation. Below is the binary labels a well as the corresponding weight map for each pixel for the given values.
+\begin{figure}[H]
+\minipage{0.45\textwidth}
+  \includegraphics[width=\linewidth]{weight_labels}
+  Image \textbf{(a)}, the input validation image
+\endminipage\hfill
+\minipage{0.53\textwidth}
+  \includegraphics[width=\linewidth]{weight_map_3}
+  Image \textbf{(b)}, the ground truth segmentation
+\endminipage\hfill
+\caption{Figure shows the ground truth labels and the pixel weight map for a training image}
+\end{figure}
+\section{Adding an adversarial loss term}
+For the discriminative network a ResNet will be used. The ResNet is chosen over the VGG due to its slightly better performance and computational cost as well as its flexible architecture which makes it easy to change the depth or the input size [****]. The input to the discriminative network will be the satellite image concatenated with the ground truth or generated segmentation as showed in the image below. 
+\begin{figure}[H]
+  \centering
+      \includegraphics[scale=0.25]{gan_no_n}
+  \caption{The 34 layer deep ResNet architecture \parencite{simonyan_very_2014}} \label{fig:vgg}
+\end{figure}
+A patch-Gan structure will be used where the discriminator will only have a view of $100 \times 100$ pixels at once. The loss for the discriminator will be the average loss over all patches. The reason for this is this is that a patch-Gan with a smaller window was more stable during training compared to a patch-Gan with a larger window or an image-Gan. This also made it easy to perform batch normalization over the batch of patches extracted from one image.\\
+\\
+Following the example of \cite{goodfellow_generative_2014, luc_semantic_2016} the term $-\ell_{bce}(D(G(x),y), 0)$  is replaced with  $+\ell_{bce}(D(G(x),y), 1)$ in equation \ref{eq:cgan}. Hence instead of minimizing the probability of the discriminative network to predict the generated map to be synthetic we maximize the probability of predicting the generated map as ground truth. The reason for this is that it leads a stronger gradient for the discriminator when making predictions on ground truth and generated maps. The objective function for the GAN becomes.
+\begin{equation}
+\Lagr_{bce}(G, D) =\lambda(\ell_{bce}(D(x,G(x)), 1)-\ell_{bce}(D(x,y), 1))
+\end{equation}
+Finally we define our minimax game as.
+The objective for the network hence becomes.
+\begin{equation}
+G^{*}=argmin_{G}[\ell_{pxl}(G(x),y) + max_{D}[\lambda\Lagr(G, D)] ]
+\end{equation}
+\\
+Here we set $\lambda=0.01$ since this value gave a low importance to the adversarial loss early in the training but a larger importance at later stages when the cross entropy loss had decreased significantly. The model converged a lot slower with a larger value on $\lambda$ since the adversarial network would place too much importance on one specific difference early in training and completely disregard other differences. For example, the discriminator might learn the average size of a vehicle and solely base it's decision on this. The generator would then be able to decrease it's loss significantly by only chopping up objects in vehicle sized object and disregarding the nature of the object. This led to a slow convergence of the network.\\
+\\
+Since \cite{luc_semantic_2016} showed that there were no significant disadvantage of concatenating the generated maps with the satellite image in the basic manner opposed to the product or scaling method this was the initial approach. However in our experiments the discriminative network quickly learnt to spot the difference between the discrete ground truth labels and the continuous generated labels and spent all of it's time teaching the generative network to draw discrete boundaries and almost completely disregarded the initial segmentation task. To force the discriminative network to learn a more productive loss function the ground truth labels were first smoothed before being fed into the discriminator. The smoothing were performed so that the ground truth labels should have the same smoothness in border pixels as the generated segmentation maps without an adversarial loss. This forced the discriminative network to learn a more productive loss function and greatly improved performance.\\
+\\
+Initially both models were updated at each step. However it turned out that the network complexities poorly matched each other and one network always ended up outperforming the other. Initially a U-NET with 64 kernels in the first layer was used. For the adversarial networks a ResNet with depth 14 18,34, 50 and 101 was tried but for all of the configurations one of the networks drastically outperformed the other and training diverged as a result. To more easily be able to monitor the learning of the two networks the loss functions where changed to.
+\begin{equation}
+\Lagr(G) = \ell_{pxl}(G(x),y)+\lambda\ell_{bce}(D(x,G(x)), 1)
+\end{equation}
+\begin{equation}
+\Lagr(D) =\ell_{bce}(D(x,G(x)), 0) + \ell_{bce}(D(x,y), 1)
+\end{equation}
+Here both networks tries to minimize it's respective loss function. An alternating training regime described below could now be used.
+\lstinputlisting[language=Python]{training.py}
+Here \% is the modulus operator and $check\_discriminator=20$ and $cut\_off=1.0$. Since we stop training the discriminative network when it's loss goes below the cut off value the discriminative network is not able to significantly outperform the generative network. A cut off value of 1.0 indicates that the discriminative network makes a correct prediction approximately 60\% of the time.\\
+
+\chapter{Result}
+\section{The datasets}
+\subsection{The ISPRS Potsdam semantic dataset}
 The ISPRS Potsdam dataset is a two dimensional semantic segmentation
 dataset \cite{noauthor_2d_nodate}. The dataset has six classes, impervious surfaces, buildings, low, vegetation, trees, cars and clutter/background. The images are are of the TIFF format and has $6000 \times 6000$ resolution with a resoloution of 5 cm per pixel. There are 24 images for training
 and validation and 14 for testing. The images are rgb or infra-red together
@@ -248,50 +313,44 @@ Other & 100\\
 \hline
 \end{tabular}
 \end{center}
-To make the results comparable with the extensive research of different methods done by \cite{zhong_robust_2017} the classes plane, boat tractor van and other were removed due to scarcity of data. The annotations for each target consists on the centre coordinates of the target the angle of the center line of the bounding box as well as the corners of the bounding box. The bounding box fits the target closely so no extra information is given on the sides. The evaluation metrics on the VEDAI dataset are precision recall and F1-score:\\
-\chapter{Method}
-For the generator network a U-NET will be used and for the discriminator a ResNet will be used. The ResNet is choosen over the VGG due to its slightly better performance and computational cost as well as its flexible architecture which makes it easy to change the depth or the input size [****]. The input to the discriminative network will be the satellite image concatenated with the ground truth or generated segmentation. We will use a patch-Gan structure where the discriminator will only have a view of $100 \times 100$ pixels at once. The loss for the discriminator will be the average loss over all patches. The reason for this is this is that an patch-Gan will a smaller window was more stable during training than a patch-Gan with a larger window or an image-Gan. This also made it easy to perform batch normalization over the batch of patches extracted from one image. Using the definition of the binary cross entropy loss \eqref{eq:bce} and the pixel wise cross entropy loss \eqref{eq:mce} we can now define our loss function as.
-\begin{equation}
-\Lagr(G, D) = -\ell_{bce}(D(x,y), 1)-\ell_{bce}(D(x,G(x)), 0) + \lambda \ell_{pxl}(G(x),y)
-\end{equation}
-The generator will try to minimize this loss while the discriminator will try to maximize it. Following the example of \cite{goodfellow_generative_2014, luc_semantic_2016} and replace the term $-\ell_{bce}(D(G(x),y), 0)$ with  $+\ell_{bce}(D(G(x),y), 1)$. Hence instead of minimizing the probability of the discriminative network to predict the generated map to be synthetic we maximize the probability of predicting the generated map as ground truth. The reason for this is that it leads a stronger gradient for the discriminator when making predictions on ground truth and generated maps. The binary cross entropy loss then becomes,
-\begin{equation}
-\Lagr_{bce}(G, D) =\lambda(\ell_{bce}(D(x,G(x)), 1)-\ell_{bce}(D(x,y), 1))
-\end{equation}
-The objective for the network hence becomes.
-\begin{equation}
-G^{*}=argmin_{G}[max_{D}[\Lagr_{bce}(G, D)] + \lambda\ell_{pxl}(G(x),y)]
-\end{equation}
+To make the results comparable with the extensive research of different methods done by \cite{zhong_robust_2017} the classes plane, boat tractor van and other were removed due to scarcity of data.  The annotations for each target consists on the centre coordinates of the target the angle of the center line of the bounding box as well as the corners of the bounding box. The bounding box fits the target closely so no extra information is given on the sides. The evaluation metrics on the VEDAI dataset are precision recall and F1-score:\\
 \\
-Here we set $\lambda=0.01$, this value gave a low importance to the adversarial loss early in the training but a larger importance at later stages when the cross entropy loss had decreased significantly. The model converged a lot slower with a larger value on $\lambda$ since the adversarial network would place too much importance on one specific difference early in training and completely disregard other differences. For example, the discriminator might learn the average size of a vehicle and solely base it's decision on this. The generator would then be able to decrease it's loss significantly by only chopping up objects in vehicle sized object and disregarding the nature of the object. This led to a slow convergence of the network.\\
+The dataset was divided into three parts where 927 images were used for training, 100 for validation and 240 for testing. The dataset was transformed into a semantic dataset by assigning the pixels of the bounding boxes for remaining classes to the foreground class and the rest of the pixels to the background class. A small ''artificial'' separation was introduced around each bounding box so that all bounding boxes would be separated in the ground truth segmentation.\\
 \\
-Since \cite{luc_semantic_2016} showed that there were no significant disadvantage of concatenating the generated maps with the satellite image in the basic manner opposed to the product or scaling method this was the initial approach. However in our experiments the discriminative network quickly learnt to spot the difference between the discrete ground truth labels and the continuous generated labels and spent all of it's time teaching the generative network to draw discrete boundaries and almost completely disregarded the initial segmentation task. Below is an image of the ground truth label, the predicted segmentation using classical training and the predicted segmentation with an adversarial loss and concatenation in the basic manner.
-[******************************************************']
-To force the discriminative network to learn a more productive loss function the ground truth labels were first smoothed before being fed into the discriminator. The smoothing were performed so that the ground truth labels should have the same smoothness in border pixels as the generated segmentation maps without an adversarial loss. This forced the discriminative network to learn a more productive loss function and greatly improved performance.
+The dataset is severely imbalanced and around 99.3 \% of all pixels belongs to the background class. Since networks that have been trained on balanced datasets aslo have been shown to produce good results on unbalanced test data [????] the training data set was first filtered to make it more balanced. From the 927 training images only those which contained five or more vehicles where selected which resulted in 166 images. Those images where used for the initial part of training and when the network started to over fit and the performance on the validation data decreased the network was finally trained on all of the training images. This training procedure removed instabilities early on in training where the network otherwise where inclined to predict everything to the background class and set all weights to zero.
+\section{Weighting the loss function}
+The network with the weighted cross entropy loss achieved a comparable f1 score with the original network but but learned to separate objects much better. In the below segmentations we use discrete predictions to better display object separations.
+\begin{center}
 \begin{figure}[H]
-\minipage{0.48\textwidth}
-  \includegraphics[width=\linewidth]{pred_soft}
-  Image \textbf{(a)}, the input validation image
-\endminipage\hfill
-\minipage{0.48\textwidth}
-  \includegraphics[width=\linewidth]{label_blured}
-  Image \textbf{(b)}, the ground truth segmentation
-\endminipage\hfill
-\caption{Figure shows the ground truth labels and the pixel weight map for a training image}
+      \includegraphics[scale=0.7]{weighted_vs_unweighted}
+  \caption{} \label{fig:weighted_vs_unweighted}
 \end{figure}
-Initially both models were updated at each step. However it turned out that the network complexities poorly matched each other and one network always ended up outperforming the other. Initially a U-NET with 64 kernels in the first layer was used. For the adversarial networks a ResNet with depth 14 18,34, 50 and 101 was tried but for all of the configurations one of the networks drastically outperformed the other and training diverged as a result. To more easily be able to monitor the learning of the two networks the loss functions where changed to.
-\begin{equation}
-\Lagr_{bce}(G) =\ell_{bce}(D(x,G(x)), 1) + \lambda\ell_{pxl}(G(x),y)
-\end{equation}
-\begin{equation}
-\Lagr_{bce}(D) =\ell_{bce}(D(x,G(x)), 0) + \ell_{bce}(D(x,y), 1)
-\end{equation}
-Here both networks tries to minimize it's respective loss function. An alternating training regime described below could now be used.
-\lstinputlisting[language=Python]{training.py}
-Here \% is the modulus operator and $check\_discriminator=20$ and $cut\_off=1.0$. Since we stop training the discriminative network when it's loss goes below the cutoff value the discriminative network is not able to significantly outperform the generative network. A cutoff value of 1.0 indicates that the discriminative network makes a correct prediction approximately 60\% of the time.\\
+\end{center}
+\begin{figure}[H]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{class_vs_w/label_1}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{class_vs_w/un_weight_1}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{class_vs_w/weight_1}
+\endminipage
+\caption{}
+\end{figure}
 
-\chapter{Result}
-\section{With weight scaling}
+\begin{figure}[H]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{class_vs_w/label_2}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{class_vs_w/un_weight_2}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{class_vs_w/weight_2}
+\endminipage
+\caption{}
+\end{figure}
 \begin{center}
 \begin{tabular}{|c c c c c c c|}
 \hline
@@ -303,6 +362,68 @@ Here \% is the modulus operator and $check\_discriminator=20$ and $cut\_off=1.0$
 \hline
 \end{tabular}
 \end{center}
+\section{Adding an adversarial loss term}
+Since the GAN game becomes unstable with sparse gradients the Relu activation function was therefore replaced with a leaky relu activation in both the generative and discriminative network and max pooling was replaced by mean pooling in the generative network. The U-NET already uses 2D transposed convolution for up sampling so this was kept as in the original network. This changes greatly stabilized the training. However I still managed to train a GAN using the origin U-NET with sparse gradients with a carefully chosen learning rate decay. This training was very unstable and even a small change in the learning rate would cause the training to diverge. Below is the F1 score on the validation data for both types of GANs.
+\begin{center}
+\begin{figure}[H]
+      \includegraphics[scale=0.7]{mean_max_2}
+  \caption{The VGG16 architecture proposed by \cite{simonyan_very_2014}} \label{fig:vgg}
+\end{figure}
+\end{center}
+Both networks had a similar performance on the training data but the original network over fitted less and performed better on the validation data. Hence the original U-NET network was chosen as the generative network for the following comparisons although it was harder to train.
+In the below plots we displays the segmentation as a continuous values where the brightness of each pixel is the probability that that pixel belongs to a car to make better comparisons between the two networks. To obtain a discrete prediction an argmax between this layer and the background class can be preformed. The segmented images looks very similar on a large scale.
+\begin{figure}[H]
+\minipage{0.48\textwidth}
+  \includegraphics[width=\linewidth]{gan_vs_class/img_4}
+  Image \textbf{(a)}, the input validation image
+\endminipage\hfill
+\minipage{0.48\textwidth}
+  \includegraphics[width=\linewidth]{gan_vs_class/label_4}
+  Image \textbf{(b)}, the ground truth segmentation
+\endminipage\hfill
+\minipage{0.48\textwidth}
+  \includegraphics[width=\linewidth]{gan_vs_class/class_4}
+  Image \textbf{(c)}, segmentation without an adversarial loss
+\endminipage\hfill
+\minipage{0.48\textwidth}%
+  \includegraphics[width=\linewidth]{gan_vs_class/gan_4}
+   Image \textbf{(d)}, segmentation with an adversarial loss
+\endminipage
+\caption{Figure \ref{fig:class_1} shows the ground truth segmentation,}
+\end{figure}
+However if we look closely there are differences between the two networks. The adversarial network managed to enforce more assertive predictions and cars were more likely to be fully segmented or completely left out. However the segmented objects seemed to be more loosely conditioned on the input image then for the network without an adversarial loss. Other differences were that the GAN network was more inclined to chop up false positives into vehicle like objects. It also had a tenancy to separate long vehicles such as trucks into smaller car like parts. Below are cherry picked images which displays the differences of the two networks. adversarial loss.
+\begin{figure}[H]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{gan_vs_class/label_1}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{gan_vs_class/class_1}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{gan_vs_class/gan_1}
+\endminipage
+\caption{Figure \ref{fig:class_1} shows the ground truth segmentation, }
+\end{figure}
+
+\begin{figure}[H]
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{gan_vs_class/label_2}
+\endminipage\hfill
+\minipage{0.32\textwidth}
+  \includegraphics[width=\linewidth]{gan_vs_class/class_2}
+\endminipage\hfill
+\minipage{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{gan_vs_class/gan_2}
+\endminipage
+\caption{Figure \ref{fig:class_1} shows the ground truth segmentation, }
+\end{figure}
+When comparing the f1 scores the adversarial loss proved not to be helpful.
+\begin{center}
+\begin{figure}[H]
+      \includegraphics[scale=0.6]{classical_vs_adversarial}
+  \caption{The VGG16 architecture proposed by \cite{simonyan_very_2014}} \label{fig:gan_vs_class}
+\end{figure}
+\end{center}
 \section{Comparison with earlier work}
 \newpage
 \begin{center}
@@ -311,10 +432,10 @@ Here \% is the modulus operator and $check\_discriminator=20$ and $cut\_off=1.0$
 \hline
 \textbf{Model} & Proposed Model & SBD \\
 \textbf{Resolution used} & \textbf{30 cm/pixel} & 12.5 cm/pixel\\
-\textbf{Pixelwise F1 score} & 0.851 & \textbf{0.884}\\
-\textbf{Vehiclewise F1 score} & \textbf{0.800} &  0.773\\
+\textbf{Pixel wise F1 score} & 0.851 & \textbf{0.884}\\
+\textbf{Vehicle wise F1 score} & \textbf{0.811} &  0.773\\
 \textbf{Mean prediction error counting cars} & \textbf{1.67 \%} &  3.57 \%\\
-\textbf{Evaluation time per tile*} & \textbf{0.19 seconds} &  28.19 seconds\\
+\textbf{Evaluation time per image *} & \textbf{0.19 seconds} &  28.19 seconds\\
 \hline
 \end{tabular}\caption{Shows the comparison between the proposed model and the Segment before you Detect (SBD) model \parencite{audebert_usability_2016} on the Potsdam dataset.\\ \textbf{*} The SBD model was evaluated on a Tesla K20 which can at maximum perform $3.52*10^{12}$ 32 bit floating point operations per second. The proposed model was evaluated on a Tesla K80 wich can perform at maximum $8.74*10^{12}$ 32 bit floating point operations per second. Therefore the evaluation time on the SBD model was multiplied with $3.52/8.74\approx0.4027$ to make fair comparisons. The evaluation time should therefore not be regarded as exact but as an indication of the speed difference between the two models.}
 \end{center}
@@ -323,56 +444,18 @@ Here \% is the modulus operator and $check\_discriminator=20$ and $cut\_off=1.0$
 \captionof*{table}{Comparison on the Vedai dataset} \label{tab:vedai} 
 \begin{tabular}{|c | c c|}
 \hline
-\textbf{Model} & \textbf{Detection time per image*}  & \textbf{Vehiclewise F1 score}\\
+\textbf{Model} & \textbf{Detection time per image *}  & \textbf{Vehicle wise F1 score}\\
 \hline
 Faster R-CNN (Z\&F) & 0.1998 & 0.212\\
 Faster R-CNN (VGG-16) & 0.2248 & 0.225\\
 Fast R-CNN (VGG-16) & 3.1465 &  0.224\\
 CCNN &0.2736 &  0.305\\
-Proposed Model & $\approx$ \textbf{0.19/4} & \textbf{0.554}\\
+Proposed Model & \textbf{0.0616} & \textbf{0.542}\\
 \hline
 \end{tabular}
 \caption{Shows the comparison between the proposed model and the Faster R-CNN (Z\&F), Faster R-CNN (VGG-16), Fast R-CNN (VGG-16) \parencite{zeiler_visualizing_2014} and the Cascaded Convolutional Neural Networks (CCNN) \parencite{zhong_robust_2017-1} on the Vedai dataset. \textbf{*} The other models were evaluated on a Titan X which can at maximum perform $11*10^{12}$ 32 bit floating point operations per second. The proposed model was evaluated on a Tesla K80 wich can perform at maximum $8.74*10^{12}$ 32 bit floating point operations per second. Therefore the evaluation time on the compared models were multiplied with $11/8.74\approx1.2586$ to make fair comparisons. The evaluation time should therefore not be regarded as exact but as an indication of the speed difference between the two models.}
 \end{center}
 \chapter{Discussion}
-%Potsdam/bin_labels_resized/top_potsdam_2_11_RGB.tif
-%2018-04-17 08:47:13,406 time: 2.2504019737243652
-%107
-%108
-%107
-%[107, 83, 25, 24, 0.7685185185185185, 0.7757009345794392, 0.7720930232558139]
-%Potsdam/bin_labels_resized/top_potsdam_7_12_RGB.tif
-%2018-04-17 08:47:25,775 time: 0.16370177268981934
-%346
-%347
-%346
-%[346, 278, 59, 68, 0.8249258160237388, 0.8034682080924855, 0.8140556368960469]
-%Potsdam/bin_labels_resized/top_potsdam_7_11_RGB.tif
-%2018-04-17 08:47:38,697 time: 0.15589356422424316
-%346
-%347
-%346
-%[346, 291, 61, 55, 0.8267045454545454, 0.8410404624277457, 0.833810888252149]
-%Potsdam/bin_labels_resized/top_potsdam_7_10_RGB.tif
-%2018-04-17 08:47:51,576 time: 0.2106609344482422
-%250
-%251
-%250
-%[250, 203, 48, 47, 0.8087649402390438, 0.812, 0.810379241516966]
-%Potsdam/bin_labels_resized/top_potsdam_7_9_RGB.tif
-%2018-04-17 08:48:04,344 time: 0.18450117111206055
-%304
-%305
-%304
-%[304, 230, 80, 74, 0.7419354838709677, 0.756578947368421, 0.749185667752443]
-%Potsdam/bin_labels_resized/top_potsdam_2_12_RGB.tif
-%2018-04-17 08:48:17,134 time: 0.17915034294128418
-%123
-%124
-%123
-%[123, 100, 26, 23, 0.7936507936507936, 0.8130081300813008, 0.8032128514056225]
-%[246.0, 197.5, 49.833333333333336, 48.5, 0.794083349626268, 0.8002994470915654]
-
 \printbibliography[heading=bibintoc] % Print the bibliography (and make it appear in the table of contents)
 
 \appendix

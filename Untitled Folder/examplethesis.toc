@@ -14,42 +14,52 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Research Question}{3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Related work}{4}
+\contentsline {chapter}{\numberline {2}Related work}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Generative adversarial networks}{4}
+\contentsline {section}{\numberline {2.1}Generative adversarial networks}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Unconditional generative adversarial networks}{4}
+\contentsline {subsection}{\numberline {2.1.1}Unconditional generative adversarial networks}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Conditional generative adversarial networks}{5}
+\contentsline {subsection}{\numberline {2.1.2}Conditional generative adversarial networks}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.3}Training generative adversarial networks}{6}
+\contentsline {subsection}{\numberline {2.1.3}Training generative adversarial networks}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Segmentor networks}{6}
+\contentsline {section}{\numberline {2.2}Segmentor networks}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Classification networks}{8}
+\contentsline {section}{\numberline {2.3}Classification networks}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Weight functions and dealing with severely imbalanced datasets}{9}
+\contentsline {section}{\numberline {2.4}Weight functions and dealing with severely imbalanced datasets}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Connected component extraction}{10}
+\contentsline {section}{\numberline {2.5}Related work}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Related work}{11}
+\contentsline {chapter}{\numberline {3}Method}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}The datasets}{13}
+\contentsline {section}{\numberline {3.1}The semantic network}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}The ISPRS Potsdam semantic dataset}{13}
+\contentsline {subsection}{\numberline {3.1.1}Network architecture}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.1}The VEDAI dataset}{15}
+\contentsline {subsection}{\numberline {3.1.2}Border mirroring}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Method}{16}
+\contentsline {section}{\numberline {3.2}Weighting the cross entropy loss}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Result}{20}
+\contentsline {section}{\numberline {3.3}Adding an adversarial loss term}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}With weight scaling}{20}
+\contentsline {chapter}{\numberline {4}Result}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Comparison with earlier work}{20}
+\contentsline {section}{\numberline {4.1}The datasets}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Discussion}{23}
+\contentsline {subsection}{\numberline {4.1.1}The ISPRS Potsdam semantic dataset}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{24}
+\contentsline {subsection}{\numberline {4.1.2}The VEDAI dataset}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Unnecessary Appended Material}{31}
+\contentsline {section}{\numberline {4.2}Weighting the loss function}{22}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Adding an adversarial loss term}{24}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Comparison with earlier work}{28}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Discussion}{31}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{32}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Unnecessary Appended Material}{39}

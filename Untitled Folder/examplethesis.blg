@@ -1,17 +1,17 @@
 [0] Config.pm:340> INFO - This is Biber 2.4
 [0] Config.pm:343> INFO - Logfile is 'examplethesis.blg'
-[56] biber:287> INFO - === tor apr 19, 2018, 15:11:00
-[177] Biber.pm:348> INFO - Reading 'examplethesis.bcf'
-[374] Biber.pm:742> INFO - Found 59 citekeys in bib section 0
-[381] Biber.pm:3151> INFO - Processing section 0
-[422] Biber.pm:3308> INFO - Looking for bibtex format file 'ex.bib' for section 0
-[1154] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
-[1746] bibtex.pm:974> INFO - Found BibTeX data source 'ex.bib'
-[2665] Utils.pm:147> WARN - ISBN '978-3-319-10589-5 978-3-319-10590-1' in entry 'zeiler_visualizing_2014' is invalid - run biber with '--validate_datamodel' for details.
-[3434] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[3435] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[3435] Biber.pm:3028> INFO - Sorting list 'nty/global' of type 'entry' with scheme 'nty' and locale 'en-US'
-[3435] Biber.pm:3032> INFO - No sort tailoring available for locale 'en-US'
-[3642] bbl.pm:519> INFO - Writing 'examplethesis.bbl' with encoding 'UTF-8'
-[4367] bbl.pm:615> INFO - Output to examplethesis.bbl
-[4368] Biber.pm:109> INFO - WARNINGS: 1
+[54] biber:287> INFO - === tor apr 26, 2018, 17:29:56
+[173] Biber.pm:348> INFO - Reading 'examplethesis.bcf'
+[369] Biber.pm:742> INFO - Found 59 citekeys in bib section 0
+[377] Biber.pm:3151> INFO - Processing section 0
+[415] Biber.pm:3308> INFO - Looking for bibtex format file 'ex.bib' for section 0
+[1111] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
+[1717] bibtex.pm:974> INFO - Found BibTeX data source 'ex.bib'
+[2627] Utils.pm:147> WARN - ISBN '978-3-319-10589-5 978-3-319-10590-1' in entry 'zeiler_visualizing_2014' is invalid - run biber with '--validate_datamodel' for details.
+[3342] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[3342] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[3342] Biber.pm:3028> INFO - Sorting list 'nty/global' of type 'entry' with scheme 'nty' and locale 'en-US'
+[3342] Biber.pm:3032> INFO - No sort tailoring available for locale 'en-US'
+[3523] bbl.pm:519> INFO - Writing 'examplethesis.bbl' with encoding 'UTF-8'
+[4216] bbl.pm:615> INFO - Output to examplethesis.bbl
+[4217] Biber.pm:109> INFO - WARNINGS: 1
