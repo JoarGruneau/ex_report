@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.8.23)  27 APR 2018 01:02
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2017.8.23)  27 APR 2018 15:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1147,32 +1147,32 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [6]
 Chapter 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--83
+Underfull \hbox (badness 10000) in paragraph at lines 63--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--83
+Underfull \hbox (badness 10000) in paragraph at lines 63--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--83
+Underfull \hbox (badness 10000) in paragraph at lines 63--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--83
+Underfull \hbox (badness 10000) in paragraph at lines 63--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--83
+Underfull \hbox (badness 10000) in paragraph at lines 63--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--83
+Underfull \hbox (badness 10000) in paragraph at lines 63--76
 
  []
 
@@ -1182,32 +1182,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--83
 ] [2] [3] [4]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--90
+Underfull \hbox (badness 10000) in paragraph at lines 80--83
 
  []
 
 [5
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 120--129
+Underfull \hbox (badness 10000) in paragraph at lines 113--122
 
  []
 
 [6]
 File: u-net.png Graphic file (type QTm)
  <use  "u-net.png" >
-Underfull \hbox (badness 10000) in paragraph at lines 130--140
+Underfull \hbox (badness 10000) in paragraph at lines 123--133
 
  []
 
 
-Overfull \hbox (10.53017pt too wide) in paragraph at lines 130--140
-\EU1/TeXGyrePagella(0)/m/n/12 been shown to produce high accuracy results even 
-on small sized datasets
+Overfull \hbox (1.63817pt too wide) in paragraph at lines 123--133
+\EU1/TeXGyrePagella(0)/m/n/12 network has been shown to produce high accuracy r
+esults even on small
  []
 
 [7] [8]
-Overfull \hbox (8.2612pt too wide) in paragraph at lines 141--142
+Overfull \hbox (8.2612pt too wide) in paragraph at lines 134--135
 \EU1/TeXGyrePagella(0)/m/n/12 For the discriminative part of the GAN a classifi
 cation network is needed.
  []
@@ -1216,39 +1216,39 @@ File: vgg.png Graphic file (type QTm)
 <use  "vgg.png" > [9]
 File: resnet.png Graphic file (type QTm)
  <use  "resnet.png" >
-Overfull \hbox (5.91286pt too wide) in paragraph at lines 151--158
-\EU1/TeXGyrePagella(0)/m/n/12 taining comparable performance [51, 55]. The succ
+Overfull \hbox (5.91286pt too wide) in paragraph at lines 144--151
+\EU1/TeXGyrePagella(0)/m/n/12 taining comparable performance [52, 56]. The succ
 ess behind the ResNet
  []
 
 
-Overfull \hbox (1.19066pt too wide) in paragraph at lines 162--162
+Overfull \hbox (1.19066pt too wide) in paragraph at lines 155--155
 |[]\EU1/lmss/bx/n/17.28 Weight functions and dealing with severely
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 179--183
+Underfull \hbox (badness 10000) in paragraph at lines 172--176
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 193--200
+Underfull \hbox (badness 10000) in paragraph at lines 186--193
 
  []
 
 
-Overfull \hbox (4.60117pt too wide) in paragraph at lines 193--200
+Overfull \hbox (4.60117pt too wide) in paragraph at lines 186--193
 \EU1/TeXGyrePagella(0)/m/n/12 The generators task was to produce segmentation m
 aps for the C classes.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--200
+Underfull \hbox (badness 10000) in paragraph at lines 186--193
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--200
+Underfull \hbox (badness 10000) in paragraph at lines 186--193
 
  []
 
@@ -1256,12 +1256,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 193--200
 Chapter 3.
 File: net.png Graphic file (type QTm)
 <use  "net.png" >
-Overfull \hbox (15.63431pt too wide) in paragraph at lines 208--209
+Overfull \hbox (15.63431pt too wide) in paragraph at lines 201--202
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--210
+Underfull \hbox (badness 10000) in paragraph at lines 196--203
 
  []
 
@@ -1277,17 +1277,23 @@ File: weight_map_3.png Graphic file (type QTm)
 <use  "weight_map_3.png" > [15]
 File: gan_no_n.png Graphic file (type QTm)
  <use  "gan_no_n.png" > [16]
-Underfull \hbox (badness 10000) in paragraph at lines 239--242
+Underfull \hbox (badness 10000) in paragraph at lines 232--235
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 249--256
+Underfull \hbox (badness 10000) in paragraph at lines 242--249
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--256
+Overfull \hbox (1.29417pt too wide) in paragraph at lines 242--249
+\EU1/TeXGyrePagella(0)/m/n/12 quickly learned to spot the difference between th
+e discrete ground truth
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--249
 
  []
 
@@ -1295,7 +1301,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 249--256
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (./training.py)
-Underfull \hbox (badness 10000) in paragraph at lines 264--265
+Underfull \hbox (badness 10000) in paragraph at lines 257--258
 
  []
 
@@ -1310,18 +1316,18 @@ File: trees.jpg Graphic file (type QTm)
 File: trees_label.jpg Graphic file (type QTm)
  <use  "trees_label.jpg" >
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 322--327
+Underfull \hbox (badness 10000) in paragraph at lines 315--320
 
  []
 
 
-Overfull \hbox (6.79819pt too wide) in paragraph at lines 322--327
+Overfull \hbox (6.79819pt too wide) in paragraph at lines 315--320
 \EU1/TeXGyrePagella(0)/m/n/12 transformed into a semantic dataset by assigning 
 the pixels of the bound-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--327
+Underfull \hbox (badness 10000) in paragraph at lines 315--320
 
  []
 
@@ -1343,7 +1349,7 @@ File: class_vs_w/un_weight_2.jpg Graphic file (type QTm)
 <use  "class_vs_w/un_weight_2.jpg" >
 File: class_vs_w/weight_2.jpg Graphic file (type QTm)
  <use  "class_vs_w/weight_2.jpg" >
-Overfull \hbox (12.12218pt too wide) in paragraph at lines 361--370
+Overfull \hbox (12.12218pt too wide) in paragraph at lines 354--363
  [] 
  []
 
@@ -1361,10 +1367,10 @@ File: gan_vs_class/gan_4.jpg Graphic file (type QTm)
 
 <use  "gan_vs_class/gan_4.jpg" >
 
-LaTeX Warning: Reference `fig:class_1' on page 26 undefined on input line 398.
+LaTeX Warning: Reference `fig:class_1' on page 26 undefined on input line 391.
 
 
-LaTeX Warning: Reference `fig:class_1' on page 26 undefined on input line 398.
+LaTeX Warning: Reference `fig:class_1' on page 26 undefined on input line 391.
 
 [26]
 File: gan_vs_class/label_1.jpg Graphic file (type QTm)
@@ -1375,10 +1381,10 @@ File: gan_vs_class/gan_1.jpg Graphic file (type QTm)
 
 <use  "gan_vs_class/gan_1.jpg" >
 
-LaTeX Warning: Reference `fig:class_1' on page 27 undefined on input line 411.
+LaTeX Warning: Reference `fig:class_1' on page 27 undefined on input line 404.
 
 
-LaTeX Warning: Reference `fig:class_1' on page 27 undefined on input line 411.
+LaTeX Warning: Reference `fig:class_1' on page 27 undefined on input line 404.
 
 [27]
 File: gan_vs_class/label_2.jpg Graphic file (type QTm)
@@ -1389,19 +1395,19 @@ File: gan_vs_class/gan_2.jpg Graphic file (type QTm)
 
 <use  "gan_vs_class/gan_2.jpg" >
 
-LaTeX Warning: Reference `fig:class_1' on page 28 undefined on input line 424.
+LaTeX Warning: Reference `fig:class_1' on page 28 undefined on input line 417.
 
 
-LaTeX Warning: Reference `fig:class_1' on page 28 undefined on input line 424.
+LaTeX Warning: Reference `fig:class_1' on page 28 undefined on input line 417.
 
 File: classical_vs_adversarial.png Graphic file (type QTm)
 <use  "classical_vs_adversarial.png" > [28] [29]
-Overfull \hbox (24.21817pt too wide) in paragraph at lines 437--446
+Overfull \hbox (24.21817pt too wide) in paragraph at lines 430--439
  [] 
  []
 
 
-Overfull \hbox (56.0182pt too wide) in paragraph at lines 451--462
+Overfull \hbox (56.0182pt too wide) in paragraph at lines 444--455
  [] 
  []
 
@@ -1410,31 +1416,38 @@ Chapter 5.
 [32
 
 ]
-LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 465
+LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 458
 .
  (/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmtt.fd
 File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (5.21103pt too wide) in paragraph at lines 465--465
+Overfull \hbox (5.21103pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/n/12 mentation via Adversarial Neural Networks”. In: \
 EU1/TeXGyrePagella(0)/m/it/12 arXiv:1709.05860
  []
 
 
-Overfull \hbox (5.63281pt too wide) in paragraph at lines 465--465
+Overfull \hbox (5.63281pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/sc/12 url\EU1/TeXGyrePagella(0)/m/n/12 : $[][][][] [] 
 [] [] [][][][][] [] [][][] [] [][][] [] [][][][] [] [][][][][]$ (visited on 02/
 20/2018). 
  []
 
 
-Overfull \hbox (28.32802pt too wide) in paragraph at lines 465--465
+Overfull \hbox (28.32802pt too wide) in paragraph at lines 458--458
 []\EU1/TeXGyrePagella(0)/m/n/12 Nicolas Audebert, Bertrand Le Saux, and Sébasti
 en Lefèvre. “  Segment-
  []
 
 
-Overfull \hbox (11.13206pt too wide) in paragraph at lines 465--465
+Overfull \hbox (1.98091pt too wide) in paragraph at lines 458--458
+\EU1/TeXGyrePagella(0)/m/n/12 In: \EU1/TeXGyrePagella(0)/m/it/12 arXiv:1609.068
+45 [cs] \EU1/TeXGyrePagella(0)/m/n/12 (Sept. 2016). arXiv: 1609.06845. \EU1/TeX
+GyrePagella(0)/m/sc/12 url\EU1/TeXGyrePagella(0)/m/n/12 : $[][][][] []
+ []
+
+
+Overfull \hbox (11.13206pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/n/12 mote Sensing for Vegetation Monitoring From an Un
 manned Aerial
  []
@@ -1442,39 +1455,39 @@ manned Aerial
 [33
 
 ]
-Overfull \hbox (7.0718pt too wide) in paragraph at lines 465--465
+Overfull \hbox (7.0718pt too wide) in paragraph at lines 458--458
 [][][][][] [] [] [] [][][][][][] [] [][][] [] [][][][][][][] [] [][][][][][][][
 ]$ \EU1/TeXGyrePagella(0)/m/n/12 (visited on 04/04/2018). 
  []
 
 
-Overfull \hbox (3.91496pt too wide) in paragraph at lines 465--465
+Overfull \hbox (3.91496pt too wide) in paragraph at lines 458--458
 []\EU1/TeXGyrePagella(0)/m/n/12 Ross Girshick. “  Fast R-CNN”. In: \EU1/TeXGyre
 Pagella(0)/m/it/12 arXiv:1504.08083 [cs] \EU1/TeXGyrePagella(0)/m/n/12 (Apr. 20
 15).
  []
 
 
-Overfull \hbox (5.6448pt too wide) in paragraph at lines 465--465
+Overfull \hbox (5.6448pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/sc/12 url\EU1/TeXGyrePagella(0)/m/n/12 : $[][][][] [] 
 [] [] [][][][][] [] [][][] [] [][][] [] [][][][] [] [][][][][]$ (visited on 03/
 08/2018). 
  []
 
 
-Overfull \hbox (1.94301pt too wide) in paragraph at lines 465--465
+Overfull \hbox (1.94301pt too wide) in paragraph at lines 458--458
 []\EU1/TeXGyrePagella(0)/m/n/12 Ian Goodfellow. “  NIPS 2016 Tutorial: Generati
 ve Adversarial Net-
  []
 
 
-Overfull \hbox (11.11003pt too wide) in paragraph at lines 465--465
+Overfull \hbox (11.11003pt too wide) in paragraph at lines 458--458
 []\EU1/TeXGyrePagella(0)/m/n/12 Kaiming He et al. “  Identity Mappings in Deep 
 Residual Networks”.
  []
 
 
-Overfull \hbox (0.69176pt too wide) in paragraph at lines 465--465
+Overfull \hbox (0.69176pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/n/12 pp. 871–880. \EU1/TeXGyrePagella(0)/m/sc/12 issn\
 EU1/TeXGyrePagella(0)/m/n/12 : 0099-1112. \EU1/TeXGyrePagella(0)/m/sc/12 url\EU
 1/TeXGyrePagella(0)/m/n/12 : $[][][][][] [] [] [] [][][][] [] [][][][] [] [][][
@@ -1482,181 +1495,187 @@ EU1/TeXGyrePagella(0)/m/n/12 : 0099-1112. \EU1/TeXGyrePagella(0)/m/sc/12 url\EU
  []
 
 
-Overfull \hbox (47.5156pt too wide) in paragraph at lines 465--465
+Overfull \hbox (47.5156pt too wide) in paragraph at lines 458--458
 [][][] [] [][] [] [][][][][][][][][][][][] [] [][][][][][] [][] [][][][][] [][]
  [][][][][][][][][] [][] [][][] [][] [][][][][][][][][][][][][][] [][]
  []
 
 [34]
-Overfull \hbox (2.15205pt too wide) in paragraph at lines 465--465
+Overfull \hbox (7.5718pt too wide) in paragraph at lines 458--458
+[][][][][][] [] [][][] [] [][][][][][][][][] [] [][][] [][] [][][][][][][][][][
+]$ \EU1/TeXGyrePagella(0)/m/n/12 (visited on 04/27/2018). 
+ []
+
+
+Overfull \hbox (2.15205pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/n/12 geNet Classification with Deep Convolutional Neur
 al Networks”.
  []
 
 
-Overfull \hbox (15.61563pt too wide) in paragraph at lines 465--465
+Overfull \hbox (15.61563pt too wide) in paragraph at lines 458--458
 [][][][] [] [] [] [][][][][][] [] [][][][] [] [][] [] [][][][][] [] [][][][] []
 [] [][][][][][][][] [][] [][][][][][][][][][][][][][] [][]
  []
 
 
-Overfull \hbox (19.91406pt too wide) in paragraph at lines 465--465
+Overfull \hbox (19.91406pt too wide) in paragraph at lines 458--458
 []\EU1/TeXGyrePagella(0)/m/n/12 Christian Ledig et al. “  Photo-Realistic Singl
 e Image Super-Resolution
  []
 
 
-Overfull \hbox (1.11804pt too wide) in paragraph at lines 465--465
+Overfull \hbox (1.11804pt too wide) in paragraph at lines 458--458
 []\EU1/TeXGyrePagella(0)/m/n/12 Pauline Luc et al. “  Semantic Segmentation usi
 ng Adversarial Net-
  []
 
 
-Overfull \hbox (4.36293pt too wide) in paragraph at lines 465--465
+Overfull \hbox (4.36293pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/n/12 versarial Nets”. In: \EU1/TeXGyrePagella(0)/m/it/
 12 arXiv:1411.1784 [cs, stat] \EU1/TeXGyrePagella(0)/m/n/12 (Nov. 2014). \EU1/T
 eXGyrePagella(0)/m/sc/12 url\EU1/TeXGyrePagella(0)/m/n/12 : $[][][][] []
  []
 
 
-Overfull \hbox (5.40604pt too wide) in paragraph at lines 465--465
+Overfull \hbox (5.40604pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/it/12 ternational Geoscience and Remote Sensing Sympos
 ium (IGARSS)\EU1/TeXGyrePagella(0)/m/n/12 . July
  []
 
 
-Overfull \hbox (4.83pt too wide) in paragraph at lines 465--465
+Overfull \hbox (4.83pt too wide) in paragraph at lines 458--458
 []\EU1/TeXGyrePagella(0)/m/n/12 T. Moranduzzo and F. Melgani. “  Automatic Car 
 Counting Method
  []
 
 [35]
-Overfull \hbox (5.62082pt too wide) in paragraph at lines 465--465
+Overfull \hbox (5.62082pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/sc/12 url\EU1/TeXGyrePagella(0)/m/n/12 : $[][][][] [] 
 [] [] [][][][][] [] [][][] [] [][][] [] [][][][] [] [][][][][]$ (visited on 03/
 09/2018). 
  []
 
 [36]
-Overfull \hbox (5.6448pt too wide) in paragraph at lines 465--465
+Overfull \hbox (5.6448pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/sc/12 url\EU1/TeXGyrePagella(0)/m/n/12 : $[][][][] [] 
 [] [] [][][][][] [] [][][] [] [][][] [] [][][][] [] [][][][][]$ (visited on 02/
 20/2018). 
  []
 
 
-Overfull \hbox (45.02301pt too wide) in paragraph at lines 465--465
+Overfull \hbox (45.02301pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/n/12 ization and Detection using Convolutional Network
 s”. In: \EU1/TeXGyrePagella(0)/m/it/12 arXiv:1312.6229
  []
 
 
-Overfull \hbox (26.58302pt too wide) in paragraph at lines 465--465
+Overfull \hbox (26.58302pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/n/12 volutional Networks for Semantic Segmentation”. I
 n: \EU1/TeXGyrePagella(0)/m/it/12 arXiv:1605.06211
  []
 
 
-Overfull \hbox (29.43405pt too wide) in paragraph at lines 465--465
+Overfull \hbox (29.43405pt too wide) in paragraph at lines 458--458
 []\EU1/TeXGyrePagella(0)/m/n/12 Wenzhe Shi et al. “  Real-Time Single Image and
  Video Super-Resolution
  []
 
 
-Overfull \hbox (8.51892pt too wide) in paragraph at lines 465--465
+Overfull \hbox (8.51892pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/it/12 arXiv:1609.05158 [cs, stat] \EU1/TeXGyrePagella(
 0)/m/n/12 (Sept. 2016). arXiv: 1609.05158. \EU1/TeXGyrePagella(0)/m/sc/12 url\E
 U1/TeXGyrePagella(0)/m/n/12 : $[][][][] []
  []
 
 
-Overfull \hbox (36.19902pt too wide) in paragraph at lines 465--465
+Overfull \hbox (36.19902pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/n/12 lutional Networks for Action Recognition in Video
 s”. In: \EU1/TeXGyrePagella(0)/m/it/12 arXiv:1406.2199
  []
 
 
-Overfull \hbox (35.05103pt too wide) in paragraph at lines 465--465
+Overfull \hbox (35.05103pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/n/12 tional Networks for Large-Scale Image Recognition
 ”. In: \EU1/TeXGyrePagella(0)/m/it/12 arXiv:1409.1556
  []
 
 
-Overfull \hbox (5.60883pt too wide) in paragraph at lines 465--465
+Overfull \hbox (5.60883pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/sc/12 url\EU1/TeXGyrePagella(0)/m/n/12 : $[][][][] [] 
 [] [] [][][][][] [] [][][] [] [][][] [] [][][][] [] [][][][][]$ (visited on 03/
 09/2018). 
  []
 
 [37]
-Overfull \hbox (58.00302pt too wide) in paragraph at lines 465--465
+Overfull \hbox (58.00302pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/n/12 ing loss function for highly unbalanced segmentat
 ions”. In: \EU1/TeXGyrePagella(0)/m/it/12 arXiv:1707.03237
  []
 
 
-Overfull \hbox (7.89502pt too wide) in paragraph at lines 465--465
+Overfull \hbox (7.89502pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/n/12 Impact of Residual Connections on Learning”. In: 
 \EU1/TeXGyrePagella(0)/m/it/12 arXiv:1602.07261
  []
 
 
-Overfull \hbox (0.48804pt too wide) in paragraph at lines 465--465
+Overfull \hbox (0.48804pt too wide) in paragraph at lines 458--458
 []\EU1/TeXGyrePagella(0)/m/n/12 K. Uto et al. “  Characterization of Rice Paddi
 es by a UAV-Mounted
  []
 
 
-Overfull \hbox (5.49503pt too wide) in paragraph at lines 465--465
+Overfull \hbox (5.49503pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/n/12 $L_1$ Loss for Medical Image Segmentation”. In: \
 EU1/TeXGyrePagella(0)/m/it/12 arXiv:1706.01805
  []
 
 
-Overfull \hbox (3.20702pt too wide) in paragraph at lines 465--465
+Overfull \hbox (3.20702pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/n/12 versarial Image-to-Image Network”. In: \EU1/TeXGy
 rePagella(0)/m/it/12 arXiv:1707.08037 [cs] \EU1/TeXGyrePagella(0)/m/n/12 (July
  []
 
 
-Overfull \hbox (0.22691pt too wide) in paragraph at lines 465--465
+Overfull \hbox (0.22691pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/n/12 work”. In: \EU1/TeXGyrePagella(0)/m/it/12 arXiv:1
 608.01471 [cs] \EU1/TeXGyrePagella(0)/m/n/12 (2016), pp. 516–520. \EU1/TeXGyreP
 agella(0)/m/sc/12 doi\EU1/TeXGyrePagella(0)/m/n/12 : $[][] [] [][][][] []
  []
 
 [38]
-Overfull \hbox (2.78801pt too wide) in paragraph at lines 465--465
+Overfull \hbox (2.78801pt too wide) in paragraph at lines 458--458
 []\EU1/TeXGyrePagella(0)/m/n/12 Matthew D. Zeiler and Rob Fergus. “  Visualizin
 g and Understand-
  []
 
 
-Overfull \hbox (2.029pt too wide) in paragraph at lines 465--465
+Overfull \hbox (2.029pt too wide) in paragraph at lines 458--458
 \EU1/TeXGyrePagella(0)/m/n/12 ing Convolutional Networks”. In: \EU1/TeXGyrePage
 lla(0)/m/it/12 arXiv:1311.2901 [cs] \EU1/TeXGyrePagella(0)/m/n/12 (Nov. 2013).
  []
 
 
-Overfull \hbox (2.78801pt too wide) in paragraph at lines 465--465
+Overfull \hbox (2.78801pt too wide) in paragraph at lines 458--458
 []\EU1/TeXGyrePagella(0)/m/n/12 Matthew D. Zeiler and Rob Fergus. “  Visualizin
 g and Understand-
  []
 
 
-Overfull \hbox (1.11865pt too wide) in paragraph at lines 465--465
+Overfull \hbox (1.11865pt too wide) in paragraph at lines 458--458
 [][] [] [][][][] [] [][][] [][] [] [][] [][][] [][] [][][][][] [][] [] [] [][]$
 \EU1/TeXGyrePagella(0)/m/n/12 . \EU1/TeXGyrePagella(0)/m/sc/12 url\EU1/TeXGyreP
 agella(0)/m/n/12 : $[][][][][] [] [] [] [][][][] [] [][][][][][][][] []
  []
 
 
-Overfull \hbox (2.73402pt too wide) in paragraph at lines 465--465
+Overfull \hbox (2.73402pt too wide) in paragraph at lines 458--458
 []\EU1/TeXGyrePagella(0)/m/n/12 Shuai Zheng et al. “  Conditional Random Fields
  as Recurrent Neu-
  []
 
-[39] (./examplethesis.aux)
+[39] [40] (./examplethesis.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1668,12 +1687,12 @@ Package logreq Info: Writing requests to 'examplethesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25707 strings out of 493638
- 477387 string characters out of 6146796
- 874208 words of memory out of 5000000
- 28784 multiletter control sequences out of 15000+600000
+ 25708 strings out of 493638
+ 477436 string characters out of 6146796
+ 874237 words of memory out of 5000000
+ 28785 multiletter control sequences out of 15000+600000
  8517 words of font info for 61 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  61i,11n,92p,10412b,2454s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on examplethesis.pdf (45 pages).
+Output written on examplethesis.pdf (46 pages).
