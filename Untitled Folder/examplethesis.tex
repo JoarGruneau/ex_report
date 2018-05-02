@@ -13,6 +13,8 @@
 \usepackage{float}
 \usepackage{amsmath,amssymb}
 \usepackage{listings}
+\usepackage{makecell}
+\renewcommand\theadfont{\bfseries}
 
 \DeclareRobustCommand{\bbone}{\text{\usefont{U}{bbold}{m}{n}1}}
 
@@ -104,7 +106,7 @@ It has been shown that a multi term loss function can improve the quality of the
 \begin{equation}\label{eq:mce}
 \ell_{pxl}(\hat{y}, y) = - \sum_{x=1}^{H*W}y(x)*log(\hat{y}(x))
 \end{equation}
-Here $y(x)$ is the one hot encoding for pixel x and $\hat{y}(x)$ is the predicted probabilities. The discriminator's objective is unchanged but the generator now has to fool the discriminator as well as minimizing the distance to the ground truth in respect to the cross entropy.
+Here $y(x)$ is the one hot encoding for pixel x and $\hat{y}(x)$ is the predicted probabilities. $H$ and $W$ is the height and width of the image. The discriminator's objective is unchanged but the generator now has to fool the discriminator as well as minimizing the distance to the ground truth in respect to the cross entropy.
 \begin{equation}
 G^{*}=argmin_{G}[max_{D}[\Lagr(G, D)] + \lambda \ell_{pxl}(G)]
 \end{equation}
@@ -124,36 +126,36 @@ For the generative part of a GAN a segmentation network is needed. This network 
 A fully convolutional network (FCN) was first proposed Shelhamer and Long \textit{et al.} \parencite{shelhamer_fully_2016}. A FCN is a CNN without any fully connected layers. A network with fully connected layers must have a specific input size on the image while a FCN network can take inputs of any size. The key insight made by the authors were that fully connected layers can be viewed as convolutions with kernels that cover their entire input region. Hence, a CNN with fully connected layers can be viewed as a FCN since it takes patches from a image of any size and outputs a spatial output map when the patches are aggregated. While the resulting maps are equivalent the computational cost for the FCN is greatly reduced. This is because no overlapping regions between patches has to be computed. This makes these networks ideal for generating dense output maps such as for image segmentation.\\
 \\
 Ronneberger \textit{et al.} \parencite{ronneberger_u-net:_2015} builds on the advancements of the FCN to propose a new type of segmentation network. The U-Net uses a encoder decoder structure with skip connections from bottleneck layers to up sampled layers. These skip connections are crucial for segmentation tasks as the initial feature maps maintain low-level features which need to be properly exploited for accurate segmentation at later stages. The network has been shown to produce high accuracy results even on small sized datasets \parencite{son_retinal_2017, ronneberger_u-net:_2015, isola_image--image_2016, xue_segan:_2017, yang_automatic_2017}. 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[scale=0.2]{u-net}
   \caption{Shows the U-Net architecture proposed by Ronneberger \textit{et al.} \parencite{ronneberger_u-net:_2015}.}\label{fig:unet}
 \end{figure}
-Notice that the size of the input image and the output prediction in \ref{fig:unet} is different. This is because the U-Net uses unpadded convolutions so at every convolutional layer one pixel is lost at every side. To obtain predictions in the borders of an image the context is extrapolated by mirroring the image \parencite{li_deepunet:_2017}. It is also important that we choose an initial image size so the activation maps length is even through all layers of the network. \parencite{ronneberger_u-net:_2015}. In theory the U-Net can handle images of any size but in practice we have memory limitations for the GPU. Large input images is therefore split up into patches. The segmentation on the patches can then be directly stitched together without any overlapping because the net uses unpadded convolutions.
+\noindent Notice that the size of the input image and the output prediction in \ref{fig:unet} is different. This is because the U-Net uses unpadded convolutions so at every convolutional layer one pixel is lost at every side. To obtain predictions in the borders of an image the context is extrapolated by mirroring the image \parencite{li_deepunet:_2017}. It is also important that we choose an initial image size so the activation maps length is even through all layers of the network. \parencite{ronneberger_u-net:_2015}. In theory the U-Net can handle images of any size but in practice we have memory limitations for the GPU. Large input images is therefore split up into patches. The segmentation on the patches can then be directly stitched together without any overlapping because the net uses unpadded convolutions.
 \section{Classification networks}
 For the discriminative part of the GAN a classification network is needed. This takes a input image and a set of segmentation maps and decides if the segmentation maps are artificial or ground truth. There are several high preforming classification networks such as the VGG networks \parencite{simonyan_very_2014} and the ResNet networks \parencite{he_deep_2015}.
 \subsection{VGG Networks}
 The popular 16 layer VGG16 or the 19 layers VGG19 have performed very well on a wide variety of tasks such as classification \parencite{simonyan_very_2014}. They have been used inside Fast Region-based Convolutional Networks (fast R-CNN) \parencite{ren_faster_2015, girshick_fast_2015} to generate object activation maps for the regional proposal network (RPN). Fast R-CNN have been able to do object detection and bounding box prediction at a fraction of the time of earlier networks. They have also been used as a encoder in the SegNet architecture which has been a very popular segmentation network \parencite{badrinarayanan_segnet:_2015}.
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[scale=0.5]{vgg}
   \caption{The VGG16 architecture proposed by \cite{simonyan_very_2014}} \label{fig:vgg}
 \end{figure}
-The VGG16 network takes inputs of images with size $224 \times 224$ and produces a class wise prediction. The network is very simple, yet powerful and uses only $3 \times 3$ convolutions and $2 \times 2$ max pooling layers with stride 2.
+\noindent The VGG16 network takes inputs of images with size $224 \times 224$ and produces a class wise prediction. The network is very simple, yet powerful and uses only $3 \times 3$ convolutions and $2 \times 2$ max pooling layers with stride 2.
 \subsection{ResNet networks}
 ResNet is another widely popular classification network. It has performed very well on classification tasks \parencite{he_identity_2016, szegedy_inception-v4_2016} It has also been shown that wider residual networks are more memory efficient while still obtaining comparable performance \parencite{wu_wider_2016, zagoruyko_wide_2016}.
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
       \includegraphics[scale=0.25]{resnet}
   \caption{The 34 layer deep ResNet architecture \parencite{simonyan_very_2014}} \label{fig:vgg}
 \end{figure}
-The success behind the ResNet lies in the residual blocks. A residual block is a two or more convolutional layers with a identity short-cut connection in between. The residual block can be defined as.
+\noindent The success behind the ResNet lies in the residual blocks. A residual block is a two or more convolutional layers with a identity short-cut connection in between. The residual block can be defined as.
 \begin{equation}
 y=F(x, W) + x
 \end{equation}
 The benefit of this is that this guarantees that the gradients will flow through the entire network. Therefore, it is possible to build and train very deep residual networks by stacking hundreds of residual blocks. This also allows the network to itself decide the required depth since it can learn to set the weight of the final residual blocks to zero if they are not needed \parencite{he_deep_2015}. Hence, we get a very flexible network where we easily can adapt the depth to the task at hand.
 \section{Weight functions and dealing with severely imbalanced datasets}
-Due to the nature of overhead images the objects of interest are usually small compared to the entire image. This causes the dataset to be imbalanced since most pixels will belong to the background class. A naive segmentation network could then obtain good accuracy by only predicting everything to the background class. To combat this there are several techniques. The most straight forward is to use a weighted cross entropy loss where every term is weighted depending on the class frequency \parencite{sudre_generalised_2017}. Below is the weighted cross entropy loss for a two class segmentation problem.
+Due to the nature of overhead images the objects of interest are usually small compared to the entire image. This causes the dataset to be imbalanced since most pixels will belong to the background class. A naive segmentation network could then obtain good accuracy by only predicting everything to the background class. To combat this there are several techniques. The most straight forward is to use a weighted cross entropy loss where every term is weighted depending on the class frequency or predicted frequency \parencite{sudre_generalised_2017}. Below is the weighted cross entropy loss for a two class segmentation problem.
 \begin{equation}
 \ell_{wce}(\hat{y}, y)=-\omega_cylog(\hat{y}) + (1-y)log(1-\hat{y})
 \end{equation}
@@ -161,22 +163,21 @@ Here $y$ is the true probability for the foreground class, $\hat{y}$ the predict
 \begin{equation}\label{eq:wc1}
 w_c=\frac{W*H - \sum_{x=0}^{W*H} \hat{y}_{c=1}(x)}{\sum_{x=0}^{W*H} \hat{y}_{c=1}(x)}
 \end{equation}
-Here W and H are the width and height of the image and $\hat{y}_{c=1}(x)$ the predicted probability that pixel x belongs to class one.
+Here W and H are the width and height of the image and $\hat{y}_{c=1}(x)$ is the predicted probability that pixel $x$ belongs to class one. Another class weighting technique i.
 \begin{equation}\label{eq:wc2}
 w_c=\frac{\sum_{n=0}^{N} \sum_{x=0}^{W*H} y_{c=0}(x)}{\sum_{n=0}^{N} \sum_{x=0}^{W*H} y_{c=1}(x)}
 \end{equation}
-Which is the sum over all of the background pixels in the training dataset divided by the foreground pixels.
-Another popular approach is to minimize the intersect over union loss \parencite{yu_unitbox:_2016, rahman_optimizing_2016}. The intersect over union loss for a two class segmentation task is given below.
+$\sum_{n=0}^{N} \sum_{x=0}^{W*H} y_{c=0}(x)$ is the sum over all of the background pixels in the training dataset. This is divided by the sum of the foreground pixels to obtain the class frequency ratio. Another popular approach is to minimize the intersect over union loss \parencite{yu_unitbox:_2016, rahman_optimizing_2016}. The intersect over union loss for a two class segmentation task is given below.
 \begin{equation}
 \ell_{IoU}(\hat{y}, y)= 1 - \frac{ \sum_{x=0}^{W*H} y(x)*\hat{y}(x) }{ \sum_{x=0}^{W*H} y(x) + \sum_{x=0}^{W*H} \hat{y}(x) - \sum_{W*H} y(x) * \hat{y}(x)}
 \end{equation}
 Here $\hat{y}(x)$ is the discrete class prediction for pixel x.\\
 \\
-To ensure good object separation Ronneberger \textit{et al.} \parencite{ronneberger_u-net:_2015} proposes to scale the pixel wise loss based on the proximity to the closet two foreground objects according to.
+To ensure good object separation Ronneberger \textit{et al.} \parencite{ronneberger_u-net:_2015} proposes to scale the pixel wise loss based on the proximity to the closest two foreground objects according.
 \begin{equation}\label{eq:pxl_weight}
 	\ell_{pxl}(\hat{y}, y) = - \sum_{x=0}^{H*W}\omega(x)*y(x)*log(\hat{y}(x))
 \end{equation}
-Here $\omega(x)$ is the weighting term for pixel x, $y$ is the one hot encoding for the class of pixel x, $\hat{y}(x)$ is the prediction for pixel x and $H$ and $W$ is the height and width of the segmentation map. The weighting factor $\omega(x)$ is computed as following.
+Here $\omega(x)$ is the weighting term for pixel x, $y$ is the one hot encoding, $\hat{y}(x)$ is the discrete prediction and $H$ and $W$ is the height and width of the segmentation map. The weighting factor $\omega(x)$ is computed as following.
 \begin{equation}\label{eq:weight}
 \omega(x)=\omega_c+\omega_0*epx(\frac{(-d_1(x)-d_2(x))^{2}}{2\sigma^2})
 \end{equation}
@@ -187,31 +188,32 @@ In most cases the segmentation networks needs some post processing to improve th
 \\
 The generators task was to produce segmentation maps for the C classes. One initial concern was that the discriminator would trivially be able to differentiate the generated segmentation maps from the ground truth by only examining if they were continuous or discrete. To combat this a scaling method was proposed where the ground truth segmentation maps were processed so that a mass of $\tau$ where placed on the correct label but were otherwise made as similar as possible to the generated maps (in regard to KL divergence). The scaling method showed no improvement over the basic method with no preprocessing.\\
 \\
-Son and Jung \textit{et al.} \parencite{son_retinal_2017} showed that a U-NET combined with an adversarial loss could achieve state of the art performance for retinal vessel segmentation in fundoscopic images. The team investigated several types on adversarial networks proposed in \parencite{isola_image--image_2016} such as image-GAN, patch-GAN and pixel-GAN. For Image-GAN the discriminator make a decision on a image level if the image is generated or not. For patch-GAN the images are split into patches and the discriminator analyses each individually. The result is the aggregated result from all patches. For pixel-GAN the discriminator makes it decision on pixel per pixel level. The team found that a image-GAN together with a cross entropy term preformed the best and outperformed the non adversarial segmentation network trained only with the cross entropy loss by a small margin.\\
+Son and Jung \textit{et al.} \parencite{son_retinal_2017} showed that a U-Net combined with an adversarial loss could achieve state of the art performance for retinal vessel segmentation in fundoscopic images. The team investigated several types on adversarial networks proposed in \parencite{isola_image--image_2016} such as image-GAN, patch-GAN and pixel-GAN. For Image-GAN the discriminator make a decision on a image level if the image is generated or not. For patch-GAN the images are split into patches and the discriminator analyses each individually. The result is the aggregated result from all patches. For pixel-GAN the discriminator makes it decision on pixel per pixel level. The team found that a image-GAN together with a cross entropy term preformed the best and outperformed the non adversarial segmentation network trained only with the cross entropy loss by a small margin.\\
 \\
-Ronneberger \textit{et al.} \parencite{ronneberger_u-net:_2015} showed that a U-NET could learn small border pixels in cell segmentation by weighting the loss as \ref{eq:pxl_weight}. The loss enforced the network to learn small border and outperformed the second best network on the ISBI cell tracking challenge 2015 with a large margin.
+Ronneberger \textit{et al.} \parencite{ronneberger_u-net:_2015} showed that a U-Net could learn small border pixels in cell segmentation by weighting the loss as \ref{eq:pxl_weight}. The loss enforced the network to learn small border and outperformed the second best network on the ISBI cell tracking challenge 2015 with a large margin.
 \chapter{Method}
 \section{The segmentation network}
 \subsection{Network architecture}
-For the segmentation network a U-Net proposed by \parencite{ronneberger_u-net:_2015} was used. Different number of filters in the initial layer was tried but it was concluded that more than 16 filters did not give a better performance but instead only resulted in a greater computational cost and greater over fitting. Dropout did not manage to solve the over fitting problem for the more complex networks so a U-Net with 16 initial filters and no dropout was chosen as the segmentation network for the following experiments. To produce data augmentation the training image were randomly rotated 0, 90 180 or 270 degrees as well as randomly mirrored left to right and up to down.\\
+For the segmentation network a U-Net proposed by \parencite{ronneberger_u-net:_2015} was used. Different number of filters in the initial layer was tried but it was concluded that more than 16 filters did not give a better performance and only resulted in a greater computational cost and overfitting. Dropout did not manage to solve the overfitting problem for the more complex networks so a U-Net with 16 initial filters and no dropout was chosen as the segmentation network for the following experiments. To produce data augmentation the training image were randomly rotated 0, 90 180 or 270 degrees as well as randomly mirrored left to right and up to down.\\
 \\
-To extract vehicles from the segmentation map connected component extraction is used. Pixels can be defined to be connected by four or eight way connectivity. In four way connectivity only the above, below and two sideways neighbours are examined for connectivity but in eight way connectivity the diagonal neighbours are examined as well. Since all pixels in a vehicle should be four way connected with each other we will only use this mode. The most simple and intuitive method of extracting connected components in an image is the two pass algorithm \parencite{stockman_computer_2001} which is a O(n) time algorithm. The below image shows the proposed pipeline at testing time for counting and detecting vehicles.
+To extract vehicles from the segmentation map connected component extraction is used. Pixels can be defined to be connected by four or eight way connectivity. In four way connectivity only the above, below and two sideways neighbours are examined for connectivity but in eight way connectivity the diagonal neighbours are examined as well. Since all pixels in a vehicle should be four way connected with each other only use this mode will be used. The most simple and intuitive method of extracting connected components in an image is the two pass algorithm \parencite{stockman_computer_2001} which is a O(n) time algorithm. The below image shows the proposed pipeline at testing time for counting and detecting vehicles.
 \begin{figure}[H]
   \centering
-      \includegraphics[scale=.16]{net}
-  \caption{The 34 layer deep ResNet architecture \parencite{simonyan_very_2014}} \label{fig:vgg}
+      \includegraphics[scale=.15]{net}
+  \caption{Shows the proposed vehicle detection and counting pipeline at test time.} \label{fig:pipe}
 \end{figure}
 \subsection{Border mirroring}
 Since the U-Net uses unpadded convolutions the output segmentation is smaller than the input image. Therefore, borders were added to the input image to give the output segmentation the desired size. Information in the borders where extrapolated by mirroring. The below image shows the result of mirroring borders. The mirrored borders are shaded for clarity and the lighter are is the covered area for the output segmentation map.
 \begin{figure}[H]
   \centering
       \includegraphics[scale=.8]{borders}
-  \caption{Shows a training image with mirrored borders from the Potsdam dataset. The shaded area will be lost due to unpaded convolutions} \label{fig:vgg}
+  \caption{Shows a training image with mirrored borders from the Potsdam dataset. The shaded area will be lost due to unpaded convolutions.} \label{fig:vgg}
 \end{figure}
 
 \section{Weighting the cross entropy loss}
-Using the weighting definition \ref{eq:pxl_weight} the cross entropy loss was weighted based on object separation. Initially $\omega_c$ was set to reflect the class imbalance as defined in \eqref{eq:wc1} or \eqref{eq:wc2}. This led the model to achieve a good recall but a low precision and F1 score. The values $\omega_c =2$, $\omega_0=10$ and $\sigma=3$ was found to give a good F1 score while also enforcing better object separation. Below is the binary labels a well as the corresponding weight map for each pixel for the given values.
+Using the weighting definition \ref{eq:pxl_weight} the cross entropy loss was weighted based on object separation. Initially $\omega_c$ was set to reflect the class imbalance as defined in \eqref{eq:wc1} or \eqref{eq:wc2}. This led the model to achieve a good recall but a low precision and F1 score. The values $\omega_c =2$, $\omega_0=10$ and $\sigma=3$ was found to give a good F1 score while also enforcing better object separation. Below is the binary labels and the corresponding weight map for the given values.
 \begin{figure}[H]
+\centering
 \minipage{0.45\textwidth}
   \includegraphics[width=\linewidth]{weight_labels}
 %  Image \textbf{(a)}, the input validation image
@@ -220,18 +222,18 @@ Using the weighting definition \ref{eq:pxl_weight} the cross entropy loss was we
   \includegraphics[width=\linewidth]{weight_map_3}
 %  Image \textbf{(b)}, the ground truth segmentation
 \endminipage\hfill
-\caption{Figure shows the ground truth labels and the pixel weight map for a training image.}
+\caption{Shows the ground truth labels and the pixel weight map for a training image.}
 \end{figure}
 \section{Adding an adversarial loss term}
 For the discriminative network a ResNet will be used. The ResNet is chosen over the VGG due to its slightly better performance and computational cost \parencite{johnson_cnn-benchmarks:_2018} as well as its flexible architecture which makes it easy to change the depth or the input size. The input to the discriminative network will be the satellite image concatenated with the ground truth or generated segmentation as showed in the image below. 
 \begin{figure}[H]
   \centering
       \includegraphics[scale=0.25]{gan_no_n}
-  \caption{The 34 layer deep ResNet architecture \parencite{simonyan_very_2014}} \label{fig:vgg}
+  \caption{Shows the sarchitecture of the segmentation network with an adversarial los at training time.} \label{fig:GAN}
 \end{figure}
-A patch-Gan structure will be used where the discriminator will only have a view of $100 \times 100$ pixels at once. The loss for the discriminator will be the average loss over all patches. The reason for this is that a patch-Gan with a smaller window was more stable during training compared to a patch-Gan with a larger window or an image-Gan. This also made it easy to perform batch normalization over the batch of patches extracted from one image.\\
+\noindent A patch-GAN structure will be used where the discriminator only has a view of $100 \times 100$ pixels at once. The loss for the discriminator will be the average loss over all patches. The reason for this is that a patch-GAN with a smaller window was more stable during training compared to a patch-GAN with a larger window or an image-GAN. This also made it easy to perform batch normalization over the batch of patches extracted from one image.\\
 \\
-Following the example of \cite{goodfellow_generative_2014, luc_semantic_2016} the term $-\ell_{bce}(D(G(x),y), 0)$  is replaced with  $+\ell_{bce}(D(G(x),y), 1)$ in equation \ref{eq:cgan}. Hence instead of minimizing the probability of the discriminative network to predict the generated map to be synthetic we maximize the probability of predicting the generated map as ground truth. The reason for this is that it leads a stronger gradient for the discriminator when making predictions on ground truth and generated maps. The objective function for the GAN becomes.
+Following the example of \cite{goodfellow_generative_2014, luc_semantic_2016} the term $-\ell_{bce}(D(G(x),y), 0)$  is replaced with  $+\ell_{bce}(D(G(x),y), 1)$ in equation \ref{eq:cgan}. Hence instead of minimizing the probability of the discriminative network to predict the generated map to be synthetic we maximize the probability of predicting the generated map as ground truth. The reason for this is that it leads a stronger gradient for the discriminator when making predictions on ground truth and generated maps. The objective function for the GAN then becomes.
 \begin{equation}
 \Lagr_{bce}(G, D) =\lambda(\ell_{bce}(D(x,G(x)), 1)-\ell_{bce}(D(x,y), 1))
 \end{equation}
@@ -245,7 +247,7 @@ Here we set $\lambda=0.01$ since this value gave a low importance to the adversa
 \\
 Since \cite{luc_semantic_2016} showed that there were no significant disadvantage of concatenating the generated maps with the satellite image in the basic manner opposed to the product or scaling method this was the initial approach. However in our experiments the discriminative network quickly learned to spot the difference between the discrete ground truth labels and the continuous generated labels and spent all of it's time teaching the generative network to draw discrete boundaries and almost completely disregarded the initial segmentation task. To force the discriminative network to learn a more productive loss function the ground truth labels were first smoothed before being fed into the discriminator. The smoothing were performed so that the ground truth labels should have the same smoothness in border pixels as the generated segmentation maps without an adversarial loss. This forced the discriminative network to learn a more productive loss function and greatly improved performance.\\
 \\
-Initially both models were updated at each step. However it turned out that the network complexities poorly matched each other and one network always ended up outperforming the other. Initially a U-NET with 64 kernels in the first layer was used. For the adversarial networks a ResNet with depth 14 18,34, 50 and 101 was tried but for all the configurations one of the networks drastically outperformed the other and training diverged as a result. To more easily be able to monitor the learning of the two networks the loss functions where changed to.
+Initially both models were updated at each step. However it turned out that the network complexities poorly matched each other and one network always ended up outperforming the other. For the adversarial networks a ResNet with depth 14, 18, 34, 50 and 101 was tried but for all the configurations one of the networks drastically outperformed the other and training diverged as a result. To more easily be able to monitor the learning of the two networks the loss functions where changed to.
 \begin{equation}
 \Lagr(G) = \ell_{pxl}(G(x),y)+\lambda\ell_{bce}(D(x,G(x)), 1)
 \end{equation}
@@ -255,19 +257,20 @@ Initially both models were updated at each step. However it turned out that the 
 Here both networks tries to minimize its respective loss function. An alternating training regime described below could now be used.
 \lstinputlisting[language=Python]{training.py}
 Here \% is the modulus operator and $check\_discriminator=20$ and $cutoff=1.0$. Since we stop training the discriminative network when its loss goes below the cutoff value the discriminative network is not able to significantly outperform the generative network. A cutoff value of 1.0 indicates that the discriminative network makes a correct prediction approximately 60\% of the time.\\
-
 \chapter{Result}
 \section{The datasets}
+The datasets chosen for evaluation are the ISPRS Potsdam segmentation dataset and the Vedai vehicle detection dataset. The Potsdam dataset was chosen since it is over urban areas with high car densities. This corresponds well with the application of interest which is counting cars in car parks which usually have densities of vehicles as well. The Potsdam images also had a very high resolution which allowed them to be down sampled to match satellite resolution easily. The Vedai dataset was chosen since this is a well known vehicle detection dataset. This allowed the proposed model to be evaluated against previous well known models. The Vedai dataset also has a very low car density which lets us test generality of the proposed model for vehicle detection over different settings.
 \subsection{The ISPRS Potsdam semantic dataset}
 The ISPRS Potsdam dataset is a two dimensional semantic segmentation
-dataset \cite{noauthor_2d_nodate}. The dataset has six classes, impervious surfaces, buildings, low, vegetation, trees, cars and clutter/background. The images are are of the TIFF format and has $6000 \times 6000$ resolution with a resoloution of 5 cm per pixel. There are 24 images for training
+dataset \cite{noauthor_2d_nodate}. The dataset has six classes, impervious surfaces, buildings, low, vegetation, trees, cars and clutter/background. The images are are of the TIFF format and has $6000 \times 6000$ size with a resolution of 5 cm per pixel. There are 24 images for training
 and validation and 14 for testing. The images are rgb or infra-red together
-with rgb. There is also a height data channel. The ground truth segmentation for the test images is not released and the segmentation maps have to be sent to ISPRS for evaluation. Below is an example of the training data from the ISPRS Potsdam semantic dataset.
+with rgb. There is also a height data channel. The ground truth segmentation for the test images are not released and the segmentation maps have to be sent to ISPRS for evaluation. Below is an example of the training data from the ISPRS Potsdam segmentation dataset.
 \begin{center}
 \begin{figure}[H]
+\centering
       \includegraphics[scale=0.25]{potsdam}
-  \caption{An example image from the Potsdam dataset with a: the rgb
-channel, b: the height data channel and c: the ground truth segmentation
+  \caption{An example image from the Potsdam dataset with the rgb
+channel, the height data channel and the ground truth segmentation
 map.}
 \end{figure}
 \end{center}
@@ -282,15 +285,14 @@ Recall=\frac{True\textit{ }positive}{True\textit{ }Positive+False\textit{ }negat
 \begin{equation}\label{eq:f1}
 F1\textit{ }score=\frac{2*Recall*Precision}{Recall+Precision}
 \end{equation}
-This work focuses on detecting vehicles in low cost images so the images will be down sampled to a resolution of $1000 \times 1000$ pixels which corresponds a resolution of 30 cm per pixel. This is done to match the resolution to the the resolution of commercial satellites such as DigitalGlobes WorldView 3 and 4 \cite{noauthor_worldview-3_nodate}. Only the car class will also be predicted. One important factor to keep in mind is that this is a multi class semantic dataset and not a vehicles detection dataset. In several of the images it is possible to spot vehicles through trees without leaves but these are not segmented as vehicles but as trees. This makes it a harder challenge for the semantic network since it must learn to differentiate between very similar objects.
+This work focuses on detecting vehicles in low cost images so the images will be down sampled to a size of $1000 \times 1000$ pixels which corresponds a resolution of 30 cm per pixel. This is done to match the resolution of commercial satellites such as DigitalGlobes WorldView 3 and 4 \cite{noauthor_worldview-3_nodate}. One important factor to keep in mind is that this is a multi class segmentation dataset and not a vehicles detection dataset. In several of the images it is possible to spot vehicles through trees without leaves but these are not segmented as vehicles but as trees. This makes it a harder challenge for the segmentation network since it must learn to differentiate between very similar objects.
 \begin{figure}[H]
+\centering
 \minipage{0.48\textwidth}
   \includegraphics[width=\linewidth]{trees}
-  Image \textbf{(a)}, the input validation image
 \endminipage\hfill
 \minipage{0.48\textwidth}
   \includegraphics[width=\linewidth]{trees_label}
-  Image \textbf{(b)}, the ground truth segmentation
 \endminipage\hfill
 \caption{Figure shows the ground truth labels and the pixel weight map for a training image}
 \end{figure}
@@ -312,20 +314,15 @@ Other & 100\\
 \hline
 \end{tabular}
 \end{center}
-To make the results comparable with the extensive research of different methods done by \cite{zhong_robust_2017} the classes plane, boat tractor van and other were removed due to scarcity of data.  The annotations for each target consists on the centre coordinates of the target the angle of the center line of the bounding box as well as the corners of the bounding box. The bounding box fits the target closely so no extra information is given on the sides. The evaluation metrics on the VEDAI dataset are precision recall and F1-score:\\
+To make the results comparable with the extensive research of different methods done by \cite{zhong_robust_2017} the classes plane, boat tractor van and other were removed due to scarcity of data.  The annotations for each target consists on the centre coordinates of the target, the angle of the center line of the bounding box as well as the corners of the bounding box. The bounding box fits the target closely so no extra information is given on the sides of the target. The evaluation metrics on the VEDAI dataset are precision recall and F1-score:\\
 \\
 The dataset was divided into three parts where 927 images were used for training, 100 for validation and 240 for testing. The dataset was transformed into a semantic dataset by assigning the pixels of the bounding boxes for remaining classes to the foreground class and the rest of the pixels to the background class. A small ''artificial'' separation was introduced around each bounding box so that all bounding boxes would be separated in the ground truth segmentation.\\
 \\
-The dataset is severely imbalanced and around 99.3 \% of all pixels belongs to the background class. To deal with this the training data set was first filtered to make it more balanced. From the 927 training images only those which contained five or more vehicles where selected which resulted in 166 images. Those images where used for the initial part of training and when the network started overfitting and the performance on the validation data decreased the network was finally trained on all of the training images. This training procedure removed instabilities early on in training where the network otherwise where inclined to predict everything to the background class and set all weights to zero.
+The dataset is severely imbalanced and around 99.3 \% of all pixels belongs to the background class. To deal with this the training data set was first filtered to make it more balanced. From the 927 training images only those which contained five or more vehicles where selected, this resulted in 166 images. Those images where used for the initial part of training and when the network started overfitting the network was finally trained on all of the training images. This training procedure removed instabilities early on in training where the network otherwise where inclined to predict everything to the background class and set all weights to zero.
 \section{Weighting the loss function}
-The network with the weighted cross entropy loss achieved a comparable f1 score with the original network but but learned to separate objects much better. In the below segmentations we use discrete predictions to better display object separations.
-\begin{center}
+The weighted cross entropy loss enforced much better object separation on the validation dataset. Below are cherry picked examples from high vehicle density areas in the validation images.
 \begin{figure}[H]
-      \includegraphics[scale=0.7]{weighted_vs_unweighted}
-  \caption{} \label{fig:weighted_vs_unweighted}
-\end{figure}
-\end{center}
-\begin{figure}[H]
+\centering
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{class_vs_w/label_1}
 \endminipage\hfill
@@ -335,10 +332,11 @@ The network with the weighted cross entropy loss achieved a comparable f1 score 
 \minipage{0.32\textwidth}%
   \includegraphics[width=\linewidth]{class_vs_w/weight_1}
 \endminipage
-\caption{}
+\caption{Shows the ground truth segmentation, the discrete prediction without a weighted loss and the discrete prediction with a weighted loss. The weighted loss has clearly enforced better segmentation around nearby vehicles.}
 \end{figure}
 
 \begin{figure}[H]
+\centering
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{class_vs_w/label_2}
 \endminipage\hfill
@@ -348,8 +346,16 @@ The network with the weighted cross entropy loss achieved a comparable f1 score 
 \minipage{0.32\textwidth}%
   \includegraphics[width=\linewidth]{class_vs_w/weight_2}
 \endminipage
-\caption{}
+\caption{Shows the ground truth segmentation, the discrete prediction without a weighted loss and the discrete prediction with a weighted loss. The weighted loss has clearly enforced better segmentation around nearby vehicles.}
 \end{figure}
+
+\noindent The weighted loss achieved better object separation while still obtaining comparable pixel wise F1 score and training time.
+\begin{figure}[H]
+\centering
+      \includegraphics[scale=0.7]{weighted_vs_unweighted}
+  \caption{Shows the pixel wise F1 score of the network with the weighted and unweighted loss for the training and validation dataset.} \label{fig:weighted_vs_unweighted}
+\end{figure}
+The proposed model's car counting capabilities where also evaluated on the validation dataset. Here we define the true number of cars as the number of connected components in the ground truth segmentation map. The predicted number of cars is the number of connected components in the predicted segmentation map.
 \begin{center}
 \begin{tabular}{|c c c c c c c|}
 \hline
@@ -362,36 +368,19 @@ The network with the weighted cross entropy loss achieved a comparable f1 score 
 \end{tabular}
 \end{center}
 \section{Adding an adversarial loss term}
-Since the GAN game becomes unstable with sparse gradients the Relu activation function was therefore replaced with a leaky relu activation in both the generative and discriminative network and max pooling was replaced by mean pooling in the generative network. The U-NET already uses 2D transposed convolution for up sampling so this was kept as in the original network. This changes greatly stabilized the training. However I still managed to train a GAN using the origin U-NET with sparse gradients with a carefully chosen learning rate decay. This training was very unstable and even a small change in the learning rate would cause the training to diverge. Below is the F1 score on the validation data for both types of GANs.
+Since the GAN game becomes unstable with sparse gradients the Relu activation function was therefore replaced with a leaky Relu activation in both the generative and discriminative network and max pooling was replaced by mean pooling in the generative network. The U-NET already uses 2D transposed convolution for up sampling so this was kept as in the original network. This changes greatly stabilized the training. However I still managed to train a GAN using the origin U-Net with sparse gradients with a carefully chosen learning rate decay. This training was very unstable and even a small change in the learning rate would cause the training to diverge.
 \begin{center}
 \begin{figure}[H]
-      \includegraphics[scale=0.7]{mean_max_2}
-  \caption{The VGG16 architecture proposed by \cite{simonyan_very_2014}} \label{fig:vgg}
+\centering
+      \includegraphics[scale=0.6]{mean_max_2}
+  \caption{The pixel wise F1 score for the for the training and validation dataset with and without sparse gradients functions.} \label{fig:sparse}
 \end{figure}
 \end{center}
-Both networks had a similar performance on the training data but the original network over fitted less and performed better on the validation data. Hence the original U-NET network was chosen as the generative network for the following comparisons although it was harder to train.
-In the below plots we displays the segmentation as a continuous values where the brightness of each pixel is the probability that that pixel belongs to a car to make better comparisons between the two networks. To obtain a discrete prediction an argmax between this layer and the background class can be preformed. The segmented images looks very similar on a large scale.
+Both networks had a similar performance on the training data but the original network over fitted less and performed better on the validation data. Hence the original U-Net network was chosen as the generative network for the following comparisons although it was harder to train.\\
+\\
+The segmented images looks very similar on a large scale but if we look closely there are differences between the two networks. In the below images we displays cherry picked high density areas of vehicles. The segmentation maps are displayed as continuous values where the brightness of each pixel is the probability of that pixel belonging to a car. This is done to make better comparisons between the two networks. To obtain a discrete prediction an argmax between this layer and the background class can be preformed.
 \begin{figure}[H]
-\minipage{0.48\textwidth}
-  \includegraphics[width=\linewidth]{gan_vs_class/img_4}
-  Image \textbf{(a)}, the input validation image
-\endminipage\hfill
-\minipage{0.48\textwidth}
-  \includegraphics[width=\linewidth]{gan_vs_class/label_4}
-  Image \textbf{(b)}, the ground truth segmentation
-\endminipage\hfill
-\minipage{0.48\textwidth}
-  \includegraphics[width=\linewidth]{gan_vs_class/class_4}
-  Image \textbf{(c)}, segmentation without an adversarial loss
-\endminipage\hfill
-\minipage{0.48\textwidth}%
-  \includegraphics[width=\linewidth]{gan_vs_class/gan_4}
-   Image \textbf{(d)}, segmentation with an adversarial loss
-\endminipage
-\caption{Figure \ref{fig:class_1} shows the ground truth segmentation,}
-\end{figure}
-However if we look closely there are differences between the two networks. The adversarial network managed to enforce more assertive predictions and cars were more likely to be fully segmented or completely left out. However the segmented objects seemed to be more loosely conditioned on the input image then for the network without an adversarial loss. Other differences were that the GAN network was more inclined to chop up false positives into vehicle like objects. It also had a tenancy to separate long vehicles such as trucks into smaller car like parts. Below are cherry picked images which displays the differences of the two networks. adversarial loss.
-\begin{figure}[H]
+\centering
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{gan_vs_class/label_1}
 \endminipage\hfill
@@ -400,11 +389,8 @@ However if we look closely there are differences between the two networks. The a
 \endminipage\hfill
 \minipage{0.32\textwidth}%
   \includegraphics[width=\linewidth]{gan_vs_class/gan_1}
-\endminipage
-\caption{Figure \ref{fig:class_1} shows the ground truth segmentation, }
-\end{figure}
-
-\begin{figure}[H]
+\endminipage\hfill
+\caption*{ }
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{gan_vs_class/label_2}
 \endminipage\hfill
@@ -414,17 +400,17 @@ However if we look closely there are differences between the two networks. The a
 \minipage{0.32\textwidth}%
   \includegraphics[width=\linewidth]{gan_vs_class/gan_2}
 \endminipage
-\caption{Figure \ref{fig:class_1} shows the ground truth segmentation, }
+\caption{Shows the ground truth segmentation, the continuous prediction without and with and adversarial loss.}
 \end{figure}
-When comparing the f1 scores the adversarial loss proved not to be helpful.
-\begin{center}
+\noindent The adversarial network enforced more assertive predictions and cars were more likely to be fully segmented or completely left out. However the segmented objects seemed to be more loosely conditioned on the input image then for the network without an adversarial loss. Other differences were that the GAN network was more inclined to chop up false positives into vehicle like objects. It also had a tenancy to separate long vehicles such as trucks into smaller car like parts. The adversarial segmentation maps looks worse by visual inspection and the adversarial loss did not improve the pixel wise F1 score on the validation dataset.
 \begin{figure}[H]
+\centering
       \includegraphics[scale=0.6]{classical_vs_adversarial}
-  \caption{The VGG16 architecture proposed by \cite{simonyan_very_2014}} \label{fig:gan_vs_class}
+  \caption{Shows the pixel wise F1 score with and without an adversarial loss term on the validation dataset.} \label{fig:gan_vs_class}
 \end{figure}
-\end{center}
-\section{Comparison with earlier work}
 \newpage
+\section{Comparison with earlier work}
+\noindent The network with the weighted cross entropy loss was chosen to be compared with previous models since this had the best performance on the validation dataset. Below is the comparison with the proposed model and the SBD model on the Potsdam dataset.
 \begin{center}
 \captionof*{table}{Comparison on the ISPRS Potsdam dataset} \label{tab:potsdam} 
 \begin{tabular}{|c | c | c|}
@@ -433,17 +419,18 @@ When comparing the f1 scores the adversarial loss proved not to be helpful.
 \textbf{Resolution used} & \textbf{30 cm/pixel} & 12.5 cm/pixel\\
 \textbf{Pixel wise F1 score} & 0.851 & \textbf{0.884}\\
 \textbf{Vehicle wise F1 score} & \textbf{0.811} &  0.773\\
-\textbf{Mean prediction error counting cars} & \textbf{1.67 \%} &  3.57 \%\\
+\textbf{\thead{Mean prediction error\\ counting cars}} & \textbf{1.67 \%} &  3.57 \%\\
 \textbf{Evaluation time per image *} & \textbf{0.19 seconds} &  28.19 seconds\\
 \hline
-\end{tabular}\caption{Shows the comparison between the proposed model and the Segment before you Detect (SBD) model \parencite{audebert_usability_2016} on the Potsdam dataset.\\ \textbf{*} The SBD model was evaluated on a Tesla K20 which can at maximum perform $3.52*10^{12}$ 32 bit floating point operations per second. The proposed model was evaluated on a Tesla K80 wich can perform at maximum $8.74*10^{12}$ 32 bit floating point operations per second. Therefore the evaluation time on the SBD model was multiplied with $3.52/8.74\approx0.4027$ to make fair comparisons. The evaluation time should therefore not be regarded as exact but as an indication of the speed difference between the two models.}
+\end{tabular}\caption{Shows the comparison between the proposed model and the Segment before you Detect (SBD) model \parencite{audebert_usability_2016} on the Potsdam dataset.\\ \textbf{*} The SBD model was evaluated on a Tesla K20 which can at maximum perform $3.52*10^{12}$ 32 bit floating point operations per second. The proposed model was evaluated on a Tesla K80 wich can perform at maximum $8.74*10^{12}$ 32 bit floating point operations per second. Therefore the evaluation time on the SBD model was multiplied with $3.52/8.74\approx0.4027$ to make a fair comparison. The evaluation time should therefore not be regarded as exact but as an indication of the speed difference between the two models.}
 \end{center}
-
+\newpage
+The proposed model was also evaluated on the Vedai dataset using the $512 \times 512$ resolution. The proposed model was compared with the Faster R-CNN (Z\&F), Faster R-CNN (VGG-16), Fast R-CNN (VGG-16) \parencite{zeiler_visualizing_2014} and the Cascaded Convolutional Neural Networks (CCNN) \parencite{zhong_robust_2017-1}.
 \begin{center}
 \captionof*{table}{Comparison on the Vedai dataset} \label{tab:vedai} 
 \begin{tabular}{|c | c c|}
 \hline
-\textbf{Model} & \textbf{Detection time per image *}  & \textbf{Vehicle wise F1 score}\\
+\textbf{Model} & \textbf{\thead{Detection time\\ per image *}}  & \textbf{\thead{Vehicle wise\\ F1 score}}\\
 \hline
 Faster R-CNN (Z\&F) & 0.1998 & 0.212\\
 Faster R-CNN (VGG-16) & 0.2248 & 0.225\\
@@ -452,9 +439,12 @@ CCNN &0.2736 &  0.305\\
 Proposed Model & \textbf{0.0616} & \textbf{0.542}\\
 \hline
 \end{tabular}
-\caption{Shows the comparison between the proposed model and the Faster R-CNN (Z\&F), Faster R-CNN (VGG-16), Fast R-CNN (VGG-16) \parencite{zeiler_visualizing_2014} and the Cascaded Convolutional Neural Networks (CCNN) \parencite{zhong_robust_2017-1} on the Vedai dataset. \textbf{*} The other models were evaluated on a Titan X which can at maximum perform $11*10^{12}$ 32 bit floating point operations per second. The proposed model was evaluated on a Tesla K80 wich can perform at maximum $8.74*10^{12}$ 32 bit floating point operations per second. Therefore the evaluation time on the compared models were multiplied with $11/8.74\approx1.2586$ to make fair comparisons. The evaluation time should therefore not be regarded as exact but as an indication of the speed difference between the two models.}
+\caption{Shows the comparison between the proposed model and the Faster R-CNN (Z\&F), Faster R-CNN (VGG-16), Fast R-CNN (VGG-16) \parencite{zeiler_visualizing_2014} and the Cascaded Convolutional Neural Networks (CCNN) \parencite{zhong_robust_2017-1} on the Vedai dataset. \textbf{*} The other models were evaluated by \parencite{zhong_robust_2017-1} on a Titan X which can at maximum perform $11*10^{12}$ 32 bit floating point operations per second. The proposed model was evaluated on a Tesla K80 wich can perform at maximum $8.74*10^{12}$ 32 bit floating point operations per second. Therefore the evaluation time on the compared models were multiplied with $11/8.74\approx1.2586$ to make a fair comparison. The evaluation time should therefore not be regarded as exact but as an indication of the speed difference between the two models.}
 \end{center}
 \chapter{Discussion}
+In this thesis I proposed vehicle segmentation and detection pipeline capable of detecting and counting vehicles in satellite resolution images. The proposed model outperforms the Segment Before you Detect (SBD) pipeline \parencite{audebert_usability_2016} on the vehicle wise F1 score and prediction error by a significant margin while using less than half of the resolution for input images. The proposed model achieves this while obtaining a computational time which is less than 1\% of the SBD network's computational time. The proposed model almost doubles the vehicle wise F1 score on the Vedai dataset compared to Faster R-CNN (Z\&F), Faster R-CNN (VGG-16), Fast R-CNN (VGG-16) \parencite{zeiler_visualizing_2014} and the Cascaded Convolutional Neural Networks (CCNN) \parencite{zhong_robust_2017-1}. It achieves this performance with a computational time which is less than a third of the second fastest model.\\
+\\
+The pipeline needs a very small amount of training images. Only 18 training images where used to obtain a vehicle detection F1 score of 0.811 and a counting car prediction error of 1.67 \%. This  ensures that that constructing a dataset is a low cost operation which makes it a viable option for commercial analysis of satellite imagery. It can be argued that one of the restrictions of the proposed pipline is that only separated objects can be detected due to the nature of connected component extraction. However, by introducing ''artificial'' separations between touching objects on the Vedai dataset it is shown that the proposed pipeline still can learn to seperate touching objects and outperforms earlier methods. We also show that it is possible to overcom the drawback of connected component extraction that every object needs to be separated by introducing ''artificial'' seperations between touching objects on the Vedai dataset. 
 \printbibliography[heading=bibintoc] % Print the bibliography (and make it appear in the table of contents)
 
 \appendix

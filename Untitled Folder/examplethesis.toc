@@ -60,8 +60,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}Adding an adversarial loss term}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Comparison with earlier work}{29}
+\contentsline {section}{\numberline {4.4}Comparison with earlier work}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Discussion}{32}
+\contentsline {chapter}{\numberline {5}Discussion}{30}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{33}
+\contentsline {chapter}{Bibliography}{32}

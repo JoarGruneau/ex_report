@@ -82,9 +82,9 @@
 \newlabel{eq:mce}{{2.5}{6}}
 \abx@aux@cite{shelhamer_fully_2016}
 \abx@aux@cite{son_retinal_2017}
-\abx@aux@cite{li_deepunet:_2017}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.3}Training generative adversarial networks}{7}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2.2}Segmentation networks}{7}}
+\abx@aux@cite{li_deepunet:_2017}
 \@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Shows the U-Net architecture proposed by Ronneberger \textit  {et al.} \parencite {ronneberger_u-net:_2015}.\relax }}{8}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:unet}{{2.1}{8}}
@@ -107,10 +107,10 @@
 \newlabel{eq:wc1}{{2.9}{11}}
 \newlabel{eq:wc2}{{2.10}{11}}
 \newlabel{eq:pxl_weight}{{2.12}{11}}
-\newlabel{eq:weight}{{2.13}{11}}
 \abx@aux@cite{arnab_higher_2015}
 \abx@aux@cite{schwing_fully_2015}
 \abx@aux@cite{zheng_conditional_2015}
+\newlabel{eq:weight}{{2.13}{12}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {2.5}Earlier work}{12}}
 \abx@aux@cite{stockman_computer_2001}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {3}Method}{14}}
@@ -118,18 +118,18 @@
 \@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {3.1}The segmentation network}{14}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Network architecture}{14}}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces The 34 layer deep ResNet architecture \parencite {simonyan_very_2014}\relax }}{15}}
-\newlabel{fig:vgg}{{3.1}{15}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Shows the proposed vehicle detection and counting pipeline at test time.\relax }}{15}}
+\newlabel{fig:pipe}{{3.1}{15}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Border mirroring}{15}}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Shows a training image with mirrored borders from the Potsdam dataset. The shaded area will be lost due to unpaded convolutions\relax }}{15}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Shows a training image with mirrored borders from the Potsdam dataset. The shaded area will be lost due to unpaded convolutions.\relax }}{15}}
 \newlabel{fig:vgg}{{3.2}{15}}
 \abx@aux@cite{johnson_cnn-benchmarks:_2018}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {3.2}Weighting the cross entropy loss}{16}}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Figure shows the ground truth labels and the pixel weight map for a training image.\relax }}{16}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Shows the ground truth labels and the pixel weight map for a training image.\relax }}{16}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {3.3}Adding an adversarial loss term}{16}}
 \abx@aux@cite{goodfellow_generative_2014}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces The 34 layer deep ResNet architecture \parencite {simonyan_very_2014}\relax }}{17}}
-\newlabel{fig:vgg}{{3.4}{17}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Shows the sarchitecture of the segmentation network with an adversarial los at training time.\relax }}{17}}
+\newlabel{fig:GAN}{{3.4}{17}}
 \@writefile{lol}{\defcounter {refsection}{0}\relax }\@writefile{lol}{\contentsline {lstlisting}{training.py}{19}}
 \abx@aux@cite{noauthor_2d_nodate}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {4}Result}{20}}
@@ -138,32 +138,30 @@
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {4.1}The datasets}{20}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}The ISPRS Potsdam semantic dataset}{20}}
 \abx@aux@cite{noauthor_worldview-3_nodate}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces An example image from the Potsdam dataset with a: the rgb channel, b: the height data channel and c: the ground truth segmentation map.\relax }}{21}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces An example image from the Potsdam dataset with the rgb channel, the height data channel and the ground truth segmentation map.\relax }}{21}}
 \newlabel{eq:precision}{{4.1}{21}}
 \newlabel{eq:recall}{{4.2}{21}}
 \newlabel{eq:f1}{{4.3}{21}}
 \@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Figure shows the ground truth labels and the pixel weight map for a training image\relax }}{22}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.2}The VEDAI dataset}{22}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {4.2}Weighting the loss function}{23}}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces \relax }}{24}}
-\newlabel{fig:weighted_vs_unweighted}{{4.3}{24}}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces \relax }}{24}}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces \relax }}{24}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Shows the ground truth segmentation, the discrete prediction without a weighted loss and the discrete prediction with a weighted loss. The weighted loss has clearly enforced better segmentation around nearby vehicles.\relax }}{23}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Shows the ground truth segmentation, the discrete prediction without a weighted loss and the discrete prediction with a weighted loss. The weighted loss has clearly enforced better segmentation around nearby vehicles.\relax }}{24}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Shows the pixel wise F1 score of the network with the weighted and unweighted loss for the training and validation dataset.\relax }}{24}}
+\newlabel{fig:weighted_vs_unweighted}{{4.5}{24}}
 \@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {4.3}Adding an adversarial loss term}{25}}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces The VGG16 architecture proposed by \cite {simonyan_very_2014}\relax }}{25}}
-\newlabel{fig:vgg}{{4.6}{25}}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Figure \G@refundefinedtrue \text  {\normalfont  \bfseries  ??}\GenericWarning  {               }{LaTeX Warning: Reference `fig:class_1' on page 27 undefined} shows the ground truth segmentation,\relax }}{27}}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Figure \G@refundefinedtrue \text  {\normalfont  \bfseries  ??}\GenericWarning  {               }{LaTeX Warning: Reference `fig:class_1' on page 28 undefined} shows the ground truth segmentation, \relax }}{28}}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Figure \G@refundefinedtrue \text  {\normalfont  \bfseries  ??}\GenericWarning  {               }{LaTeX Warning: Reference `fig:class_1' on page 28 undefined} shows the ground truth segmentation, \relax }}{28}}
-\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces The VGG16 architecture proposed by \cite {simonyan_very_2014}\relax }}{29}}
-\newlabel{fig:gan_vs_class}{{4.10}{29}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {4.4}Comparison with earlier work}{29}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces The pixel wise F1 score for the for the training and validation dataset with and without sparse gradients functions.\relax }}{25}}
+\newlabel{fig:sparse}{{4.6}{25}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Shows the ground truth segmentation, the continuous prediction without and with and adversarial loss.\relax }}{26}}
+\@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Shows the pixel wise F1 score with and without an adversarial loss term on the validation dataset.\relax }}{27}}
+\newlabel{fig:gan_vs_class}{{4.8}{27}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {section}{\numberline {4.4}Comparison with earlier work}{28}}
+\newlabel{tab:potsdam}{{4.4}{28}}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Shows the comparison between the proposed model and the Segment before you Detect (SBD) model \parencite {audebert_usability_2016} on the Potsdam dataset.  \textbf  {*} The SBD model was evaluated on a Tesla K20 which can at maximum perform $3.52*10^{12}$ 32 bit floating point operations per second. The proposed model was evaluated on a Tesla K80 wich can perform at maximum $8.74*10^{12}$ 32 bit floating point operations per second. Therefore the evaluation time on the SBD model was multiplied with $3.52/8.74\approx 0.4027$ to make a fair comparison. The evaluation time should therefore not be regarded as exact but as an indication of the speed difference between the two models.\relax }}{28}}
 \abx@aux@cite{zeiler_visualizing_2014}
-\newlabel{tab:potsdam}{{4.4}{30}}
-\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Shows the comparison between the proposed model and the Segment before you Detect (SBD) model \parencite {audebert_usability_2016} on the Potsdam dataset.  \textbf  {*} The SBD model was evaluated on a Tesla K20 which can at maximum perform $3.52*10^{12}$ 32 bit floating point operations per second. The proposed model was evaluated on a Tesla K80 wich can perform at maximum $8.74*10^{12}$ 32 bit floating point operations per second. Therefore the evaluation time on the SBD model was multiplied with $3.52/8.74\approx 0.4027$ to make fair comparisons. The evaluation time should therefore not be regarded as exact but as an indication of the speed difference between the two models.\relax }}{30}}
-\newlabel{tab:vedai}{{4.4}{30}}
-\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Shows the comparison between the proposed model and the Faster R-CNN (Z\&F), Faster R-CNN (VGG-16), Fast R-CNN (VGG-16) \parencite {zeiler_visualizing_2014} and the Cascaded Convolutional Neural Networks (CCNN) \parencite {zhong_robust_2017-1} on the Vedai dataset. \textbf  {*} The other models were evaluated on a Titan X which can at maximum perform $11*10^{12}$ 32 bit floating point operations per second. The proposed model was evaluated on a Tesla K80 wich can perform at maximum $8.74*10^{12}$ 32 bit floating point operations per second. Therefore the evaluation time on the compared models were multiplied with $11/8.74\approx 1.2586$ to make fair comparisons. The evaluation time should therefore not be regarded as exact but as an indication of the speed difference between the two models.\relax }}{30}}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {5}Discussion}{32}}
+\newlabel{tab:vedai}{{4.4}{29}}
+\@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Shows the comparison between the proposed model and the Faster R-CNN (Z\&F), Faster R-CNN (VGG-16), Fast R-CNN (VGG-16) \parencite {zeiler_visualizing_2014} and the Cascaded Convolutional Neural Networks (CCNN) \parencite {zhong_robust_2017-1} on the Vedai dataset. \textbf  {*} The other models were evaluated by \parencite {zhong_robust_2017-1} on a Titan X which can at maximum perform $11*10^{12}$ 32 bit floating point operations per second. The proposed model was evaluated on a Tesla K80 wich can perform at maximum $8.74*10^{12}$ 32 bit floating point operations per second. Therefore the evaluation time on the compared models were multiplied with $11/8.74\approx 1.2586$ to make a fair comparison. The evaluation time should therefore not be regarded as exact but as an indication of the speed difference between the two models.\relax }}{29}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{\numberline {5}Discussion}{30}}
 \@writefile{lof}{\defcounter {refsection}{0}\relax }\@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\defcounter {refsection}{0}\relax }\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{Bibliography}{33}}
+\@writefile{toc}{\defcounter {refsection}{0}\relax }\@writefile{toc}{\contentsline {chapter}{Bibliography}{32}}
