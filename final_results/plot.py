@@ -82,15 +82,15 @@ def borders(path, type=-1, add_borders=False, dtype=np.float32, swap_channel=Fal
 
 
 if __name__== '__main__':
-    # plot_args = {'original network training': {'path': 'ugan16_max_pool/run_train-tag-f1.json', 'color': 'b', 'line_style': '--'},
-    #             'original network validation': {'path': 'ugan16_max_pool/run_eval-tag-f1.json', 'color': 'b', 'line_style':'solid'},
-    #             'no sparse gradient network training': {'path': 'ugan16_avg_pool/run_train-tag-f1.json', 'color': 'orange', 'line_style': '--'},
-    #             'no sparse gradient network validation': {'path': 'ugan16_avg_pool/run_eval-tag-f1.json', 'color': 'orange', 'line_style': 'solid'}}
+    plot_args = {'original network training': {'path': 'ugan16_max_pool/run_train-tag-f1.json', 'color': 'b', 'line_style': '--'},
+                'original network validation': {'path': 'ugan16_max_pool/run_eval-tag-f1.json', 'color': 'b', 'line_style':'solid'},
+                'no sparse gradient network training': {'path': 'ugan16_avg_pool/run_train-tag-f1.json', 'color': 'orange', 'line_style': '--'},
+                'no sparse gradient network validation': {'path': 'ugan16_avg_pool/run_eval-tag-f1.json', 'color': 'orange', 'line_style': 'solid'}}
 
-    plot_args = {'classical training': {'path': 'unet16/run_train-tag-f1.json', 'color': 'b', 'line_style': '--'},
-            'classical validation': {'path': 'unet16/run_eval-tag-f1.json', 'color': 'b', 'line_style':'solid'},
-            'adversarial training': {'path': 'ugan16_max_pool/run_train-tag-f1.json', 'color': 'orange', 'line_style': '--'},
-            'adversarial validation': {'path': 'ugan16_max_pool/run_eval-tag-f1.json', 'color': 'orange', 'line_style': 'solid'}}
+    # plot_args = {'classical training': {'path': 'unet16/run_train-tag-f1.json', 'color': 'b', 'line_style': '--'},
+    #         'classical validation': {'path': 'unet16/run_eval-tag-f1.json', 'color': 'b', 'line_style':'solid'},
+    #         'adversarial training': {'path': 'ugan16_max_pool/run_train-tag-f1.json', 'color': 'orange', 'line_style': '--'},
+    #         'adversarial validation': {'path': 'ugan16_max_pool/run_eval-tag-f1.json', 'color': 'orange', 'line_style': 'solid'}}
 
     # plot_args = {'unweighted loss training': {'path': 'unet16/run_train-tag-f1.json', 'color': 'b', 'line_style': '--'},
     #     'unweighted loss validation': {'path': 'unet16/run_eval-tag-f1.json', 'color': 'b', 'line_style':'solid'},
@@ -98,6 +98,6 @@ if __name__== '__main__':
     #     'weighted loss validation': {'path': 'unet16_weight_map/run_eval-tag-f1.json', 'color': 'orange', 'line_style': 'solid'}}
 
 
-    #plot('epoch', 'F1 score', plot_args)
-    borders('img.tif', add_borders=True)
+    plot('epoch', 'F1 score', plot_args)
+    # borders('img.tif', add_borders=True)
     #connected_components('eval_hard_2.jpg')

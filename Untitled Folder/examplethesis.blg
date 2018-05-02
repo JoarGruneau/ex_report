@@ -1,17 +1,17 @@
 [0] Config.pm:340> INFO - This is Biber 2.4
 [0] Config.pm:343> INFO - Logfile is 'examplethesis.blg'
-[55] biber:287> INFO - === ons maj  2, 2018, 19:40:35
-[175] Biber.pm:348> INFO - Reading 'examplethesis.bcf'
-[374] Biber.pm:742> INFO - Found 62 citekeys in bib section 0
-[381] Biber.pm:3151> INFO - Processing section 0
-[419] Biber.pm:3308> INFO - Looking for bibtex format file 'ex.bib' for section 0
-[1150] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
+[56] biber:287> INFO - === ons maj  2, 2018, 23:26:20
+[186] Biber.pm:348> INFO - Reading 'examplethesis.bcf'
+[390] Biber.pm:742> INFO - Found 62 citekeys in bib section 0
+[397] Biber.pm:3151> INFO - Processing section 0
+[435] Biber.pm:3308> INFO - Looking for bibtex format file 'ex.bib' for section 0
+[1165] bibtex.pm:1113> INFO - Decoding LaTeX character macros into UTF-8
 [1768] bibtex.pm:974> INFO - Found BibTeX data source 'ex.bib'
-[2723] Utils.pm:147> WARN - ISBN '978-3-319-10589-5 978-3-319-10590-1' in entry 'zeiler_visualizing_2014' is invalid - run biber with '--validate_datamodel' for details.
-[3483] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[3483] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[3483] Biber.pm:3028> INFO - Sorting list 'nty/global' of type 'entry' with scheme 'nty' and locale 'en-US'
-[3483] Biber.pm:3032> INFO - No sort tailoring available for locale 'en-US'
-[3676] bbl.pm:519> INFO - Writing 'examplethesis.bbl' with encoding 'UTF-8'
-[4590] bbl.pm:615> INFO - Output to examplethesis.bbl
-[4591] Biber.pm:109> INFO - WARNINGS: 1
+[2842] Utils.pm:147> WARN - ISBN '978-3-319-10589-5 978-3-319-10590-1' in entry 'zeiler_visualizing_2014' is invalid - run biber with '--validate_datamodel' for details.
+[3721] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[3721] UCollate.pm:65> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[3722] Biber.pm:3028> INFO - Sorting list 'nty/global' of type 'entry' with scheme 'nty' and locale 'en-US'
+[3722] Biber.pm:3032> INFO - No sort tailoring available for locale 'en-US'
+[4052] bbl.pm:519> INFO - Writing 'examplethesis.bbl' with encoding 'UTF-8'
+[4946] bbl.pm:615> INFO - Output to examplethesis.bbl
+[4947] Biber.pm:109> INFO - WARNINGS: 1

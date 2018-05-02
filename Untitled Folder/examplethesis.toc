@@ -56,7 +56,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1.2}The VEDAI dataset}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Weighting the loss function}{23}
+\contentsline {section}{\numberline {4.2}Weighting the loss function}{24}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}Adding an adversarial loss term}{25}
 \defcounter {refsection}{0}\relax 
@@ -64,4 +64,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Discussion}{30}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{32}
+\contentsline {chapter}{Bibliography}{31}

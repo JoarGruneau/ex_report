@@ -229,7 +229,7 @@ For the discriminative network a ResNet will be used. The ResNet is chosen over 
 \begin{figure}[H]
   \centering
       \includegraphics[scale=0.25]{gan_no_n}
-  \caption{Shows the sarchitecture of the segmentation network with an adversarial los at training time.} \label{fig:GAN}
+  \caption{Shows the sarchitecture of the segmentation network with an adversarial loss at training time.} \label{fig:GAN}
 \end{figure}
 \noindent A patch-GAN structure will be used where the discriminator only has a view of $100 \times 100$ pixels at once. The loss for the discriminator will be the average loss over all patches. The reason for this is that a patch-GAN with a smaller window was more stable during training compared to a patch-GAN with a larger window or an image-GAN. This also made it easy to perform batch normalization over the batch of patches extracted from one image.\\
 \\
@@ -238,7 +238,6 @@ Following the example of \cite{goodfellow_generative_2014, luc_semantic_2016} th
 \Lagr_{bce}(G, D) =\lambda(\ell_{bce}(D(x,G(x)), 1)-\ell_{bce}(D(x,y), 1))
 \end{equation}
 Finally we define our minimax game as.
-The objective for the network hence becomes.
 \begin{equation}
 G^{*}=argmin_{G}[\ell_{pxl}(G(x),y) + max_{D}[\lambda\Lagr(G, D)] ]
 \end{equation}
@@ -319,6 +318,7 @@ To make the results comparable with the extensive research of different methods 
 The dataset was divided into three parts where 927 images were used for training, 100 for validation and 240 for testing. The dataset was transformed into a semantic dataset by assigning the pixels of the bounding boxes for remaining classes to the foreground class and the rest of the pixels to the background class. A small ''artificial'' separation was introduced around each bounding box so that all bounding boxes would be separated in the ground truth segmentation.\\
 \\
 The dataset is severely imbalanced and around 99.3 \% of all pixels belongs to the background class. To deal with this the training data set was first filtered to make it more balanced. From the 927 training images only those which contained five or more vehicles where selected, this resulted in 166 images. Those images where used for the initial part of training and when the network started overfitting the network was finally trained on all of the training images. This training procedure removed instabilities early on in training where the network otherwise where inclined to predict everything to the background class and set all weights to zero.
+\newpage
 \section{Weighting the loss function}
 The weighted cross entropy loss enforced much better object separation on the validation dataset. Below are cherry picked examples from high vehicle density areas in the validation images.
 \begin{figure}[H]
@@ -332,11 +332,7 @@ The weighted cross entropy loss enforced much better object separation on the va
 \minipage{0.32\textwidth}%
   \includegraphics[width=\linewidth]{class_vs_w/weight_1}
 \endminipage
-\caption{Shows the ground truth segmentation, the discrete prediction without a weighted loss and the discrete prediction with a weighted loss. The weighted loss has clearly enforced better segmentation around nearby vehicles.}
-\end{figure}
-
-\begin{figure}[H]
-\centering
+\vspace{1ex}
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{class_vs_w/label_2}
 \endminipage\hfill
@@ -348,14 +344,13 @@ The weighted cross entropy loss enforced much better object separation on the va
 \endminipage
 \caption{Shows the ground truth segmentation, the discrete prediction without a weighted loss and the discrete prediction with a weighted loss. The weighted loss has clearly enforced better segmentation around nearby vehicles.}
 \end{figure}
-
-\noindent The weighted loss achieved better object separation while still obtaining comparable pixel wise F1 score and training time.
+\noindent The weighted loss achieved better object separation while still obtaining comparable pixel wise F1 score. Below is the pixel wise F1 score on the training and validation set during training.
 \begin{figure}[H]
 \centering
-      \includegraphics[scale=0.7]{weighted_vs_unweighted}
+      \includegraphics[scale=0.5]{weighted_vs_unweighted}
   \caption{Shows the pixel wise F1 score of the network with the weighted and unweighted loss for the training and validation dataset.} \label{fig:weighted_vs_unweighted}
 \end{figure}
-The proposed model's car counting capabilities where also evaluated on the validation dataset. Here we define the true number of cars as the number of connected components in the ground truth segmentation map. The predicted number of cars is the number of connected components in the predicted segmentation map.
+\noindent The proposed model's car counting capabilities where also evaluated on the validation dataset. Here we define the true number of cars as the number of connected components in the ground truth segmentation map. The predicted number of cars is the number of connected components in the predicted segmentation map.
 \begin{center}
 \begin{tabular}{|c c c c c c c|}
 \hline
@@ -372,7 +367,7 @@ Since the GAN game becomes unstable with sparse gradients the Relu activation fu
 \begin{center}
 \begin{figure}[H]
 \centering
-      \includegraphics[scale=0.6]{mean_max_2}
+      \includegraphics[scale=0.5]{mean_max_2}
   \caption{The pixel wise F1 score for the for the training and validation dataset with and without sparse gradients functions.} \label{fig:sparse}
 \end{figure}
 \end{center}
@@ -390,7 +385,7 @@ The segmented images looks very similar on a large scale but if we look closely 
 \minipage{0.32\textwidth}%
   \includegraphics[width=\linewidth]{gan_vs_class/gan_1}
 \endminipage\hfill
-\caption*{ }
+\vspace{1ex}
 \minipage{0.32\textwidth}
   \includegraphics[width=\linewidth]{gan_vs_class/label_2}
 \endminipage\hfill
@@ -405,10 +400,9 @@ The segmented images looks very similar on a large scale but if we look closely 
 \noindent The adversarial network enforced more assertive predictions and cars were more likely to be fully segmented or completely left out. However the segmented objects seemed to be more loosely conditioned on the input image then for the network without an adversarial loss. Other differences were that the GAN network was more inclined to chop up false positives into vehicle like objects. It also had a tenancy to separate long vehicles such as trucks into smaller car like parts. The adversarial segmentation maps looks worse by visual inspection and the adversarial loss did not improve the pixel wise F1 score on the validation dataset.
 \begin{figure}[H]
 \centering
-      \includegraphics[scale=0.6]{classical_vs_adversarial}
+      \includegraphics[scale=0.5]{classical_vs_adversarial}
   \caption{Shows the pixel wise F1 score with and without an adversarial loss term on the validation dataset.} \label{fig:gan_vs_class}
 \end{figure}
-\newpage
 \section{Comparison with earlier work}
 \noindent The network with the weighted cross entropy loss was chosen to be compared with previous models since this had the best performance on the validation dataset. Below is the comparison with the proposed model and the SBD model on the Potsdam dataset.
 \begin{center}
@@ -424,7 +418,6 @@ The segmented images looks very similar on a large scale but if we look closely 
 \hline
 \end{tabular}\caption{Shows the comparison between the proposed model and the Segment before you Detect (SBD) model \parencite{audebert_usability_2016} on the Potsdam dataset.\\ \textbf{*} The SBD model was evaluated on a Tesla K20 which can at maximum perform $3.52*10^{12}$ 32 bit floating point operations per second. The proposed model was evaluated on a Tesla K80 wich can perform at maximum $8.74*10^{12}$ 32 bit floating point operations per second. Therefore the evaluation time on the SBD model was multiplied with $3.52/8.74\approx0.4027$ to make a fair comparison. The evaluation time should therefore not be regarded as exact but as an indication of the speed difference between the two models.}
 \end{center}
-\newpage
 The proposed model was also evaluated on the Vedai dataset using the $512 \times 512$ resolution. The proposed model was compared with the Faster R-CNN (Z\&F), Faster R-CNN (VGG-16), Fast R-CNN (VGG-16) \parencite{zeiler_visualizing_2014} and the Cascaded Convolutional Neural Networks (CCNN) \parencite{zhong_robust_2017-1}.
 \begin{center}
 \captionof*{table}{Comparison on the Vedai dataset} \label{tab:vedai} 
@@ -442,9 +435,9 @@ Proposed Model & \textbf{0.0616} & \textbf{0.542}\\
 \caption{Shows the comparison between the proposed model and the Faster R-CNN (Z\&F), Faster R-CNN (VGG-16), Fast R-CNN (VGG-16) \parencite{zeiler_visualizing_2014} and the Cascaded Convolutional Neural Networks (CCNN) \parencite{zhong_robust_2017-1} on the Vedai dataset. \textbf{*} The other models were evaluated by \parencite{zhong_robust_2017-1} on a Titan X which can at maximum perform $11*10^{12}$ 32 bit floating point operations per second. The proposed model was evaluated on a Tesla K80 wich can perform at maximum $8.74*10^{12}$ 32 bit floating point operations per second. Therefore the evaluation time on the compared models were multiplied with $11/8.74\approx1.2586$ to make a fair comparison. The evaluation time should therefore not be regarded as exact but as an indication of the speed difference between the two models.}
 \end{center}
 \chapter{Discussion}
-In this thesis I proposed vehicle segmentation and detection pipeline capable of detecting and counting vehicles in satellite resolution images. The proposed model outperforms the Segment Before you Detect (SBD) pipeline \parencite{audebert_usability_2016} on the vehicle wise F1 score and prediction error by a significant margin while using less than half of the resolution for input images. The proposed model achieves this while obtaining a computational time which is less than 1\% of the SBD network's computational time. The proposed model almost doubles the vehicle wise F1 score on the Vedai dataset compared to Faster R-CNN (Z\&F), Faster R-CNN (VGG-16), Fast R-CNN (VGG-16) \parencite{zeiler_visualizing_2014} and the Cascaded Convolutional Neural Networks (CCNN) \parencite{zhong_robust_2017-1}. It achieves this performance with a computational time which is less than a third of the second fastest model.\\
+This thesis proposes a vehicle segmentation and detection pipeline capable of detecting and counting vehicles in satellite resolution images. The proposed model outperforms the Segment Before you Detect (SBD) pipeline \parencite{audebert_usability_2016} on the vehicle wise F1 score and prediction error by a significant margin while using less than half of the resolution for input images. The proposed model achieves this while obtaining a computational time which is less than 1\% of the SBD network's computational time. The proposed model almost doubles the vehicle wise F1 score on the Vedai dataset compared to Faster R-CNN (Z\&F), Faster R-CNN (VGG-16), Fast R-CNN (VGG-16) \parencite{zeiler_visualizing_2014} and the Cascaded Convolutional Neural Networks (CCNN) \parencite{zhong_robust_2017-1}. It achieves this performance with a computational time which is less than a third of the second fastest model.\\
 \\
-The pipeline needs a very small amount of training images. Only 18 training images where used to obtain a vehicle detection F1 score of 0.811 and a counting car prediction error of 1.67 \%. This  ensures that that constructing a dataset is a low cost operation which makes it a viable option for commercial analysis of satellite imagery. It can be argued that one of the restricrtions of the proposed pipline is that only seperBy introducing ''artificial'' separations between touching objects on the Vedai dataset it is shown that the restrict. We also show that it is possible to overcom the drawback of connected component extraction that every object needs to be separated by introducing ''artificial'' seperations between touching objects on the Vedai dataset. 
+The pipeline needs a very small amount of training images. Only 18 training images where used to obtain a vehicle detection F1 score of 0.811 and a counting car prediction error of 1.67 \%. This  ensures that constructing a dataset is a low cost operation which makes it a viable option for commercial analysis of satellite imagery. It can be argued that one of the restrictions of the proposed pipeline is that only separated objects can be detected due to the nature of connected component extraction. However, by introducing ''artificial'' separations between touching objects on the Vedai dataset it is shown that the proposed pipeline still can learn to separate touching objects and outperforms earlier methods.
 \printbibliography[heading=bibintoc] % Print the bibliography (and make it appear in the table of contents)
 
 \appendix
